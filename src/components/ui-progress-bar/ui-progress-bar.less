@@ -1,0 +1,49 @@
+@import "../../theme.less";
+
+ui-progress-bar {
+	display: flex;
+	align-items: center;
+}
+
+:local(.outter) {
+	height: 5px;
+	border-radius: 10px;
+	background-color: #DDD;
+	overflow: hidden;
+	flex: 1;
+}
+
+:local(.inner) {
+	height: 100%;
+	transition: width ease 1s;
+}
+
+:local(.label) {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999;
+}
+
+:local(.sm) {
+	height: 3px;
+}
+
+:local(.lg) {
+	height: 7px;
+}
+
+:local(.primary) {
+	background-color: @primary-color;
+}
+
+:local(.success) {
+	background-color: @success-color;
+}
+
+:local(.warning) {
+	background-color: @warning-color;
+}
+
+:local(.danger) {
+	background-color: @danger-color;
+}

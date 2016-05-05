@@ -1,0 +1,52 @@
+@import "../../theme.less";
+
+ui-input {
+	display: inline-block;
+}
+
+:local(.base) {
+	width: 100%;
+	outline: none;
+	border-radius: 4px;
+	border: solid 1px #DDD;
+	color: #666;
+	transition: all .3s ease;
+	padding: 6px 8px;
+	box-sizing: border-box;
+
+	&:hover {
+		border: solid 1px #C0C0C0;
+	}
+
+	&:focus {
+		border: solid 1px @primary-color;
+		box-shadow: 0 0 0 3px tint(@primary-color, 90%);
+	}
+}
+
+/* Size */
+
+:local(.sm) {
+	height: 26px;
+	padding: 5px 7px;
+}
+
+:local(.md) {
+	height: 29px;
+	padding: 6px 7px;
+}
+
+:local(.lg) {
+	height: 34px;
+	padding: 8px 8px;
+}
+
+/* state */
+:local(.disabled) {
+	cursor: @disabled-cursor;
+	background-color: @disabled-input-background-color;
+
+	&:hover {
+		border: solid 1px #DDD;
+	}
+}

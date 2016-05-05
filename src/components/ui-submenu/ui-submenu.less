@@ -1,0 +1,34 @@
+@import "../../theme.less";
+
+ui-submenu {
+	display: block;
+	position: relative;
+	top: 1px;
+	padding: 0 20px;
+	color: #666;
+}
+
+ui-menu[horizontal] {
+	& > ui-submenu {
+		float: left;
+	}
+
+	& > ui-submenu:hover {
+		color: @primary-color;
+		border-bottom: solid 1px @primary-color;
+	}
+
+	& > ui-submenu:hover :local(.items) {
+		display: block;
+	}
+}
+
+:local(.items) {
+	display: none;
+	position: absolute;
+	left: 0;
+	margin-top: 5px;
+	border: solid 1px #DDD;
+	border-radius: 3px;
+	overflow: hidden;
+}

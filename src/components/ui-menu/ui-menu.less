@@ -1,0 +1,20 @@
+@import "../../theme.less";
+
+ui-menu {
+	display: block;
+	cursor: pointer;
+	background-color: #FFF;
+	font-size: 14px;
+}
+
+ui-menu[horizontal] {
+	border-bottom: solid 1px #DDD;
+	line-height: 45px;
+
+	&::after {
+		display: block;
+		content: "";
+		height: 0;
+		clear: both;
+	}
+}

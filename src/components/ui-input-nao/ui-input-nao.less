@@ -1,0 +1,110 @@
+ui-input-nao {
+	display: inline-block;
+}
+
+.input {
+	position: relative;
+	display: inline-block;
+	min-width: 170px;
+	width: calc(100% - 2em);
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #666;
+	font-weight: 400;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+	text-overflow: ellipsis;
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #696969;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 150%;
+}
+
+
+
+
+.input--nao {
+	overflow: hidden;
+	padding-top: 1em;
+}
+
+.input__field--nao {
+	width: 100%;
+	background: transparent;
+	color: #666;
+	font-size: 1.25em;
+	padding: .2em 0;
+}
+
+.input__label--nao {
+	position: absolute;
+	top: 1.5em;
+	font-size: 0.85em;
+	left: 0;
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 0em;
+	pointer-events: none;
+	transform-origin: 0 0;
+	transition: transform 0.2s 0.15s, color 1s;
+	transition-timing-function: ease-out;
+}
+
+.graphic--nao {
+	stroke: #92989e;
+	pointer-events: none;
+	transition: transform 0.7s, stroke 0.7s;
+	transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input__field--nao:focus + .input__label--nao,
+.input--filled .input__label--nao {
+	color: #333;
+	transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+}
+
+.input__field--nao:focus ~ .graphic--nao,
+.input--filled .graphic--nao {
+	stroke: #333;
+	transform: translate3d(-66.6%, 0, 0);
+}

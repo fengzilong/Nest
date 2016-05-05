@@ -1,0 +1,44 @@
+@import "../../theme.less";
+
+ui-radio {
+	cursor: pointer;
+	color: #666;
+}
+
+:local(.base) {
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: solid 1px #DDD;
+	user-select: none;
+}
+
+:local(.base::after) {
+	content: "";
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	transform: translate3d(-50%,-50%,0) scale(1.9);
+	transition: transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+:local(.base.checked) {
+	background-color: @primary-color;
+	border: solid 1px @primary-color;
+}
+
+:local(.base.checked::after) {
+	background-color: #FFF;
+	transform: translate3d(-50%,-50%,0) scale(1);
+}
+
+:local(.base) + span {
+	font-size: 14px;
+}

@@ -1,0 +1,35 @@
+@import "../../theme.less";
+
+ui-menu-item {
+	display: block;
+	white-space: nowrap;
+	border-bottom: solid 1px transparent;
+	transition: all ease .3s;
+	color: #666;
+	user-select: none;
+}
+
+ui-menu[horizontal] {
+	& > ui-menu-item {
+		float: left;
+		position: relative;
+		top: 1px;
+	}
+
+	& > ui-menu-item:hover {
+		color: @primary-color;
+		border-bottom: solid 1px @primary-color;
+	}
+
+	& > ui-submenu ui-menu-item {
+		line-height: 40px;
+	}
+
+	& > ui-submenu ui-menu-item:hover {
+		background-color: tint(@primary-color, 90%);
+	}
+}
+
+:local(.base) {
+	padding: 0 20px;
+}

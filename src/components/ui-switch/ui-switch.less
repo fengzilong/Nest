@@ -1,0 +1,77 @@
+@import "../../theme.less";
+
+.switch-size(@width; @height; @distance; @border-radius) {
+	width: @width;
+	height: @height;
+	border-radius: @border-radius;
+
+	&::after {
+		top: @distance;
+		left: @distance;
+		width: @height - @distance * 2;
+		height: @height - @distance * 2;
+	}
+
+	&:local(.off)::after {
+		top: @distance;
+		left: @distance;
+	}
+
+	&:local(.on)::after {
+		top: @distance;
+		left: @width - @height + @distance;
+	}
+}
+
+ui-switch {
+	display: inline-block;
+	color: #FFF;
+}
+
+:local(.base) {
+	position: relative;
+	background-color: #DDD;
+	background-color: @primary-color;
+	padding: 0 5px;
+	box-sizing: border-box;
+	user-select: none;
+	cursor: pointer;
+	transition: background-color .3s cubic-bezier(.78,.14,.15,.86);
+	.switch-size(49px; 27px; 2px; 15px);
+
+	&::after {
+		position: absolute;
+		content: '';
+		display: block;
+		border-radius: 50%;
+		background-color: #FFF;
+		transition: left .3s cubic-bezier(.78,.14,.15,.86), background-color .3s cubic-bezier(.78,.14,.15,.86);
+	}
+}
+
+:local(.off) {
+	text-align: right;
+	background-color: #DDD;
+}
+
+:local(.on) {
+	text-align: left;
+	background-color: @primary-color;
+}
+
+:local(.sm) {
+	.switch-size(40px; 22px; 2px; 15px);
+}
+
+:local(.lg) {
+	.switch-size(54px; 29px; 3px; 16px);
+}
+
+:local(.disabled) {
+	cursor: not-allowed;
+	background-color: #EDEDED;
+
+	&::after {
+		background-color: #DDD;
+	}
+}

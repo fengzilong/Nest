@@ -1,0 +1,66 @@
+@import "../../theme.less";
+
+.link-style( @color ) {
+	color: @color;
+
+	&::after {
+		background-color: @color;
+	}
+
+	&:active {
+		color: shade(@color, 15%);
+	}
+
+	&:active::after {
+		background-color: shade(@color, 15%);
+	}
+}
+
+ui-link {
+	display: inline-block;
+}
+
+:local(.base) {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		width: 100%;
+		height: 1px;
+		background-color: @primary-color;
+		transition: all ease 0.2s;
+		transform: scaleX(0);
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
+	}
+
+	&:active {
+		color: shade(@primary-color, 15%);
+	}
+
+	&:active::after {
+		background-color: shade(@primary-color, 15%);
+	}
+}
+
+:local(.primary) {
+	.link-style( @primary-color );
+}
+
+:local(.success) {
+	.link-style( @success-color );
+}
+
+:local(.warning) {
+	.link-style( @warning-color );
+}
+
+:local(.danger) {
+	.link-style( @danger-color );
+}

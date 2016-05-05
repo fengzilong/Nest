@@ -1,0 +1,50 @@
+@import "../../theme.less";
+
+ui-checkbox {
+	display: inline-block;
+	cursor: pointer;
+	color: #666;
+}
+
+:local(.base) {
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	border-radius: 3px;
+	border: solid 1px #DDD;
+}
+
+ui-checkbox:active > :local(.base) {
+	/* background-color: @primary-color; */
+}
+
+:local(.base::after) {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 3px;
+	width: 4px;
+	height: 7px;
+	border: 2px solid #ffffff;
+	border-top: none;
+	border-left: none;
+	transform: rotate(15deg) scale(0);
+	transition: all .2s cubic-bezier(0.6, -0.3, 0.5, 1.41);
+}
+
+:local(.base.checked) {
+	background-color: @primary-color;
+	border: solid 1px @primary-color;
+}
+
+:local(.base.checked::after) {
+	transform: rotate(45deg) scale(1);
+}
+
+:local(.base) + span {
+	display: inline-block;
+	font-size: 14px;
+}

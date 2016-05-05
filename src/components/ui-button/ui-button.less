@@ -1,0 +1,170 @@
+@import "../../theme.less";
+
+.button-color(@color; @background; @border){
+	color: @color;
+	background-color: @background;
+	border: solid 1px @border;
+}
+.button-style(@color; @background; @border){
+	.button-color(@color; @background; @border);
+
+	&:hover {
+		.button-color(@color; tint(@background, 20%); tint(@border, 20%));
+	}
+
+	&:active {
+		.button-color(@color; shade(@background, 15%); shade(@border, 15%));
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 3px tint(@background, 85%);
+		text-shadow: 0 0 1px @color;
+	}
+}
+.button-ghost-style(@color; @background; @border){
+	.button-color(@color; @background; @border);
+
+	&:hover {
+		.button-color(@color; tint(@color, 95%); tint(@border, 20%));
+	}
+
+	&:active {
+		.button-color(@color; tint(@color, 85%); @border);
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 3px tint(@color, 85%);
+		text-shadow: none;
+	}
+}
+
+ui-button {
+	display: inline-block;
+}
+
+/* Base */
+
+:local(.base) {
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+	white-space: nowrap;
+	transition: all .3s cubic-bezier(.645,.045,.355,1);
+	transform: translate3d(0,0,0);
+	box-shadow: 0 0 0 3px transparent;
+
+	.button-color(#666; #f4f4f4; #d9d9d9);
+	&:hover {
+		.button-color(@primary-color; #FFF; @primary-color);
+	}
+	&:active {
+		.button-color(shade(@primary-color, 15%); #FFF; shade(@primary-color, 15%));
+	}
+}
+
+/* Color */
+
+:local(.primary) {
+	.button-style(#FFF; @primary-color; @primary-color);
+}
+
+:local(.success) {
+	.button-style(#FFF; @success-color; @success-color);
+}
+
+:local(.warning) {
+	.button-style(#666; @warning-color; @warning-color);
+}
+
+:local(.danger) {
+	.button-style(#FFF; @danger-color; @danger-color);
+}
+
+/* Ghost */
+
+:local(.primary.ghost) {
+	.button-ghost-style(@primary-color; #FFF; @primary-color);
+}
+
+:local(.success.ghost) {
+	.button-ghost-style(@success-color; #FFF; @success-color);
+}
+
+:local(.warning.ghost) {
+	.button-ghost-style(@warning-color; #FFF; @warning-color);
+}
+
+:local(.danger.ghost) {
+	.button-ghost-style(@danger-color; #FFF; @danger-color);
+}
+
+/* Size */
+
+:local(.sm) {
+	font-size: 12px;
+	padding: 0 11px;
+	height: 26px;
+}
+
+:local(.md) {
+	font-size: 13px;
+	padding: 0 12px;
+	height: 29px;
+}
+
+:local(.lg) {
+	font-size: 15px;
+	padding: 0 13px;
+	height: 34px;
+}
+
+/* Disabled */
+
+:local(.disabled) {
+	cursor: @disabled-cursor;
+	.button-color(@disabled-text-color; #f4f4f4; #d9d9d9);
+
+	&:hover {
+		.button-color(@disabled-text-color; #f4f4f4; #d9d9d9);
+	}
+
+	&:active {
+		.button-color(@disabled-text-color; #f4f4f4; #d9d9d9);
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+/*  */
+
+@keyframes loadingCircle {
+	0% {
+		transform-origin: 50% 50%;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform-origin: 50% 50%;
+		transform: rotate(360deg);
+	}
+}
+
+:local(.loading) {
+	animation: loadingCircle .9s infinite linear;
+}
+
+/* block */
+
+ui-button[block] {
+	width: 100%;
+
+	:local(.base) {
+		width: 100%;
+	}
+}
