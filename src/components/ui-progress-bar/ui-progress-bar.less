@@ -3,33 +3,57 @@
 ui-progress-bar {
 	display: flex;
 	align-items: center;
+	height: 8px;
+}
+
+ui-progress-bar[sm] {
+	height: 5px;
+}
+
+ui-progress-bar[lg] {
+	height: 12px;
 }
 
 :local(.outter) {
-	height: 5px;
+	height: 100%;
 	border-radius: 10px;
 	background-color: #DDD;
 	overflow: hidden;
 	flex: 1;
 }
 
+@keyframes progress-bar-active {
+	0% {
+		opacity: .3;
+		width: 0;
+	}
+
+	100% {
+		opacity: 0;
+		width: 100%;
+	}
+}
+
 :local(.inner) {
 	height: 100%;
 	transition: width ease 1s;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		display: block;
+		height: 100%;
+		width: 100%;
+		background-color: #FFF;
+		animation: progress-bar-active 2s ease infinite;
+	}
 }
 
 :local(.label) {
 	margin-left: 10px;
 	font-size: 12px;
 	color: #999;
-}
-
-:local(.sm) {
-	height: 3px;
-}
-
-:local(.lg) {
-	height: 7px;
 }
 
 :local(.primary) {
