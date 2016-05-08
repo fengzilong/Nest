@@ -31,8 +31,13 @@ import './ui-checkbox-group.less';
 			return tmp;
 		};
 
+		let values = this.opts.value;
 		let onChange = this.opts.onChange || function(){};
 		for ( let i = 0, len = checkboxes.length; i < len; i++ ) {
+			if( ~values.indexOf( checkboxes[ i ].opts.value ) ) {
+				checkboxes[ i ].checked = true;
+				checkboxes[ i ].update();
+			}
 			checkboxes[ i ].on('change', () => {
 				let checked = getChecked();
 				onChange( checked.values, checked.keys );

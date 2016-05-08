@@ -2,6 +2,16 @@
 	<br />
 	<br />
 
+	<!-- ui-radio-button -->
+
+	<ui-radio-group>
+		<ui-radio-button value="bj">北京</ui-radio-button><ui-radio-button value="sh">上海</ui-radio-button><ui-radio-button value="gz">广州</ui-radio-button><ui-radio-button value="hz">杭州</ui-radio-button>
+	</ui-radio-group>
+
+
+	<br />
+	<br />
+
 	<!-- ui-badge -->
 
 	<ui-badge count="1000" max="999">
@@ -11,8 +21,6 @@
 	<ui-badge count="50" max="99" dot="{ true }">
 		<div style="width: 40px;height: 40px;background-color: #DDD;border-radius: 5px;"></div>
 	</ui-badge>
-
-
 
 	<br />
 	<br />
@@ -179,9 +187,9 @@
 
 	<!-- ui-radio -->
 
-	<ui-radio-group on-change="{ onRadioChange }">
-		<ui-radio value="option1" checked="{ false }">选项一</ui-radio>
-		<ui-radio value="option2" checked="{ true }">选项二</ui-radio>
+	<ui-radio-group on-change="{ onRadioChange }" value="option1">
+		<ui-radio value="option1">选项一</ui-radio>
+		<ui-radio value="option2">选项二</ui-radio>
 	</ui-radio-group>
 
 	<br />
@@ -189,7 +197,7 @@
 
 	<!-- ui-checkbox -->
 
-	<ui-checkbox-group on-change="{ onCheckboxChange }" checked="{ ['option1', '@2'] }">
+	<ui-checkbox-group on-change="{ onCheckboxChange }" value="{ ['option1', 'option2'] }">
 		<ui-checkbox value="option1">选项一</ui-checkbox>
 		<ui-checkbox value="option2">选项二</ui-checkbox>
 		<ui-checkbox value="option3">选项三</ui-checkbox>

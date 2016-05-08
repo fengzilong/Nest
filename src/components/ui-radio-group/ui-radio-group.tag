@@ -26,10 +26,13 @@ import './ui-radio-group.less';
 				this.update();
 			};
 
-			let lastChecked = null;
+			let lastChecked = this.opts.value;
 
 			let onChange = this.opts.onChange || function(){};
 			for( let i = 0, len = radios.length; i < len; i++ ) {
+				if( this.opts.value && radios[ i ].opts.value === this.opts.value ) {
+					check( i );
+				}
 				radios[ i ].on('change', () => {
 					check( i );
 

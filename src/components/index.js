@@ -5,6 +5,7 @@ import './ui-link';
 import './ui-input-nao';
 import './ui-input';
 import './ui-radio';
+import './ui-radio-button';
 import './ui-radio-group';
 import './ui-checkbox';
 import './ui-checkbox-group';
