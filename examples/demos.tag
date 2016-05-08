@@ -1,16 +1,6 @@
 <demos>
 	<br />
 
-	<!-- ui-radio-button -->
-
-	<ui-radio-group value="sh" on-change="{ onRadioButtonChange }">
-		<ui-radio-button value="bj">北京</ui-radio-button><ui-radio-button value="sh">上海</ui-radio-button><ui-radio-button value="gz">广州</ui-radio-button><ui-radio-button value="hz">杭州</ui-radio-button>
-	</ui-radio-group>
-
-
-	<br />
-	<br />
-
 	<!-- ui-badge -->
 
 	<ui-badge count="1000" max="999">
@@ -162,14 +152,14 @@
 
 	<!-- ui-input -->
 
-	<ui-input value="test value" placeholder="占位符" sm></ui-input>
-	<ui-input placeholder="占位符"></ui-input>
-	<ui-input placeholder="占位符" lg></ui-input>
+	<ui-input value="test value" placeholder="占位文字" sm></ui-input>
+	<ui-input placeholder="占位文字"></ui-input>
+	<ui-input placeholder="占位文字" lg></ui-input>
 
 	<br />
 	<br />
 
-	<ui-input placeholder="占位符" lg disabled="{ true }"></ui-input>
+	<ui-input placeholder="占位文字" lg disabled="{ true }"></ui-input>
 
 	<br />
 	<br />
@@ -180,6 +170,15 @@
 	<ui-switch checked="{ true }"></ui-switch>
 	<ui-switch checked="{ true }" lg></ui-switch>
 	<ui-switch checked="{ true }" disabled="{ true }" lg></ui-switch>
+
+	<br />
+	<br />
+
+	<!-- ui-radio-button -->
+
+	<ui-radio-group value="sh" on-change="{ onRadioButtonChange }">
+		<ui-radio-button value="bj">北京</ui-radio-button><ui-radio-button value="sh">上海</ui-radio-button><ui-radio-button value="gz">广州</ui-radio-button><ui-radio-button value="hz">杭州</ui-radio-button>
+	</ui-radio-group>
 
 	<br />
 	<br />
