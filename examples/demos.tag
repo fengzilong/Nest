@@ -2,6 +2,12 @@
 	<br />
 
 	<!-- ui-badge -->
+	<ui-json-tree json="{ jsonData }"></ui-json-tree>
+
+	<br />
+	<br />
+
+	<!-- ui-badge -->
 
 	<ui-badge count="1000" max="999">
 		<div style="width: 40px;height: 40px;background-color: #DDD;border-radius: 5px;"></div>
@@ -25,18 +31,9 @@
 	<ui-progress-bar value="80" label danger></ui-progress-bar>
 
 	<br />
-
-	<ui-popover content="悬浮内容" direction="top">
-		鼠标移到这里
-	</ui-popover>
-
-	<br />
-	<br />
-	<br />
-	<br />
 	<br />
 
-	<!-- ui -->
+	<!-- ui-button -->
 	<ui-button primary lg block>
 		{ parent.text }
 	</ui-button>
@@ -82,13 +79,11 @@
 	<br />
 	<br />
 
-	<!-- size -->
-
 	<ui-button sm>
 		{ parent.text }
 	</ui-button>
 
-	<ui-button md>
+	<ui-button>
 		{ parent.text }
 	</ui-button>
 
@@ -98,8 +93,6 @@
 
 	<br />
 	<br />
-
-	<!-- with icon -->
 
 	<ui-button primary>
 		<ui-icon icon="left"></ui-icon>
@@ -114,16 +107,12 @@
 	<br />
 	<br />
 
-	<!-- loading -->
-
 	<ui-button primary loading="{ true }">
 		正在加载中
 	</ui-button>
 
 	<br />
 	<br />
-
-	<!-- disabled -->
 
 	<ui-button primary disabled="{ true }">
 		{ parent.text }
@@ -221,10 +210,33 @@
 		<ui-menu-item text="菜单三"></ui-menu-item>
 	</ui-menu>
 
+	<ui-popover content="悬浮内容" direction="top">
+		鼠标移到这里
+	</ui-popover>
+
 	<script>
 		var self = this;
 
 		this.text = '按钮';
+		this.jsonData = {
+			id: 1,
+			name: 'mo',
+			age: 23,
+			numbers: [1, 2, 3, 4, 5],
+			a: {
+				b: ['11', '22', '33'],
+				c: true
+			},
+			arr: [
+				{
+					a: 1,
+					b: '2'
+				},
+				{
+					c: false
+				}
+			]
+		};
 
 		this.onRadioButtonChange = ( v, k ) => {
 			console.log( 'radioButtonChange', v, k );

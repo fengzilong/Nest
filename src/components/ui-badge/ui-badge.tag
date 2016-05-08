@@ -9,6 +9,10 @@ import styles from './ui-badge.less';
 	<script>
 		this.styles = styles;
 
+		this.on('mount', () => {
+			// TODO: add animation
+		});
+
 		this.on('update', () => {
 			let overflowCount = this.opts.max;
 			overflowCount = parseInt( overflowCount );

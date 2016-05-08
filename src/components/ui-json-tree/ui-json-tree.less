@@ -1,5 +1,65 @@
 @import "../../theme.less";
 
+@json-tree-number-color: #3F51B5;
+@json-tree-string-color: #CF4643;
+@json-tree-boolean-color: #3F51B5;
+@json-tree-key-color: #9C27B0;
+
 :local(.base) {
 
+}
+
+.title, .caret {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.caret {
+	justify-content: center;
+	width: 25px;
+	color: #58666e;
+	text-align: center;
+}
+
+.key {
+	color: @json-tree-key-color;
+}
+
+.string {
+	color: @json-tree-string-color;
+}
+
+.number {
+	color: @json-tree-number-color;
+}
+
+.boolean {
+	color: @json-tree-boolean-color;
+}
+
+.object {
+	color: #333;
+}
+
+.children {
+	padding-left: 10px;
+	display: none;
+}
+
+.node.open > .children {
+	display: block;
+}
+
+.caret-right {
+	display: block;
+}
+.caret-down {
+	display: none;
+}
+.node.open > .title > .caret-right {
+	display: none;
+}
+.node.open > .title > .caret-down {
+	display: block;
 }
