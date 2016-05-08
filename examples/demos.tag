@@ -177,7 +177,10 @@
 	<!-- ui-radio-button -->
 
 	<ui-radio-group value="sh" on-change="{ onRadioButtonChange }">
-		<ui-radio-button value="bj">北京</ui-radio-button><ui-radio-button value="sh">上海</ui-radio-button><ui-radio-button value="gz">广州</ui-radio-button><ui-radio-button value="hz">杭州</ui-radio-button>
+		<ui-radio-button value="bj">北京</ui-radio-button>
+		<ui-radio-button value="sh">上海</ui-radio-button>
+		<ui-radio-button value="gz">广州</ui-radio-button>
+		<ui-radio-button value="hz">杭州</ui-radio-button>
 	</ui-radio-group>
 
 	<br />
