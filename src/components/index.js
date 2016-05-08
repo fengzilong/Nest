@@ -1,5 +1,6 @@
 import './ui-button';
 import './ui-icon';
+import './ui-badge';
 import './ui-link';
 import './ui-input-nao';
 import './ui-input';

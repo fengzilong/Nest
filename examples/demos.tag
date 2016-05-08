@@ -1,4 +1,24 @@
 <demos>
+	<br />
+	<br />
+
+	<!-- ui-badge -->
+
+	<ui-badge count="1000" max="999">
+		<div style="width: 40px;height: 40px;background-color: #DDD;border-radius: 5px;"></div>
+	</ui-badge>
+
+	<ui-badge count="50" max="99" dot="{ true }">
+		<div style="width: 40px;height: 40px;background-color: #DDD;border-radius: 5px;"></div>
+	</ui-badge>
+
+
+
+	<br />
+	<br />
+
+	<!-- ui-progress -->
+
 	<ui-progress-bar value="50" label></ui-progress-bar>
 	<br />
 	<ui-progress-bar value="60" label success></ui-progress-bar>
