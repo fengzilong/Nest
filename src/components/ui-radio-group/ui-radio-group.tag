@@ -5,22 +5,35 @@ import './ui-radio-group.less';
 
 	<script>
 		this.on('mount', () => {
+			let radioElements = [];
 			let radios = this.tags[ 'ui-radio' ];
+			let radioButtons = this.tags[ 'ui-radio-button' ];
 
-			if( !radios ){
-				return;
+			if( !radios ) {
+				radios = [];
 			}
 
-			if( !radios.length ){
+			if( typeof radios.length === 'undefined' ) {
 				radios = [ radios ];
 			}
 
+			if( !radioButtons ) {
+				radioButtons = [];
+			}
+
+			if( typeof radioButtons.length === 'undefined' ) {
+				radioButtons = [ radioButtons ];
+			}
+
+			radioElements.push.apply( radioElements, radios );
+			radioElements.push.apply( radioElements, radioButtons );
+
 			let check = idx => {
-				for( let i = 0, len = radios.length; i < len; i++ ) {
+				for( let i = 0, len = radioElements.length; i < len; i++ ) {
 					if( idx === i ){
-						radios[ i ].checked = true;
+						radioElements[ i ].checked = true;
 					} else {
-						radios[ i ].checked = false;
+						radioElements[ i ].checked = false;
 					}
 				}
 				this.update();
@@ -29,16 +42,16 @@ import './ui-radio-group.less';
 			let lastChecked = this.opts.value;
 
 			let onChange = this.opts.onChange || function(){};
-			for( let i = 0, len = radios.length; i < len; i++ ) {
-				if( this.opts.value && radios[ i ].opts.value === this.opts.value ) {
+			for( let i = 0, len = radioElements.length; i < len; i++ ) {
+				if( this.opts.value && radioElements[ i ].opts.value === this.opts.value ) {
 					check( i );
 				}
-				radios[ i ].on('change', () => {
+				radioElements[ i ].on('change', () => {
 					check( i );
 
 					if( i !== lastChecked ){
 						lastChecked = i;
-						onChange( radios[ i ].opts.value, i );
+						onChange( radioElements[ i ].opts.value, i );
 					}
 				});
 			}

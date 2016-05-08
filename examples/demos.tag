@@ -1,10 +1,9 @@
 <demos>
 	<br />
-	<br />
 
 	<!-- ui-radio-button -->
 
-	<ui-radio-group>
+	<ui-radio-group value="sh" on-change="{ onRadioButtonChange }">
 		<ui-radio-button value="bj">北京</ui-radio-button><ui-radio-button value="sh">上海</ui-radio-button><ui-radio-button value="gz">广州</ui-radio-button><ui-radio-button value="hz">杭州</ui-radio-button>
 	</ui-radio-group>
 
@@ -225,12 +224,16 @@
 
 		this.text = '按钮';
 
+		this.onRadioButtonChange = ( v, k ) => {
+			console.log( 'radioButtonChange', v, k );
+		};
+
 		this.onRadioChange = ( v, k ) => {
-			console.log( 'radioChanged', v, k );
+			console.log( 'radioChange', v, k );
 		};
 
 		this.onCheckboxChange = ( v, k ) => {
-			console.log( 'checkboxChanged', v, k);
+			console.log( 'checkboxChange', v, k);
 		};
 
 		this.on('mount', function(){

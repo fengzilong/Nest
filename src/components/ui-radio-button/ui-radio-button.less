@@ -1,10 +1,52 @@
 @import "../../theme.less";
 
-ui-radio-button {
+:local(.base) {
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 0 16px;
 	height: 28px;
-	border: solid 1px #D9D9D9;
 	line-height: 26px;
+	border: solid 1px #D9D9D9;
+	border-left: none;
+	cursor: pointer;
+	font-size: 14px;
+
+	&:hover {
+		color: @primary-color;
+	}
+}
+
+ui-radio-button:first-child :local(.base) {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-left: solid 1px #D9D9D9;
+}
+
+ui-radio-button:last-child :local(.base) {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+:local(.checked) {
+	background: #fff;
+	border-color: @primary-color;
+	color: @primary-color;
+	box-shadow: -1px 0 0 0 @primary-color
+}
+
+ui-radio-button:first-child :local(.checked) {
+	border-color: @primary-color;
+	box-shadow: none !important
+}
+
+:local(.checked):hover {
+	border-color: tint(@primary-color, 10%);
+	box-shadow: -1px 0 0 0 tint(@primary-color, 10%);
+	color: tint(@primary-color, 10%);
+}
+
+:local(.checked):active {
+	border-color: shade(@primary-color, 10%);
+	box-shadow: -1px 0 0 0 shade(@primary-color, 10%);
+	color: shade(@primary-color, 10%);
 }

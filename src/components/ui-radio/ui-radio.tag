@@ -12,8 +12,6 @@ import styles from './ui-radio.less';
 
 		let onToggle = () => {
 			if( !this.checked ) {
-				this.checked = true;
-				this.update();
 				this.opts.onChange && this.opts.onChange( this.checked );
 				this.trigger( 'change' );
 			}
