@@ -136,7 +136,7 @@
 	<!-- ui-input -->
 
 	<ui-input value="test value" placeholder="占位符" sm></ui-input>
-	<ui-input placeholder="占位符" md></ui-input>
+	<ui-input placeholder="占位符"></ui-input>
 	<ui-input placeholder="占位符" lg></ui-input>
 
 	<br />

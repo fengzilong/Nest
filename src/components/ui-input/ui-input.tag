@@ -21,7 +21,6 @@ import styles from './ui-input.less';
 			this.uiCls = classNames({
 				[ styles.base ]: true,
 				[ styles.sm ]: !isUndefined( this.opts.sm ),
-				[ styles.md ]: !isUndefined( this.opts.md ),
 				[ styles.lg ]: !isUndefined( this.opts.lg ),
 			});
 		});
