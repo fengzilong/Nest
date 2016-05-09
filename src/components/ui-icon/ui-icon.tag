@@ -1,22 +1,31 @@
 import './ui-icon.less';
-import classNames from 'classnames';
 
 <ui-icon>
-	<span class="iconfont { classnames }"></span>
+	<span class="iconfont">{ icon }</span>
 
 	<script>
-		this.on('update', () => {
-			const map = {
-				left: 'icon-iconfontunie61e',
-				right: 'icon-iconfontunie61f',
-				loading: 'icon-loading',
-			};
+		const iconset = {
+			'arrow-left': '&#xe600;',
+			'arrow-right': '&#xe601;',
+			loading: '&#xe602;',
+			info: '&#xe608;',
+		};
 
-			this.classnames = classNames({
-				[ map[ 'left' ] ]: this.opts.icon === 'left',
-				[ map[ 'right' ] ]: this.opts.icon === 'right',
-				[ map[ 'loading' ] ]: this.opts.icon === 'loading',
+		const convert = str => {
+			str = str.replace(/(\\u)(\w{4})/gi,function($0){
+				return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w{4})/g,"$2")),16)));
 			});
+			str = str.replace(/(&#x)(\w{4});/gi,function($0){
+				return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g,"$2"),16));
+			});
+			return str;
+		};
+
+		this.one('update', () => {
+			this.icon = this.opts.icon;
+			if( !this.opts.icon && iconset[ this.opts.type ] ) {
+				this.icon = convert( iconset[ this.opts.type ] );
+			}
 		});
 	</script>
 </ui-icon>

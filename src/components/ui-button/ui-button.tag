@@ -5,7 +5,7 @@ import createComponent from '../../util/createComponent';
 
 <ui-button>
 	<button onclick="{ onClick }" class="{ uiCls } { opts.__disabled ? styles.disabled : '' }">
-		<ui-icon icon="loading" if="{ opts.loading }" class="{ styles.loading }"></ui-icon>
+		<ui-icon type="loading" if="{ opts.loading }" class="{ styles.loading }"></ui-icon>
 		<yield></yield>
 	</button>
 

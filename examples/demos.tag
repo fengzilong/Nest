@@ -1,5 +1,8 @@
 <demos>
 	<br />
+	<!-- ui-message -->
+
+	<ui-message content="我是一条消息"></ui-message>
 
 	<!-- ui-badge -->
 	<ui-json-tree json="{ jsonData }"></ui-json-tree>
@@ -95,13 +98,13 @@
 	<br />
 
 	<ui-button primary>
-		<ui-icon icon="left"></ui-icon>
+		<ui-icon type="arrow-left"></ui-icon>
 		{ parent.text }
 	</ui-button>
 
 	<ui-button primary>
 		{ parent.text }
-		<ui-icon icon="right"></ui-icon>
+		<ui-icon type="arrow-right"></ui-icon>
 	</ui-button>
 
 	<br />
