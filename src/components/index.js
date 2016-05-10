@@ -17,3 +17,5 @@ import './ui-switch';
 import './ui-progress-bar';
 import './ui-popover';
 import './ui-message';
+import './ui-collapse';
+import './ui-collapse-panel';

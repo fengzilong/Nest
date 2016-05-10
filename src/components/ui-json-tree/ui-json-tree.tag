@@ -101,7 +101,7 @@ import styles from './ui-json-tree.less';
 						if( !node.nextElementSibling ) {
 							return;
 						}
-						
+
 						let parent = node.parentNode;
 						if( parent.classList.contains( 'open' ) ) {
 							parent.classList.remove( 'open' );

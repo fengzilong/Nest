@@ -1,5 +1,38 @@
 @import "../../theme.less";
+@import "../../helper.less";
 
-:local(.base) {
+ui-collapse-panel {
+	display: block;
+}
 
+ui-collapse > ui-collapse-panel:not(:last-child) {
+	border-bottom: solid 1px @primary-color;
+}
+
+:local(.title) {
+	background-color: fade(@primary-color, 15%);
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+:local(.title-inner) {
+	display: inline-block;
+	padding: 10px;
+	background-color: @primary-color;
+}
+
+:local(.content) {
+	box-sizing: border-box;
+	background-color: #FFF;
+	transition: height .2s cubic-bezier(.215,.61,.355,1);
+}
+:local(.content-box) {
+	padding: 10px;
+}
+:local(.content-inactive) {
+	height: 0;
+}
+:local(.content-active) {
+	height: auto;
 }

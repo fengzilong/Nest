@@ -9,6 +9,8 @@ import './ui-icon.less';
 			'arrow-right': '&#xe601;',
 			loading: '&#xe602;',
 			info: '&#xe608;',
+			'caret-right': '&#xe603;',
+			'caret-down': '&#xe604;',
 		};
 
 		const convert = str => {
