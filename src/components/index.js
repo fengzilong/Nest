@@ -10,6 +10,8 @@ import './ui-radio-group';
 import './ui-checkbox';
 import './ui-checkbox-group';
 import './ui-json-tree';
+import './ui-tree';
+import './ui-tree-node';
 import './ui-menu';
 import './ui-submenu';
 import './ui-menu-item';

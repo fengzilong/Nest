@@ -1,6 +1,26 @@
 <demos>
 	<br />
-	<!-- ui-message -->
+
+	<!-- ui-collapse -->
+
+	<ui-tree>
+		<ui-tree-node title="根节点">
+			<ui-tree-node title="一级">
+				<ui-tree-node title="二级">
+					<ui-tree-node title="三级"></ui-tree-node>
+					<ui-tree-node title="三级"></ui-tree-node>
+				</ui-tree-node>
+				<ui-tree-node title="二级"></ui-tree-node>
+				<ui-tree-node title="二级"></ui-tree-node>
+			</ui-tree-node>
+			<ui-tree-node title="一级"></ui-tree-node>
+		</ui-tree-node>
+	</ui-tree>
+
+	<br />
+	<br />
+
+	<!-- ui-collapse -->
 
 	<ui-collapse>
 		<ui-collapse-panel title="GET /users">
