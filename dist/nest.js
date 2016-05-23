@@ -138,7 +138,7 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	riot.tag2('ui-button', '<button onclick="{onClick}" class="{uiCls} {opts.__disabled ? styles.disabled : \'\'}"> <ui-icon type="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>', '', '', function (opts) {
+	riot.tag2('ui-button', '<button onclick="{onClick}" class="{uiCls} {opts.disabled ? styles.disabled : \'\'}"> <ui-icon type="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>', '', '', function (opts) {
 		var _classNames,
 		    _this = this;
 	
@@ -1115,8 +1115,8 @@
 		var _classNames,
 		    _this = this;
 	
-		this.disabled = this.opts.__disabled || false;
-		var isOn = !!this.opts.__checked;
+		this.disabled = this.opts.disabled || false;
+		var isOn = !!this.opts.checked;
 	
 		this.styles = _uiSwitch2.default;
 		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiSwitch2.default.base, true), _defineProperty(_classNames, _uiSwitch2.default.sm, typeof this.opts.sm !== 'undefined'), _defineProperty(_classNames, _uiSwitch2.default.lg, typeof this.opts.lg !== 'undefined'), _classNames));

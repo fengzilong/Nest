@@ -3,7 +3,7 @@ import styles from './ui-button.less';
 import '../ui-icon';
 
 <ui-button>
-	<button onclick="{ onClick }" class="{ uiCls } { opts.__disabled ? styles.disabled : '' }">
+	<button onclick="{ onClick }" class="{ uiCls } { opts.disabled ? styles.disabled : '' }">
 		<ui-icon type="loading" if="{ opts.loading }" class="{ styles.loading }"></ui-icon>
 		<yield></yield>
 	</button>
