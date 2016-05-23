@@ -758,22 +758,22 @@
 			each(json, function (v, k) {
 				tmp += buildStart();
 				if (typeof v === 'number') {
-					console.log(k, '->', v);
+					// console.log( k, '->', v );
 					tmp = tmp + build(k, v);
 				} else if (typeof v === 'string') {
-					console.log(k, '->', v);
+					// console.log( k, '->', v );
 					tmp = tmp + build(k, v);
 				} else if (typeof v === 'boolean') {
-					console.log(k, '->', v);
+					// console.log( k, '->', v );
 					tmp = tmp + build(k, v);
 				} else if (Array.isArray(v)) {
-					console.log(k, '->');
+					// console.log( k, '->' );
 					tmp += build(k, v);
 					tmp += buildChildrenStart();
 					tmp += buildJsonTree(v);
 					tmp += buildChildrenEnd();
 				} else if ((typeof v === 'undefined' ? 'undefined' : _typeof(v)) === 'object') {
-					console.log(k, '->');
+					// console.log( k, '->' );
 					tmp += build(k, v);
 					tmp += buildChildrenStart();
 					tmp += buildJsonTree(v);
