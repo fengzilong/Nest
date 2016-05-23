@@ -123,3 +123,10 @@ pre {
 .example-code pre > code {
 	font-size: 13px;
 }
+.footer {
+	padding: 0 0 30px;
+	text-align: center;
+}
+.footer strong {
+	color: #E66D6D;
+}
