@@ -31,6 +31,7 @@
     "babel-plugin-transform-runtime": "^6.4.3",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "babel-runtime": "^6.3.19",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
     "css-loader": "^0.23.1",
@@ -38,6 +39,10 @@
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-html-escape": "0.0.3",
+    "gulp-nunjucks": "^2.2.0",
+    "gulp-serve": "^1.2.0",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",
     "postcss-color-mix": "^1.1.0",
@@ -47,9 +52,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
-    "webpack-dev-server": "^1.14.1",
-	"babel-runtime": "^6.3.19"
+    "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

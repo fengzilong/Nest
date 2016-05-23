@@ -3,7 +3,7 @@ import styles from './ui-badge.less';
 <ui-badge>
 	<span class="{ styles.base }">
 		<yield></yield>
-		<sup class="{ styles.count } { !countStr || opts.dot === true ? styles.dot : '' }">{ !countStr || opts.dot === true ? '' : countStr }</sup>
+		<sup if="{ parseInt( opts.count ) > 0 }" class="{ styles.count } { !countStr || opts.dot === true ? styles.dot : '' }">{ !countStr || opts.dot === true ? '' : countStr }</sup>
 	</span>
 
 	<script>

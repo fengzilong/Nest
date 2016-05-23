@@ -17,12 +17,10 @@ import styles from './ui-input.less';
 	<script>
 		const isUndefined = v => typeof v === 'undefined';
 
-		this.on('before-mount', () => {
-			this.uiCls = classNames({
-				[ styles.base ]: true,
-				[ styles.sm ]: !isUndefined( this.opts.sm ),
-				[ styles.lg ]: !isUndefined( this.opts.lg ),
-			});
+		this.uiCls = classNames({
+			[ styles.base ]: true,
+			[ styles.sm ]: !isUndefined( this.opts.sm ),
+			[ styles.lg ]: !isUndefined( this.opts.lg ),
 		});
 
 		this.on('update', () => {
