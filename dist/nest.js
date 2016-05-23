@@ -46,19 +46,19 @@
 
 	'use strict';
 
-	__webpack_require__(2);
+	__webpack_require__(3);
 
-	__webpack_require__(11);
+	__webpack_require__(12);
 
 /***/ },
 /* 1 */,
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 3 */,
 /* 4 */,
 /* 5 */,
 /* 6 */,
@@ -66,34 +66,37 @@
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(12);
+	__webpack_require__(13);
 
-	__webpack_require__(16);
+	__webpack_require__(17);
 
-	__webpack_require__(21);
+	__webpack_require__(20);
 
-	__webpack_require__(24);
+	__webpack_require__(23);
 
-	__webpack_require__(27);
+	__webpack_require__(26);
 
-	__webpack_require__(30);
+	__webpack_require__(29);
 
-	__webpack_require__(33);
+	__webpack_require__(32);
 
-	__webpack_require__(36);
+	__webpack_require__(35);
 
-	__webpack_require__(39);
+	__webpack_require__(38);
 
-	__webpack_require__(42);
+	__webpack_require__(41);
 
-	__webpack_require__(45);
+	__webpack_require__(44);
 
-	__webpack_require__(48);
+	__webpack_require__(47);
+
+	__webpack_require__(50);
 
 	__webpack_require__(51);
 
@@ -101,60 +104,63 @@
 
 	__webpack_require__(57);
 
+	__webpack_require__(60);
+
+	__webpack_require__(63);
+
+	__webpack_require__(66);
+
+	__webpack_require__(69);
+
+	__webpack_require__(72);
+
+	__webpack_require__(75);
+
+	__webpack_require__(78);
+
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiButton = __webpack_require__(14);
+	var _uiButton = __webpack_require__(15);
 	
 	var _uiButton2 = _interopRequireDefault(_uiButton);
 	
-	__webpack_require__(16);
-	
-	var _createComponent = __webpack_require__(19);
-	
-	var _createComponent2 = _interopRequireDefault(_createComponent);
+	__webpack_require__(17);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	riot.tag2('ui-button', '<button onclick="{onClick}" class="{uiCls} {opts.__disabled ? styles.disabled : \'\'}"> <ui-icon icon="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>', '', '', function (opts) {
-		var _this = this;
+	riot.tag2('ui-button', '<button onclick="{onClick}" class="{uiCls} {opts.__disabled ? styles.disabled : \'\'}"> <ui-icon type="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>', '', '', function (opts) {
+		var _classNames,
+		    _this = this;
 	
-		(0, _createComponent2.default)({
-			target: this,
-			styles: _uiButton2.default,
-			beforeMount: function beforeMount() {
-				var _classNames;
+		this.styles = _uiButton2.default;
 	
-				var isUndefined = function isUndefined(v) {
-					return typeof v === 'undefined';
-				};
+		var isUndefined = function isUndefined(v) {
+			return typeof v === 'undefined';
+		};
 	
-				this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.ghost, !isUndefined(this.opts.ghost)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
-			},
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.ghost, !isUndefined(this.opts.ghost)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
 	
-			$: {
-				onClick: function onClick() {
-					if (_this.opts.__disabled) {
-						return;
-					}
-	
-					_this.opts.onClick && _this.opts.onClick();
-				}
+		this.onClick = function () {
+			if (_this.opts.__disabled) {
+				return;
 			}
-		});
+	
+			_this.opts.onClick && _this.opts.onClick();
+		};
 	}, '{ }');
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -208,129 +214,119 @@
 
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-button__base--23f2b","primary":"ui-button__primary--55b06","success":"ui-button__success--a5daa","warning":"ui-button__warning--099ac","danger":"ui-button__danger--0c2f4","ghost":"ui-button__ghost--1a0be","sm":"ui-button__sm--586c1","md":"ui-button__md--dd1dc","lg":"ui-button__lg--aa436","disabled":"ui-button__disabled--a6225","loading":"ui-button__loading--df6bb"};
 
 /***/ },
-/* 15 */,
-/* 16 */
+/* 16 */,
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(17);
+	__webpack_require__(18);
 	
-	var _classnames = __webpack_require__(13);
-	
-	var _classnames2 = _interopRequireDefault(_classnames);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-	
-	riot.tag2('ui-icon', '<span class="iconfont {classnames}"></span>', '', '', function (opts) {
+	riot.tag2('ui-icon', '<span class="iconfont">{icon}</span>', '', '', function (opts) {
 		var _this = this;
 	
-		this.on('update', function () {
-			var _classNames;
+		var iconset = {
+			'arrow-left': '&#xe600;',
+			'arrow-right': '&#xe601;',
+			loading: '&#xe602;',
+			info: '&#xe608;',
+			'caret-right': '&#xe603;',
+			'caret-down': '&#xe604;'
+		};
 	
-			var map = {
-				left: 'icon-iconfontunie61e',
-				right: 'icon-iconfontunie61f',
-				loading: 'icon-loading'
-			};
+		var convert = function convert(str) {
+			str = str.replace(/(\\u)(\w{4})/gi, function ($0) {
+				return String.fromCharCode(parseInt(escape($0).replace(/(%5Cu)(\w{4})/g, "$2"), 16));
+			});
+			str = str.replace(/(&#x)(\w{4});/gi, function ($0) {
+				return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g, "$2"), 16));
+			});
+			return str;
+		};
 	
-			_this.classnames = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, map['left'], _this.opts.icon === 'left'), _defineProperty(_classNames, map['right'], _this.opts.icon === 'right'), _defineProperty(_classNames, map['loading'], _this.opts.icon === 'loading'), _classNames));
+		this.one('update', function () {
+			_this.icon = _this.opts.icon;
+			if (!_this.opts.icon && iconset[_this.opts.type]) {
+				_this.icon = convert(iconset[_this.opts.type]);
+			}
 		});
 	}, '{ }');
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 18 */,
-/* 19 */
+/* 19 */,
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
+	var _uiBadge = __webpack_require__(21);
 	
-	var _extend = __webpack_require__(20);
-	
-	var _extend2 = _interopRequireDefault(_extend);
+	var _uiBadge2 = _interopRequireDefault(_uiBadge);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (_ref) {
-		var target = _ref.target;
-		var styles = _ref.styles;
-		var beforeMount = _ref.beforeMount;
-		var unmount = _ref.unmount;
-		var $ = _ref.$;
+	riot.tag2('ui-badge', '<span class="{styles.base}"> <yield></yield> <sup class="{styles.count} {!countStr || opts.dot === true ? styles.dot : \'\'}">{!countStr || opts.dot === true ? \'\' : countStr}</sup> </span>', '', '', function (opts) {
+		var _this = this;
 	
-		if (!target) {
-			return;
-		}
+		this.styles = _uiBadge2.default;
 	
-		target.on('before-mount', function () {
-			beforeMount.call(target);
+		this.on('mount', function () {
+			// TODO: add animation
 		});
 	
-		target.on('unmount', function () {
-			unmount.call(target);
+		this.on('update', function () {
+			var overflowCount = _this.opts.max;
+			overflowCount = parseInt(overflowCount);
+			if (isNaN(overflowCount)) {
+				overflowCount = Infinity;
+			}
+	
+			var count = _this.opts.count;
+			count = parseInt(count);
+			if (!isNaN(count)) {
+				var countStr = count;
+				if (count > overflowCount) {
+					countStr = overflowCount + '+';
+				}
+	
+				_this.countStr = countStr;
+			} else {
+				// 不合法的count，替换为dot
+	
+			}
 		});
-	
-		target.styles = styles;
-	
-		(0, _extend2.default)(target, { styles: styles }, $);
-	};
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	exports.default = function (object) {
-		for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-			args[_key - 1] = arguments[_key];
-		}
-	
-		for (var i = 0, source; source = args[i]; i++) {
-			if (!source) {
-				continue;
-			}
-	
-			for (var property in source) {
-				object[property] = source[property];
-			}
-		}
-	
-		return object;
-	};
+	}, '{ }');
 
 /***/ },
 /* 21 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"ui-badge__base--b9cfc","count":"ui-badge__count--a0dab","dot":"ui-badge__dot--084f1"};
+
+/***/ },
+/* 22 */,
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiLink = __webpack_require__(22);
+	var _uiLink = __webpack_require__(24);
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -348,20 +344,20 @@
 	}, '{ }');
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-link__base--00da4","primary":"ui-link__primary--d23d5","success":"ui-link__success--0d6b1","warning":"ui-link__warning--e931b","danger":"ui-link__danger--ba7fa"};
 
 /***/ },
-/* 23 */,
-/* 24 */
+/* 25 */,
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(25);
+	__webpack_require__(27);
 	
 	riot.tag2('ui-input-nao', '<span class="input input--nao {input--filled : hasValue}" name="container"> <input class="input__field input__field--nao" type="text" onchange="{onChange}"> <label class="input__label input__label--nao"> <span class="input__label-content input__label-content--nao">{opts.placeholder}</span> </label> <svg class="graphic graphic--nao" width="300%" height="100%" viewbox="0 0 1200 60" preserveaspectratio="none"> <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path> </svg> </span>', '', '', function (opts) {
 			var _this = this;
@@ -376,23 +372,23 @@
 	}, '{ }');
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 26 */,
-/* 27 */
+/* 28 */,
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiInput = __webpack_require__(28);
+	var _uiInput = __webpack_require__(30);
 	
 	var _uiInput2 = _interopRequireDefault(_uiInput);
 	
@@ -410,7 +406,7 @@
 		this.on('before-mount', function () {
 			var _classNames;
 	
-			_this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiInput2.default.base, true), _defineProperty(_classNames, _uiInput2.default.sm, !isUndefined(_this.opts.sm)), _defineProperty(_classNames, _uiInput2.default.md, !isUndefined(_this.opts.md)), _defineProperty(_classNames, _uiInput2.default.lg, !isUndefined(_this.opts.lg)), _classNames));
+			_this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiInput2.default.base, true), _defineProperty(_classNames, _uiInput2.default.sm, !isUndefined(_this.opts.sm)), _defineProperty(_classNames, _uiInput2.default.lg, !isUndefined(_this.opts.lg)), _classNames));
 		});
 	
 		this.on('update', function () {
@@ -435,20 +431,20 @@
 	}, '{ }');
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"base":"ui-input__base--d9c63","sm":"ui-input__sm--d8ab3","md":"ui-input__md--af2d5","lg":"ui-input__lg--5db49","disabled":"ui-input__disabled--2541c"};
+	module.exports = {"base":"ui-input__base--d9c63","sm":"ui-input__sm--d8ab3","lg":"ui-input__lg--5db49","disabled":"ui-input__disabled--2541c"};
 
 /***/ },
-/* 29 */,
-/* 30 */
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiRadio = __webpack_require__(31);
+	var _uiRadio = __webpack_require__(33);
 	
 	var _uiRadio2 = _interopRequireDefault(_uiRadio);
 	
@@ -462,8 +458,6 @@
 	
 		var onToggle = function onToggle() {
 			if (!_this.checked) {
-				_this.checked = true;
-				_this.update();
 				_this.opts.onChange && _this.opts.onChange(_this.checked);
 				_this.trigger('change');
 			}
@@ -479,81 +473,137 @@
 	}, '{ }');
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-radio__base--99842","checked":"ui-radio__checked--83367"};
 
 /***/ },
-/* 32 */,
-/* 33 */
+/* 34 */,
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(34);
+	var _uiRadioButton = __webpack_require__(36);
+	
+	var _uiRadioButton2 = _interopRequireDefault(_uiRadioButton);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-radio-button', '<span class="{styles.base} {checked ? styles.checked : \'\'}"> <yield></yield> </span>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _uiRadioButton2.default;
+		this.checked = false;
+	
+		var onClick = function onClick() {
+			if (!_this.checked) {
+				_this.opts.onChange && _this.opts.onChange();
+				_this.trigger('change');
+			}
+		};
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onClick, false);
+		});
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onClick, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"ui-radio-button__base--de77c","checked":"ui-radio-button__checked--a2fc6"};
+
+/***/ },
+/* 37 */,
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	__webpack_require__(39);
 	
 	riot.tag2('ui-radio-group', '<yield></yield>', '', '', function (opts) {
 		var _this = this;
 	
 		this.on('mount', function () {
+			var radioElements = [];
 			var radios = _this.tags['ui-radio'];
+			var radioButtons = _this.tags['ui-radio-button'];
 	
 			if (!radios) {
-				return;
+				radios = [];
 			}
 	
-			if (!radios.length) {
+			if (typeof radios.length === 'undefined') {
 				radios = [radios];
 			}
 	
+			if (!radioButtons) {
+				radioButtons = [];
+			}
+	
+			if (typeof radioButtons.length === 'undefined') {
+				radioButtons = [radioButtons];
+			}
+	
+			radioElements.push.apply(radioElements, radios);
+			radioElements.push.apply(radioElements, radioButtons);
+	
 			var check = function check(idx) {
-				for (var i = 0, len = radios.length; i < len; i++) {
+				for (var i = 0, len = radioElements.length; i < len; i++) {
 					if (idx === i) {
-						radios[i].checked = true;
+						radioElements[i].checked = true;
 					} else {
-						radios[i].checked = false;
+						radioElements[i].checked = false;
 					}
 				}
 				_this.update();
 			};
 	
-			var lastChecked = null;
+			var lastChecked = _this.opts.value;
 	
 			var onChange = _this.opts.onChange || function () {};
 	
 			var _loop = function _loop(i, len) {
-				radios[i].on('change', function () {
+				if (_this.opts.value && radioElements[i].opts.value === _this.opts.value) {
+					check(i);
+				}
+				radioElements[i].on('change', function () {
 					check(i);
 	
 					if (i !== lastChecked) {
 						lastChecked = i;
-						onChange(radios[i].opts.value, i);
+						onChange(radioElements[i].opts.value, i);
 					}
 				});
 			};
 	
-			for (var i = 0, len = radios.length; i < len; i++) {
+			for (var i = 0, len = radioElements.length; i < len; i++) {
 				_loop(i, len);
 			}
 		});
 	});
 
 /***/ },
-/* 34 */
+/* 39 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 35 */,
-/* 36 */
+/* 40 */,
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCheckbox = __webpack_require__(37);
+	var _uiCheckbox = __webpack_require__(42);
 	
 	var _uiCheckbox2 = _interopRequireDefault(_uiCheckbox);
 	
@@ -582,20 +632,20 @@
 	}, '{ }');
 
 /***/ },
-/* 37 */
+/* 42 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-checkbox__base--c3df2","checked":"ui-checkbox__checked--35331"};
 
 /***/ },
-/* 38 */,
-/* 39 */
+/* 43 */,
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(40);
+	__webpack_require__(45);
 	
 	riot.tag2('ui-checkbox-group', '<yield></yield>', '', '', function (opts) {
 		var _this = this;
@@ -627,8 +677,13 @@
 				return tmp;
 			};
 	
+			var values = _this.opts.value;
 			var onChange = _this.opts.onChange || function () {};
 			for (var i = 0, len = checkboxes.length; i < len; i++) {
+				if (~values.indexOf(checkboxes[i].opts.value)) {
+					checkboxes[i].checked = true;
+					checkboxes[i].update();
+				}
 				checkboxes[i].on('change', function () {
 					var checked = getChecked();
 					onChange(checked.values, checked.keys);
@@ -638,21 +693,337 @@
 	});
 
 /***/ },
-/* 40 */
+/* 45 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 41 */,
-/* 42 */
+/* 46 */,
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenu = __webpack_require__(43);
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _classnames = __webpack_require__(13);
+	var _uiJsonTree = __webpack_require__(48);
+	
+	var _uiJsonTree2 = _interopRequireDefault(_uiJsonTree);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-json-tree', '', '', '', function (opts) {
+		var _this = this;
+	
+		var hasOwn = Object.hasOwnProperty;
+		var each = function each(obj, fn) {
+			if (Array.isArray(obj)) {
+				for (var i = 0, len = obj.length; i < len; i++) {
+					fn(obj[i], i);
+				}
+			} else {
+				for (var i in obj) {
+					if (hasOwn.call(obj, i)) {
+						fn(obj[i], i);
+					}
+				}
+			}
+		};
+		var buildStart = function buildStart() {
+			return '\n\t\t\t<div class="node">\n\t\t\t';
+		};
+		var buildEnd = function buildEnd() {
+			return '\n\t\t\t</div>\n\t\t\t';
+		};
+		var build = function build(k, v) {
+			var hasCaret = false;
+			var type = typeof v === 'undefined' ? 'undefined' : _typeof(v);
+			if (typeof v === 'string') {
+				v = '"' + v + '"';
+			} else if (Array.isArray(v)) {
+				v = 'Array[' + v.length + ']';
+				hasCaret = true;
+			} else if (type === 'object') {
+				v = 'Object';
+				hasCaret = true;
+			}
+			return '\n\t\t\t<div class="title">' + (hasCaret ? '<div class="iconfont caret caret-right">&#xe603;</div><div class="iconfont caret caret-down">&#xe604;</div>' : '<div class="iconfont caret"></div>') + ('\n\t\t\t\t<div>\n\t\t\t\t\t<span class="key">' + k + ':</span>\n\t\t\t\t\t<span class="' + type + '">' + v + '</span>\n\t\t\t\t</div>\n\t\t\t</div>');
+		};
+		var buildChildrenStart = function buildChildrenStart() {
+			return '\n\t\t\t<div class="children">\n\t\t\t';
+		};
+		var buildChildrenEnd = function buildChildrenEnd() {
+			return '\n\t\t\t</div>\n\t\t\t';
+		};
+		var buildJsonTree = function buildJsonTree(json) {
+			var tmp = '';
+			each(json, function (v, k) {
+				tmp += buildStart();
+				if (typeof v === 'number') {
+					console.log(k, '->', v);
+					tmp = tmp + build(k, v);
+				} else if (typeof v === 'string') {
+					console.log(k, '->', v);
+					tmp = tmp + build(k, v);
+				} else if (typeof v === 'boolean') {
+					console.log(k, '->', v);
+					tmp = tmp + build(k, v);
+				} else if (Array.isArray(v)) {
+					console.log(k, '->');
+					tmp += build(k, v);
+					tmp += buildChildrenStart();
+					tmp += buildJsonTree(v);
+					tmp += buildChildrenEnd();
+				} else if ((typeof v === 'undefined' ? 'undefined' : _typeof(v)) === 'object') {
+					console.log(k, '->');
+					tmp += build(k, v);
+					tmp += buildChildrenStart();
+					tmp += buildJsonTree(v);
+					tmp += buildChildrenEnd();
+				}
+				tmp += buildEnd();
+			});
+			return tmp;
+		};
+	
+		var last = undefined;
+		this.on('updated', function () {
+			if (_this.opts.json !== last) {
+				var result = buildJsonTree(_this.opts.json);
+				_this.root.innerHTML = result;
+				// bind
+				var nodes = _this.root.querySelectorAll('.title');
+				nodes && Array.prototype.slice.call(nodes).forEach(function (node) {
+					node.addEventListener('click', function () {
+						if (!node.nextElementSibling) {
+							return;
+						}
+	
+						var parent = node.parentNode;
+						if (parent.classList.contains('open')) {
+							parent.classList.remove('open');
+						} else {
+							parent.classList.add('open');
+						}
+					}, false);
+				});
+				last = _this.opts.json;
+			}
+		});
+	
+		this.on('mount', function () {});
+	});
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 49 */,
+/* 50 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	riot.tag2('ui-tree', '<yield></yield>', '', '', function (opts) {
+		var _this = this;
+	
+		var STATUS = {
+			CHECKED: 0,
+			UNCHECKED: 1,
+			HALF_CHECKED: 2
+		};
+	
+		this.nodes = {};
+		this.one('update', function () {
+			var treeNodes = _this.tags['ui-tree-node'];
+			if (!treeNodes) {
+				treeNodes = [];
+			} else if (typeof treeNodes.length === 'undefined') {
+				treeNodes = [treeNodes];
+			}
+	
+			for (var i = 0, len = treeNodes.length; i < len; i++) {
+				treeNodes[i].treeNodeId = i + '';
+			}
+		});
+	
+		this.on('tree-node-change', function (id) {
+			var nodes = _this.nodes;
+	
+			// 修改当前节点
+	
+			if (nodes[id].status !== STATUS.CHECKED) {
+				nodes[id].status = STATUS.CHECKED;
+			} else {
+				nodes[id].status = STATUS.UNCHECKED;
+			}
+	
+			// 修改子孙节点
+	
+			if (nodes[id].status === STATUS.CHECKED) {
+				for (var i in nodes) {
+					if (i !== id && i.startsWith(id)) {
+						nodes[i].status = STATUS.CHECKED;
+						nodes[i].update();
+					}
+				}
+			} else {
+				for (var i in nodes) {
+					if (i !== id && i.startsWith(id)) {
+						nodes[i].status = STATUS.UNCHECKED;
+						nodes[i].update();
+					}
+				}
+			}
+	
+			// 修改祖先节点
+	
+			if (nodes[id].status === STATUS.CHECKED) {
+				var parentId = id.slice(0, -1);
+				var hasChildNotChecked = false;
+				// 非根节点
+				while (parentId.length > 0) {
+					// 父节点的子孙节点中存在半选或者未选，则父节点是半选(当前节点选中了)
+					if (!hasChildNotChecked) {
+						for (var i in nodes) {
+							if (i !== parentId && i.startsWith(parentId)) {
+								if (nodes[i].status !== STATUS.CHECKED) {
+									hasChildNotChecked = true;
+									break;
+								}
+							}
+						}
+					}
+	
+					if (hasChildNotChecked) {
+						nodes[parentId].status = STATUS.HALF_CHECKED;
+					} else {
+						nodes[parentId].status = STATUS.CHECKED;
+					}
+					nodes[parentId].update();
+	
+					parentId = parentId.slice(0, -1);
+				}
+			} else {
+				var parentId = id.slice(0, -1);
+				var hasChildChecked = false;
+				// 非根节点
+				while (parentId.length > 0) {
+					// 父节点的子孙节点中存在选中状态，则父节点是半选(或者全未选)
+					if (!hasChildChecked) {
+						for (var i in nodes) {
+							if (i !== parentId && i.startsWith(parentId)) {
+								if (nodes[i].status === STATUS.CHECKED) {
+									hasChildChecked = true;
+									break;
+								}
+							}
+						}
+					}
+	
+					if (hasChildChecked) {
+						nodes[parentId].status = STATUS.HALF_CHECKED;
+					} else {
+						nodes[parentId].status = STATUS.UNCHECKED;
+					}
+					nodes[parentId].update();
+	
+					parentId = parentId.slice(0, -1);
+				}
+			}
+		});
+	});
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiTreeNode = __webpack_require__(52);
+	
+	var _uiTreeNode2 = _interopRequireDefault(_uiTreeNode);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-tree-node', '<span class="{styles.state}">{this.statusIcon()}</span> <span class="{styles.title}" onclick="{onCheckChange}">{opts.title}</span> <div class="{styles.children}"> <yield></yield> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		var STATUS = {
+			CHECKED: 0,
+			UNCHECKED: 1,
+			HALF_CHECKED: 2
+		};
+	
+		this.styles = _uiTreeNode2.default;
+		this.STATUS = STATUS;
+		this.status = STATUS.UNCHECKED;
+		this.statusIcon = function () {
+			var icon = '';
+			switch (_this.status) {
+				case STATUS.CHECKED:
+					icon = 'v';
+					break;
+				case STATUS.UNCHECKED:
+					icon = '口';
+					break;
+				case STATUS.HALF_CHECKED:
+					icon = '曰';
+					break;
+			}
+			return icon;
+		};
+	
+		this.on('mount', function () {
+			var parent = _this.parent;
+			if (parent.root.tagName === 'UI-TREE') {
+				_this.tree = parent;
+			} else if (parent.tree) {
+				_this.tree = parent.tree;
+			}
+	
+			_this.tree.nodes[_this.treeNodeId] = _this;
+	
+			var currentTreeNodeId = _this.treeNodeId || '';
+	
+			var treeNodes = _this.tags['ui-tree-node'];
+			if (!treeNodes) {
+				treeNodes = [];
+			} else if (typeof treeNodes.length === 'undefined') {
+				treeNodes = [treeNodes];
+			}
+	
+			for (var i = 0, len = treeNodes.length; i < len; i++) {
+				treeNodes[i].treeNodeId = currentTreeNodeId + i + '';
+			}
+		});
+	
+		this.onCheckChange = function () {
+			_this.tree.trigger('tree-node-change', _this.treeNodeId);
+		};
+	}, '{ }');
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"title":"ui-tree-node__title--6b761","children":"ui-tree-node__children--eda21"};
+
+/***/ },
+/* 53 */,
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiMenu = __webpack_require__(55);
+	
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -663,19 +1034,19 @@
 	});
 
 /***/ },
-/* 43 */
+/* 55 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 44 */,
-/* 45 */
+/* 56 */,
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiSubmenu = __webpack_require__(46);
+	var _uiSubmenu = __webpack_require__(58);
 	
 	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
 		this.styles = {
@@ -684,22 +1055,22 @@
 	}, '{ }');
 
 /***/ },
-/* 46 */
+/* 58 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"items":"ui-submenu__items--f47d9"};
 
 /***/ },
-/* 47 */,
-/* 48 */
+/* 59 */,
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenuItem = __webpack_require__(49);
+	var _uiMenuItem = __webpack_require__(61);
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -718,24 +1089,24 @@
 	}, '{ }');
 
 /***/ },
-/* 49 */
+/* 61 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-menu-item__base--46135"};
 
 /***/ },
-/* 50 */,
-/* 51 */
+/* 62 */,
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiSwitch = __webpack_require__(52);
+	var _uiSwitch = __webpack_require__(64);
 	
 	var _uiSwitch2 = _interopRequireDefault(_uiSwitch);
 	
@@ -794,24 +1165,24 @@
 	}, '{ }');
 
 /***/ },
-/* 52 */
+/* 64 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-switch__base--e2fac","off":"ui-switch__off--b66a6","on":"ui-switch__on--17e70","sm":"ui-switch__sm--c01c5","lg":"ui-switch__lg--3d195","disabled":"ui-switch__disabled--64b78"};
 
 /***/ },
-/* 53 */,
-/* 54 */
+/* 65 */,
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiProgressBar = __webpack_require__(55);
+	var _uiProgressBar = __webpack_require__(67);
 	
 	var _uiProgressBar2 = _interopRequireDefault(_uiProgressBar);
 	
-	var _classnames = __webpack_require__(13);
+	var _classnames = __webpack_require__(14);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -819,29 +1190,28 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	riot.tag2('ui-progress-bar', '<div class="{styles.outter} {sizeCls}"> <div class="{styles.inner} {colorCls}" riot-style="width: {opts.value}%;"></div> </div> <div if="{typeof opts.label !== \'undefined\'}" class="{styles.label}"> {this.opts.value}% </div>', '', '', function (opts) {
-		var _classNames, _classNames2;
+	riot.tag2('ui-progress-bar', '<div class="{styles.outter}"> <div class="{styles.inner} {colorCls}" riot-style="width: {opts.value}%;"></div> </div> <div if="{typeof opts.label !== \'undefined\'}" class="{styles.label}"> {this.opts.value}% </div>', '', '', function (opts) {
+		var _classNames;
 	
 		this.styles = _uiProgressBar2.default;
-		this.sizeCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiProgressBar2.default.sm, typeof this.opts.sm !== 'undefined'), _defineProperty(_classNames, _uiProgressBar2.default.lg, typeof this.opts.lg !== 'undefined'), _classNames));
-		this.colorCls = (0, _classnames2.default)((_classNames2 = {}, _defineProperty(_classNames2, _uiProgressBar2.default.primary, true), _defineProperty(_classNames2, _uiProgressBar2.default.success, typeof this.opts.success !== 'undefined'), _defineProperty(_classNames2, _uiProgressBar2.default.warning, typeof this.opts.warning !== 'undefined'), _defineProperty(_classNames2, _uiProgressBar2.default.danger, typeof this.opts.danger !== 'undefined'), _classNames2));
+		this.colorCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiProgressBar2.default.primary, true), _defineProperty(_classNames, _uiProgressBar2.default.success, typeof this.opts.success !== 'undefined'), _defineProperty(_classNames, _uiProgressBar2.default.warning, typeof this.opts.warning !== 'undefined'), _defineProperty(_classNames, _uiProgressBar2.default.danger, typeof this.opts.danger !== 'undefined'), _classNames));
 	}, '{ }');
 
 /***/ },
-/* 55 */
+/* 67 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"outter":"ui-progress-bar__outter--b19c7","inner":"ui-progress-bar__inner--c7cc3","label":"ui-progress-bar__label--5cad3","sm":"ui-progress-bar__sm--ab752","lg":"ui-progress-bar__lg--1b9d4","primary":"ui-progress-bar__primary--fc241","success":"ui-progress-bar__success--8db4a","warning":"ui-progress-bar__warning--f4465","danger":"ui-progress-bar__danger--0ed62"};
+	module.exports = {"outter":"ui-progress-bar__outter--b19c7","inner":"ui-progress-bar__inner--c7cc3","label":"ui-progress-bar__label--5cad3","primary":"ui-progress-bar__primary--fc241","success":"ui-progress-bar__success--8db4a","warning":"ui-progress-bar__warning--f4465","danger":"ui-progress-bar__danger--0ed62"};
 
 /***/ },
-/* 56 */,
-/* 57 */
+/* 68 */,
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiPopover = __webpack_require__(58);
+	var _uiPopover = __webpack_require__(70);
 	
 	var _uiPopover2 = _interopRequireDefault(_uiPopover);
 	
@@ -860,11 +1230,98 @@
 	}, '{ }');
 
 /***/ },
-/* 58 */
+/* 70 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"popover":"ui-popover__popover--2cd67"};
+
+/***/ },
+/* 71 */,
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiMessage = __webpack_require__(73);
+	
+	var _uiMessage2 = _interopRequireDefault(_uiMessage);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-message', '<ui-icon type="info" class="{styles.icon}"></ui-icon> <div>{opts.content}<yield></yield></div>', '', '', function (opts) {
+			this.styles = _uiMessage2.default;
+	}, '{ }');
+
+/***/ },
+/* 73 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"ui-message__icon--82d2e"};
+
+/***/ },
+/* 74 */,
+/* 75 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiCollapse = __webpack_require__(76);
+	
+	var _uiCollapse2 = _interopRequireDefault(_uiCollapse);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-collapse', '<yield></yield>', '', '', function (opts) {
+			this.styles = _uiCollapse2.default;
+	
+			this.on('mount', function () {});
+	});
+
+/***/ },
+/* 76 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 77 */,
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiCollapsePanel = __webpack_require__(79);
+	
+	var _uiCollapsePanel2 = _interopRequireDefault(_uiCollapsePanel);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-collapse-panel', '<div class="{styles.title}"> <div class="{styles[ \'title-inner\' ]}"> <ui-icon type="caret-right"></ui-icon> {opts.title} </div> </div> <div class="{styles.content} {expand ? styles[ \'content-active\' ] : styles[ \'content-inactive\' ]}"> <div class="{styles[ \'content-box\' ]}"> <yield></yield> </div> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _uiCollapsePanel2.default;
+		this.expand = false;
+	
+		var onToggle = function onToggle() {
+			_this.expand = !_this.expand;
+			_this.update();
+		};
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onToggle, false);
+		});
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onToggle, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 79 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"title":"ui-collapse-panel__title--47429","title-inner":"ui-collapse-panel__title-inner--2cde4","content":"ui-collapse-panel__content--d7b6a","content-box":"ui-collapse-panel__content-box--d8edc","content-inactive":"ui-collapse-panel__content-inactive--9eaf4","content-active":"ui-collapse-panel__content-active--4dad8"};
 
 /***/ }
 /******/ ]);
