@@ -397,17 +397,14 @@
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	riot.tag2('ui-input', '<input class="{uiCls} {stateCls}" type="{opts.type || \'text\'}" placeholder="{opts.placeholder}" onchange="{onChange}" oninput="{onInput}" onfocus="{onFocus}" onblur="{onBlur}" __disabled="{opts.__disabled === true}" value="{opts.value}">', '', '', function (opts) {
-		var _this = this;
+		var _classNames,
+		    _this = this;
 	
 		var isUndefined = function isUndefined(v) {
 			return typeof v === 'undefined';
 		};
 	
-		this.on('before-mount', function () {
-			var _classNames;
-	
-			_this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiInput2.default.base, true), _defineProperty(_classNames, _uiInput2.default.sm, !isUndefined(_this.opts.sm)), _defineProperty(_classNames, _uiInput2.default.lg, !isUndefined(_this.opts.lg)), _classNames));
-		});
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiInput2.default.base, true), _defineProperty(_classNames, _uiInput2.default.sm, !isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiInput2.default.lg, !isUndefined(this.opts.lg)), _classNames));
 	
 		this.on('update', function () {
 			_this.stateCls = (0, _classnames2.default)(_defineProperty({}, _uiInput2.default.disabled, opts.__disabled === true));

@@ -181,22 +181,18 @@
 
 
 <div class="box-header">
-	Input Size
+	Input Basic
 </div>
 <div class="box-content">
 	<div class="element-inline">
 		<ui-input placeholder="提示文字" sm></ui-input>
-<br />
 <ui-input placeholder="提示文字"></ui-input>
-<br />
 <ui-input placeholder="提示文字" lg></ui-input>
 
 	</div>
 	<div class="example-code">
 		<pre><code class="language-html">&lt;ui-input placeholder=&quot;提示文字&quot; sm&gt;&lt;/ui-input&gt;
-&lt;br /&gt;
 &lt;ui-input placeholder=&quot;提示文字&quot;&gt;&lt;/ui-input&gt;
-&lt;br /&gt;
 &lt;ui-input placeholder=&quot;提示文字&quot; lg&gt;&lt;/ui-input&gt;
 </code></pre>
 	</div>
@@ -207,7 +203,7 @@
 
 
 <div class="box-header">
-	Badge
+	Badge Basic
 </div>
 <div class="box-content">
 	<div class="element-inline">
@@ -235,7 +231,7 @@
 
 
 <div class="box-header">
-	Progress Bar
+	ProgressBar Basic
 </div>
 <div class="box-content">
 	<div class="element-inline">
@@ -256,6 +252,175 @@
 &lt;ui-progress-bar value=&quot;70&quot; label warning&gt;&lt;/ui-progress-bar&gt;
 &lt;br /&gt;
 &lt;ui-progress-bar value=&quot;80&quot; label danger&gt;&lt;/ui-progress-bar&gt;
+</code></pre>
+	</div>
+</div>
+
+
+
+
+
+<div class="box-header">
+	Link Basic
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-link href="javascript:;">Normal Text</ui-link>
+<ui-link success href="javascript:;">Success Text</ui-link>
+<ui-link warning href="javascript:;">Warning Text</ui-link>
+<ui-link danger href="javascript:;">Danger Text</ui-link>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-link href=&quot;javascript:;&quot;&gt;Normal Text&lt;/ui-link&gt;
+&lt;ui-link success href=&quot;javascript:;&quot;&gt;Success Text&lt;/ui-link&gt;
+&lt;ui-link warning href=&quot;javascript:;&quot;&gt;Warning Text&lt;/ui-link&gt;
+&lt;ui-link danger href=&quot;javascript:;&quot;&gt;Danger Text&lt;/ui-link&gt;
+</code></pre>
+	</div>
+</div>
+
+
+
+
+
+<div class="box-header">
+	Switch Basic
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-switch checked="{ true }" sm></ui-switch>
+<ui-switch checked="{ true }"></ui-switch>
+<ui-switch checked="{ true }" lg></ui-switch>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-switch checked=&quot;{ true }&quot; sm&gt;&lt;/ui-switch&gt;
+&lt;ui-switch checked=&quot;{ true }&quot;&gt;&lt;/ui-switch&gt;
+&lt;ui-switch checked=&quot;{ true }&quot; lg&gt;&lt;/ui-switch&gt;
+</code></pre>
+	</div>
+</div>
+
+
+<div class="box-header">
+	Switch Disabled
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-switch checked="{ true }" disabled="{ true }" lg></ui-switch>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-switch checked=&quot;{ true }&quot; disabled=&quot;{ true }&quot; lg&gt;&lt;/ui-switch&gt;
+</code></pre>
+	</div>
+</div>
+
+
+
+
+
+<div class="box-header">
+	Checkbox Basic
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-checkbox-group value="{ ['option1', 'option2'] }">
+	<ui-checkbox value="option1">Option 1</ui-checkbox>
+	<ui-checkbox value="option2">Option 2</ui-checkbox>
+	<ui-checkbox value="option3">Option 3</ui-checkbox>
+</ui-checkbox-group>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-checkbox-group value=&quot;{ [&#39;option1&#39;, &#39;option2&#39;] }&quot;&gt;
+	&lt;ui-checkbox value=&quot;option1&quot;&gt;Option 1&lt;/ui-checkbox&gt;
+	&lt;ui-checkbox value=&quot;option2&quot;&gt;Option 2&lt;/ui-checkbox&gt;
+	&lt;ui-checkbox value=&quot;option3&quot;&gt;Option 3&lt;/ui-checkbox&gt;
+&lt;/ui-checkbox-group&gt;
+</code></pre>
+	</div>
+</div>
+
+
+
+
+
+<div class="box-header">
+	Radio Basic
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-radio-group value="option1">
+	<ui-radio value="option1">Option 1</ui-radio>
+	<ui-radio value="option2">Option 2</ui-radio>
+</ui-radio-group>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-radio-group value=&quot;option1&quot;&gt;
+	&lt;ui-radio value=&quot;option1&quot;&gt;Option 1&lt;/ui-radio&gt;
+	&lt;ui-radio value=&quot;option2&quot;&gt;Option 2&lt;/ui-radio&gt;
+&lt;/ui-radio-group&gt;
+</code></pre>
+	</div>
+</div>
+
+
+
+
+
+<div class="box-header">
+	Json Tree Basic
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-json-tree json="{
+	{
+		id: 1,
+		name: 'mo',
+		age: 23,
+		numbers: [1, 2, 3, 4, 5],
+		a: {
+			b: ['11', '22', '33'],
+			c: true
+		},
+		arr: [
+			{
+				a: 1,
+				b: '2'
+			},
+			{
+				c: false
+			}
+		]
+	}
+}"></ui-json-tree>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-json-tree json=&quot;{
+	{
+		id: 1,
+		name: &#39;mo&#39;,
+		age: 23,
+		numbers: [1, 2, 3, 4, 5],
+		a: {
+			b: [&#39;11&#39;, &#39;22&#39;, &#39;33&#39;],
+			c: true
+		},
+		arr: [
+			{
+				a: 1,
+				b: &#39;2&#39;
+			},
+			{
+				c: false
+			}
+		]
+	}
+}&quot;&gt;&lt;/ui-json-tree&gt;
 </code></pre>
 	</div>
 </div>
