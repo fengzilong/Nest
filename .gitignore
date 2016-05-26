@@ -1,4 +1,4 @@
 node_modules
 .dev
-/site
+/site/partials-escape
 /public

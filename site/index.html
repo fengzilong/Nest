@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% macro snippet( title, path ) %}
+<div class="box-header">
+	{{ title }}
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		{% include "./partials/" + path %}
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">
+			{%- include "./partials-escape/" + path -%}
+		</code></pre>
+	</div>
+</div>
+{% endmacro %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="./nest.css?t={{ time }}">
+<link rel="stylesheet" href="./example.css?t={{ time }}">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+{% endblock %}
+
+{% block main %}
+
+{# Button #}
+{{ snippet( 'Button Basic', 'button/button-basic.html' ) }}
+{{ snippet( 'Button Outline', 'button/button-outline.html' ) }}
+{{ snippet( 'Button Size', 'button/button-size.html' ) }}
+{{ snippet( 'Button Block', 'button/button-block.html' ) }}
+{{ snippet( 'Button With Icon', 'button/button-with-icon.html' ) }}
+{{ snippet( 'Button Loading', 'button/button-loading.html' ) }}
+{{ snippet( 'Button Disabled', 'button/button-disabled.html' ) }}
+
+{# Input #}
+
+{{ snippet( 'Input Basic', 'input/input-size.html' ) }}
+
+{# Badge #}
+
+{{ snippet( 'Badge Basic', 'badge/badge.html' ) }}
+
+{# Progress Bar #}
+
+{{ snippet( 'ProgressBar Basic', 'progress-bar/progress-bar-basic.html' ) }}
+
+{# Link #}
+
+{{ snippet( 'Link Basic', 'link/link-basic.html' ) }}
+
+{# Switch #}
+
+{{ snippet( 'Switch Basic', 'switch/switch-basic.html' ) }}
+{{ snippet( 'Switch Disabled', 'switch/switch-disabled.html' ) }}
+
+{# Checkbox #}
+
+{{ snippet( 'Checkbox Basic', 'checkbox/checkbox-basic.html' ) }}
+
+{# Radio #}
+
+{{ snippet( 'Radio Basic', 'radio/radio-basic.html' ) }}
+
+{# Json Tree #}
+
+{{ snippet( 'Json Tree Basic', 'json-tree/json-tree-basic.html' ) }}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script type="text/javascript" src="./riot.js"></script>
+<script type="text/javascript" src="./nest.js?t={{ time }}"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+	riot.mount( '*' );
+</script>
+{% endblock %}
