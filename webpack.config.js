@@ -42,6 +42,11 @@ module.exports = {
 				loader: ExtractTextWebpackPlugin.extract('style-loader', 'css-loader?localIdentName=[name]__[local]--[hash:5]!postcss-loader!less-loader')
 			},
 			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				loader: ExtractTextWebpackPlugin.extract('style-loader', 'css-loader?localIdentName=[name]__[local]--[hash:5]')
+			},
+			{
 				test: /\.js$|\.tag$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',

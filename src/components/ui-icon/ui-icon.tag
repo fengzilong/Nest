@@ -1,3 +1,4 @@
+import '../../font/iconfont.css';
 import './ui-icon.less';
 
 <ui-icon>
