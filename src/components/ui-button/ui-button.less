@@ -38,6 +38,19 @@
 	}
 }
 
+.button-link-style(@color; @background; @border) {
+	.button-color(@color; @background; @border);
+
+	&:active {
+		.button-color(shade(@color, 10%); @background; @border);
+	}
+
+	&:focus {
+		box-shadow: none;
+		text-shadow: none;
+	}
+}
+
 ui-button {
 	display: inline-block;
 }
@@ -56,7 +69,11 @@ ui-button {
 	transition: all .3s cubic-bezier(.645,.045,.355,1);
 	transform: translate3d(0,0,0);
 	box-shadow: 0 0 0 3px transparent;
+}
 
+/* Color */
+
+:local(.basic) {
 	.button-color(#666; #f4f4f4; #d9d9d9);
 	&:hover {
 		.button-color(@primary-color; #FFF; @primary-color);
@@ -65,8 +82,6 @@ ui-button {
 		.button-color(shade(@primary-color, 15%); #FFF; shade(@primary-color, 15%));
 	}
 }
-
-/* Color */
 
 :local(.primary) {
 	.button-style(#FFF; @primary-color; @primary-color);
@@ -100,6 +115,24 @@ ui-button {
 
 :local(.danger.ghost) {
 	.button-ghost-style(@danger-color; #FFF; @danger-color);
+}
+
+/* Link */
+
+:local(.primary.link) {
+	.button-link-style(@primary-color; transparent; transparent);
+}
+
+:local(.success.link) {
+	.button-link-style(@success-color; transparent; transparent);
+}
+
+:local(.warning.link) {
+	.button-link-style(@warning-color; transparent; transparent);
+}
+
+:local(.danger.link) {
+	.button-link-style(@danger-color; transparent; transparent);
 }
 
 /* Size */

@@ -113,6 +113,25 @@
 	<br />
 	<br />
 
+	<ui-button primary link>
+		{ parent.text }
+	</ui-button>
+
+	<ui-button success link>
+		{ parent.text }
+	</ui-button>
+
+	<ui-button warning link>
+		{ parent.text }
+	</ui-button>
+
+	<ui-button danger link>
+		{ parent.text }
+	</ui-button>
+
+	<br />
+	<br />
+
 	<ui-button sm>
 		{ parent.text }
 	</ui-button>

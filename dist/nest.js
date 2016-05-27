@@ -48,91 +48,67 @@
 
 	__webpack_require__(3);
 
-	__webpack_require__(12);
+	__webpack_require__(9);
+
+	__webpack_require__(18);
+
+	__webpack_require__(21);
+
+	__webpack_require__(24);
+
+	__webpack_require__(27);
+
+	__webpack_require__(30);
+
+	__webpack_require__(33);
+
+	__webpack_require__(36);
+
+	__webpack_require__(39);
+
+	__webpack_require__(42);
+
+	__webpack_require__(45);
+
+	__webpack_require__(48);
+
+	__webpack_require__(49);
+
+	__webpack_require__(52);
+
+	__webpack_require__(55);
+
+	__webpack_require__(58);
+
+	__webpack_require__(61);
+
+	__webpack_require__(64);
+
+	__webpack_require__(67);
+
+	__webpack_require__(70);
+
+	__webpack_require__(73);
+
+	__webpack_require__(76);
 
 /***/ },
 /* 1 */,
 /* 2 */,
 /* 3 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(13);
-
-	__webpack_require__(17);
-
-	__webpack_require__(20);
-
-	__webpack_require__(23);
-
-	__webpack_require__(26);
-
-	__webpack_require__(29);
-
-	__webpack_require__(32);
-
-	__webpack_require__(35);
-
-	__webpack_require__(38);
-
-	__webpack_require__(41);
-
-	__webpack_require__(44);
-
-	__webpack_require__(47);
-
-	__webpack_require__(50);
-
-	__webpack_require__(51);
-
-	__webpack_require__(54);
-
-	__webpack_require__(57);
-
-	__webpack_require__(60);
-
-	__webpack_require__(63);
-
-	__webpack_require__(66);
-
-	__webpack_require__(69);
-
-	__webpack_require__(72);
-
-	__webpack_require__(75);
-
-	__webpack_require__(78);
-
-/***/ },
-/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiButton = __webpack_require__(15);
+	var _uiButton = __webpack_require__(5);
 	
 	var _uiButton2 = _interopRequireDefault(_uiButton);
 	
-	__webpack_require__(17);
+	__webpack_require__(9);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -148,7 +124,7 @@
 			return typeof v === 'undefined';
 		};
 	
-		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.ghost, !isUndefined(this.opts.ghost)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.basic, isUndefined(this.opts.primary) && isUndefined(this.opts.success) && isUndefined(this.opts.warning) && isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.link, !isUndefined(this.opts.link)), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.ghost, !isUndefined(this.opts.ghost)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
 	
 		this.onClick = function () {
 			if (_this.opts.__disabled) {
@@ -160,7 +136,7 @@
 	}, '{ }');
 
 /***/ },
-/* 14 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -214,20 +190,24 @@
 
 
 /***/ },
-/* 15 */
+/* 5 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"base":"ui-button__base--23f2b","primary":"ui-button__primary--55b06","success":"ui-button__success--a5daa","warning":"ui-button__warning--099ac","danger":"ui-button__danger--0c2f4","ghost":"ui-button__ghost--1a0be","sm":"ui-button__sm--586c1","md":"ui-button__md--dd1dc","lg":"ui-button__lg--aa436","disabled":"ui-button__disabled--a6225","loading":"ui-button__loading--df6bb"};
+	module.exports = {"base":"ui-button__base--23f2b","basic":"ui-button__basic--81e3e","primary":"ui-button__primary--55b06","success":"ui-button__success--a5daa","warning":"ui-button__warning--099ac","danger":"ui-button__danger--0c2f4","ghost":"ui-button__ghost--1a0be","link":"ui-button__link--90952","sm":"ui-button__sm--586c1","md":"ui-button__md--dd1dc","lg":"ui-button__lg--aa436","disabled":"ui-button__disabled--a6225","loading":"ui-button__loading--df6bb"};
 
 /***/ },
-/* 16 */,
-/* 17 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(18);
+	__webpack_require__(10);
+	
+	__webpack_require__(16);
 	
 	riot.tag2('ui-icon', '<span class="iconfont">{icon}</span>', '', '', function (opts) {
 		var _this = this;
@@ -260,19 +240,30 @@
 	}, '{ }');
 
 /***/ },
-/* 18 */
+/* 10 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 19 */,
-/* 20 */
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 17 */,
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiBadge = __webpack_require__(21);
+	var _uiBadge = __webpack_require__(19);
 	
 	var _uiBadge2 = _interopRequireDefault(_uiBadge);
 	
@@ -311,22 +302,22 @@
 	}, '{ }');
 
 /***/ },
-/* 21 */
+/* 19 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-badge__base--b9cfc","count":"ui-badge__count--a0dab","dot":"ui-badge__dot--084f1"};
 
 /***/ },
-/* 22 */,
-/* 23 */
+/* 20 */,
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiLink = __webpack_require__(24);
+	var _uiLink = __webpack_require__(22);
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -344,20 +335,20 @@
 	}, '{ }');
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-link__base--00da4","primary":"ui-link__primary--d23d5","success":"ui-link__success--0d6b1","warning":"ui-link__warning--e931b","danger":"ui-link__danger--ba7fa"};
 
 /***/ },
-/* 25 */,
-/* 26 */
+/* 23 */,
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(27);
+	__webpack_require__(25);
 	
 	riot.tag2('ui-input-nao', '<span class="input input--nao {input--filled : hasValue}" name="container"> <input class="input__field input__field--nao" type="text" onchange="{onChange}"> <label class="input__label input__label--nao"> <span class="input__label-content input__label-content--nao">{opts.placeholder}</span> </label> <svg class="graphic graphic--nao" width="300%" height="100%" viewbox="0 0 1200 60" preserveaspectratio="none"> <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path> </svg> </span>', '', '', function (opts) {
 			var _this = this;
@@ -372,23 +363,23 @@
 	}, '{ }');
 
 /***/ },
-/* 27 */
+/* 25 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 28 */,
-/* 29 */
+/* 26 */,
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiInput = __webpack_require__(30);
+	var _uiInput = __webpack_require__(28);
 	
 	var _uiInput2 = _interopRequireDefault(_uiInput);
 	
@@ -428,20 +419,20 @@
 	}, '{ }');
 
 /***/ },
-/* 30 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-input__base--d9c63","sm":"ui-input__sm--d8ab3","lg":"ui-input__lg--5db49","disabled":"ui-input__disabled--2541c"};
 
 /***/ },
-/* 31 */,
-/* 32 */
+/* 29 */,
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiRadio = __webpack_require__(33);
+	var _uiRadio = __webpack_require__(31);
 	
 	var _uiRadio2 = _interopRequireDefault(_uiRadio);
 	
@@ -470,20 +461,20 @@
 	}, '{ }');
 
 /***/ },
-/* 33 */
+/* 31 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-radio__base--99842","checked":"ui-radio__checked--83367"};
 
 /***/ },
-/* 34 */,
-/* 35 */
+/* 32 */,
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiRadioButton = __webpack_require__(36);
+	var _uiRadioButton = __webpack_require__(34);
 	
 	var _uiRadioButton2 = _interopRequireDefault(_uiRadioButton);
 	
@@ -510,20 +501,20 @@
 	}, '{ }');
 
 /***/ },
-/* 36 */
+/* 34 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-radio-button__base--de77c","checked":"ui-radio-button__checked--a2fc6"};
 
 /***/ },
-/* 37 */,
-/* 38 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(39);
+	__webpack_require__(37);
 	
 	riot.tag2('ui-radio-group', '<yield></yield>', '', '', function (opts) {
 		var _this = this;
@@ -588,19 +579,19 @@
 	});
 
 /***/ },
-/* 39 */
+/* 37 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 40 */,
-/* 41 */
+/* 38 */,
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCheckbox = __webpack_require__(42);
+	var _uiCheckbox = __webpack_require__(40);
 	
 	var _uiCheckbox2 = _interopRequireDefault(_uiCheckbox);
 	
@@ -629,20 +620,20 @@
 	}, '{ }');
 
 /***/ },
-/* 42 */
+/* 40 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-checkbox__base--c3df2","checked":"ui-checkbox__checked--35331"};
 
 /***/ },
-/* 43 */,
-/* 44 */
+/* 41 */,
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	__webpack_require__(45);
+	__webpack_require__(43);
 	
 	riot.tag2('ui-checkbox-group', '<yield></yield>', '', '', function (opts) {
 		var _this = this;
@@ -690,21 +681,21 @@
 	});
 
 /***/ },
-/* 45 */
+/* 43 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 46 */,
-/* 47 */
+/* 44 */,
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _uiJsonTree = __webpack_require__(48);
+	var _uiJsonTree = __webpack_require__(46);
 	
 	var _uiJsonTree2 = _interopRequireDefault(_uiJsonTree);
 	
@@ -813,14 +804,14 @@
 	});
 
 /***/ },
-/* 48 */
+/* 46 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 49 */,
-/* 50 */
+/* 47 */,
+/* 48 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -936,12 +927,12 @@
 	});
 
 /***/ },
-/* 51 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiTreeNode = __webpack_require__(52);
+	var _uiTreeNode = __webpack_require__(50);
 	
 	var _uiTreeNode2 = _interopRequireDefault(_uiTreeNode);
 	
@@ -1005,22 +996,22 @@
 	}, '{ }');
 
 /***/ },
-/* 52 */
+/* 50 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"title":"ui-tree-node__title--6b761","children":"ui-tree-node__children--eda21"};
 
 /***/ },
-/* 53 */,
-/* 54 */
+/* 51 */,
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenu = __webpack_require__(55);
+	var _uiMenu = __webpack_require__(53);
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -1031,19 +1022,19 @@
 	});
 
 /***/ },
-/* 55 */
+/* 53 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 56 */,
-/* 57 */
+/* 54 */,
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiSubmenu = __webpack_require__(58);
+	var _uiSubmenu = __webpack_require__(56);
 	
 	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
 		this.styles = {
@@ -1052,22 +1043,22 @@
 	}, '{ }');
 
 /***/ },
-/* 58 */
+/* 56 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"items":"ui-submenu__items--f47d9"};
 
 /***/ },
-/* 59 */,
-/* 60 */
+/* 57 */,
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenuItem = __webpack_require__(61);
+	var _uiMenuItem = __webpack_require__(59);
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -1086,24 +1077,24 @@
 	}, '{ }');
 
 /***/ },
-/* 61 */
+/* 59 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-menu-item__base--46135"};
 
 /***/ },
-/* 62 */,
-/* 63 */
+/* 60 */,
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiSwitch = __webpack_require__(64);
+	var _uiSwitch = __webpack_require__(62);
 	
 	var _uiSwitch2 = _interopRequireDefault(_uiSwitch);
 	
@@ -1162,24 +1153,24 @@
 	}, '{ }');
 
 /***/ },
-/* 64 */
+/* 62 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-switch__base--e2fac","off":"ui-switch__off--b66a6","on":"ui-switch__on--17e70","sm":"ui-switch__sm--c01c5","lg":"ui-switch__lg--3d195","disabled":"ui-switch__disabled--64b78"};
 
 /***/ },
-/* 65 */,
-/* 66 */
+/* 63 */,
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiProgressBar = __webpack_require__(67);
+	var _uiProgressBar = __webpack_require__(65);
 	
 	var _uiProgressBar2 = _interopRequireDefault(_uiProgressBar);
 	
-	var _classnames = __webpack_require__(14);
+	var _classnames = __webpack_require__(4);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -1195,20 +1186,20 @@
 	}, '{ }');
 
 /***/ },
-/* 67 */
+/* 65 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"outter":"ui-progress-bar__outter--b19c7","inner":"ui-progress-bar__inner--c7cc3","label":"ui-progress-bar__label--5cad3","primary":"ui-progress-bar__primary--fc241","success":"ui-progress-bar__success--8db4a","warning":"ui-progress-bar__warning--f4465","danger":"ui-progress-bar__danger--0ed62"};
 
 /***/ },
-/* 68 */,
-/* 69 */
+/* 66 */,
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiPopover = __webpack_require__(70);
+	var _uiPopover = __webpack_require__(68);
 	
 	var _uiPopover2 = _interopRequireDefault(_uiPopover);
 	
@@ -1227,20 +1218,20 @@
 	}, '{ }');
 
 /***/ },
-/* 70 */
+/* 68 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"popover":"ui-popover__popover--2cd67"};
 
 /***/ },
-/* 71 */,
-/* 72 */
+/* 69 */,
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMessage = __webpack_require__(73);
+	var _uiMessage = __webpack_require__(71);
 	
 	var _uiMessage2 = _interopRequireDefault(_uiMessage);
 	
@@ -1251,20 +1242,20 @@
 	}, '{ }');
 
 /***/ },
-/* 73 */
+/* 71 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"icon":"ui-message__icon--82d2e"};
 
 /***/ },
-/* 74 */,
-/* 75 */
+/* 72 */,
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapse = __webpack_require__(76);
+	var _uiCollapse = __webpack_require__(74);
 	
 	var _uiCollapse2 = _interopRequireDefault(_uiCollapse);
 	
@@ -1277,19 +1268,19 @@
 	});
 
 /***/ },
-/* 76 */
+/* 74 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 77 */,
-/* 78 */
+/* 75 */,
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapsePanel = __webpack_require__(79);
+	var _uiCollapsePanel = __webpack_require__(77);
 	
 	var _uiCollapsePanel2 = _interopRequireDefault(_uiCollapsePanel);
 	
@@ -1314,7 +1305,7 @@
 	}, '{ }');
 
 /***/ },
-/* 79 */
+/* 77 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

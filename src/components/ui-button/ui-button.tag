@@ -15,6 +15,12 @@ import '../ui-icon';
 
 		this.uiCls = classNames({
 			[ styles.base ]: true,
+			[ styles.basic ]:
+				isUndefined( this.opts.primary ) &&
+				isUndefined( this.opts.success ) &&
+				isUndefined( this.opts.warning ) &&
+				isUndefined( this.opts.danger ),
+			[ styles.link ]: !isUndefined( this.opts.link ),
 			[ styles.primary ]: !isUndefined( this.opts.primary ),
 			[ styles.success ]: !isUndefined( this.opts.success ),
 			[ styles.warning ]: !isUndefined( this.opts.warning ),
