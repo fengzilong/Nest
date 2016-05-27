@@ -63,10 +63,10 @@ module.exports = {
 		];
 	},
 	resolve: {
-		extensions: [ '', '.js', '.tag', '.css' ]
+		extensions: [ '', '.js', '.tag', '.less', '.css' ]
 	},
 	externals: [],
 	plugins: [
-		new ExtractTextWebpackPlugin('nest.css')
+		new ExtractTextWebpackPlugin( 'nest.css' )
 	]
 };
