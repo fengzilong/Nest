@@ -729,6 +729,9 @@ ui-radio-button:first-child .ui-radio-button__checked--a2fc6 {
 /* Tooltip */
 /* Input */
 /* Button */
+ui-radio-group {
+  display: inline-block;
+}
 ui-radio-group::after {
   content: "";
   display: table;
