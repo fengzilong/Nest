@@ -1,0 +1,25 @@
+@import "../../theme.less";
+
+ui-breadcrumb-item {
+	font-size: 13px;
+	color: #666;
+
+	&:last-child {
+		font-weight: bold;
+
+		:local(.sep) {
+			display: none;
+		}
+	}
+
+	a {
+		color: #666;
+		text-decoration: none;
+	}
+}
+
+:local(.sep) {
+	display: inline-block;
+	padding: 0 4px;
+	color: #C5C5C5;
+}

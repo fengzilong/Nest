@@ -1,6 +1,32 @@
 <demos>
 	<br />
 
+	<!-- ui-breadcrumb -->
+
+	<ui-breadcrumb>
+		<ui-breadcrumb-item>
+			<ui-icon icon="&#xe60a;"></ui-icon>
+			首页
+		</ui-breadcrumb-item>
+
+		<ui-breadcrumb-item>
+			<ui-icon icon="&#xe60b;"></ui-icon>
+			<a href="">一级导航</a>
+		</ui-breadcrumb-item>
+
+		<ui-breadcrumb-item>
+			<ui-icon icon="&#xe609;"></ui-icon>
+			<a href="">二级导航</a>
+		</ui-breadcrumb-item>
+
+		<ui-breadcrumb-item>
+			<a href="#">当前节点</a>
+		</ui-breadcrumb-item>
+	</ui-breadcrumb>
+
+	<br />
+	<br />
+
 	<!-- ui-collapse -->
 
 	<ui-tree>

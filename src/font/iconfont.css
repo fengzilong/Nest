@@ -1,6 +1,5 @@
 
-@font-face {
-  font-family: "iconfont";
+@font-face {font-family: "iconfont";
   src: url('iconfont.eot'); /* IE9*/
   src: url('iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('iconfont.woff') format('woff'), /* chrome, firefox */
@@ -15,12 +14,15 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-search:before { content: "\e609"; }
 .icon-caret-right:before { content: "\e603"; }
 .icon-success:before { content: "\e607"; }
 .icon-caretdown:before { content: "\e604"; }
 .icon-loading:before { content: "\e602"; }
 .icon-error:before { content: "\e605"; }
 .icon-guanyuwomen:before { content: "\e608"; }
+.icon-home:before { content: "\e60a"; }
 .icon-iconfontunie61e:before { content: "\e600"; }
 .icon-iconfontunie61f:before { content: "\e601"; }
+.icon-yingyong:before { content: "\e60b"; }
 .icon-yduigantanhaoshixin:before { content: "\e606"; }
