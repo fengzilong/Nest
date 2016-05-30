@@ -70,27 +70,31 @@
 
 	__webpack_require__(45);
 
-	__webpack_require__(48);
+	__webpack_require__(46);
 
 	__webpack_require__(49);
 
 	__webpack_require__(52);
 
-	__webpack_require__(55);
+	__webpack_require__(53);
 
-	__webpack_require__(58);
+	__webpack_require__(56);
 
-	__webpack_require__(61);
+	__webpack_require__(59);
 
-	__webpack_require__(64);
+	__webpack_require__(62);
 
-	__webpack_require__(67);
+	__webpack_require__(65);
 
-	__webpack_require__(70);
+	__webpack_require__(68);
 
-	__webpack_require__(73);
+	__webpack_require__(71);
 
-	__webpack_require__(76);
+	__webpack_require__(74);
+
+	__webpack_require__(77);
+
+	__webpack_require__(80);
 
 /***/ },
 /* 1 */,
@@ -689,13 +693,46 @@
 /***/ },
 /* 44 */,
 /* 45 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	riot.tag2('ui-breadcrumb', '<yield></yield>', '', '', function (opts) {});
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiBreadcrumbItem = __webpack_require__(47);
+	
+	var _uiBreadcrumbItem2 = _interopRequireDefault(_uiBreadcrumbItem);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-breadcrumb-item', '<yield></yield> <span class="{styles.sep}">{sep}</span>', '', '', function (opts) {
+			this.styles = _uiBreadcrumbItem2.default;
+			this.sep = '/';
+	}, '{ }');
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"sep":"ui-breadcrumb-item__sep--f28eb"};
+
+/***/ },
+/* 48 */,
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _uiJsonTree = __webpack_require__(46);
+	var _uiJsonTree = __webpack_require__(50);
 	
 	var _uiJsonTree2 = _interopRequireDefault(_uiJsonTree);
 	
@@ -804,14 +841,14 @@
 	});
 
 /***/ },
-/* 46 */
+/* 50 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 47 */,
-/* 48 */
+/* 51 */,
+/* 52 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -927,12 +964,12 @@
 	});
 
 /***/ },
-/* 49 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiTreeNode = __webpack_require__(50);
+	var _uiTreeNode = __webpack_require__(54);
 	
 	var _uiTreeNode2 = _interopRequireDefault(_uiTreeNode);
 	
@@ -996,20 +1033,20 @@
 	}, '{ }');
 
 /***/ },
-/* 50 */
+/* 54 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"title":"ui-tree-node__title--6b761","children":"ui-tree-node__children--eda21"};
 
 /***/ },
-/* 51 */,
-/* 52 */
+/* 55 */,
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenu = __webpack_require__(53);
+	var _uiMenu = __webpack_require__(57);
 	
 	var _classnames = __webpack_require__(4);
 	
@@ -1022,19 +1059,19 @@
 	});
 
 /***/ },
-/* 53 */
+/* 57 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 54 */,
-/* 55 */
+/* 58 */,
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiSubmenu = __webpack_require__(56);
+	var _uiSubmenu = __webpack_require__(60);
 	
 	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
 		this.styles = {
@@ -1043,20 +1080,20 @@
 	}, '{ }');
 
 /***/ },
-/* 56 */
+/* 60 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"items":"ui-submenu__items--f47d9"};
 
 /***/ },
-/* 57 */,
-/* 58 */
+/* 61 */,
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenuItem = __webpack_require__(59);
+	var _uiMenuItem = __webpack_require__(63);
 	
 	var _classnames = __webpack_require__(4);
 	
@@ -1077,15 +1114,15 @@
 	}, '{ }');
 
 /***/ },
-/* 59 */
+/* 63 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-menu-item__base--46135"};
 
 /***/ },
-/* 60 */,
-/* 61 */
+/* 64 */,
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1094,7 +1131,7 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiSwitch = __webpack_require__(62);
+	var _uiSwitch = __webpack_require__(66);
 	
 	var _uiSwitch2 = _interopRequireDefault(_uiSwitch);
 	
@@ -1153,20 +1190,20 @@
 	}, '{ }');
 
 /***/ },
-/* 62 */
+/* 66 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-switch__base--e2fac","off":"ui-switch__off--b66a6","on":"ui-switch__on--17e70","sm":"ui-switch__sm--c01c5","lg":"ui-switch__lg--3d195","disabled":"ui-switch__disabled--64b78"};
 
 /***/ },
-/* 63 */,
-/* 64 */
+/* 67 */,
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiProgressBar = __webpack_require__(65);
+	var _uiProgressBar = __webpack_require__(69);
 	
 	var _uiProgressBar2 = _interopRequireDefault(_uiProgressBar);
 	
@@ -1186,20 +1223,20 @@
 	}, '{ }');
 
 /***/ },
-/* 65 */
+/* 69 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"outter":"ui-progress-bar__outter--b19c7","inner":"ui-progress-bar__inner--c7cc3","label":"ui-progress-bar__label--5cad3","primary":"ui-progress-bar__primary--fc241","success":"ui-progress-bar__success--8db4a","warning":"ui-progress-bar__warning--f4465","danger":"ui-progress-bar__danger--0ed62"};
 
 /***/ },
-/* 66 */,
-/* 67 */
+/* 70 */,
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiPopover = __webpack_require__(68);
+	var _uiPopover = __webpack_require__(72);
 	
 	var _uiPopover2 = _interopRequireDefault(_uiPopover);
 	
@@ -1218,20 +1255,20 @@
 	}, '{ }');
 
 /***/ },
-/* 68 */
+/* 72 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"popover":"ui-popover__popover--2cd67"};
 
 /***/ },
-/* 69 */,
-/* 70 */
+/* 73 */,
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMessage = __webpack_require__(71);
+	var _uiMessage = __webpack_require__(75);
 	
 	var _uiMessage2 = _interopRequireDefault(_uiMessage);
 	
@@ -1242,20 +1279,20 @@
 	}, '{ }');
 
 /***/ },
-/* 71 */
+/* 75 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"icon":"ui-message__icon--82d2e"};
 
 /***/ },
-/* 72 */,
-/* 73 */
+/* 76 */,
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapse = __webpack_require__(74);
+	var _uiCollapse = __webpack_require__(78);
 	
 	var _uiCollapse2 = _interopRequireDefault(_uiCollapse);
 	
@@ -1268,19 +1305,19 @@
 	});
 
 /***/ },
-/* 74 */
+/* 78 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 75 */,
-/* 76 */
+/* 79 */,
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapsePanel = __webpack_require__(77);
+	var _uiCollapsePanel = __webpack_require__(81);
 	
 	var _uiCollapsePanel2 = _interopRequireDefault(_uiCollapsePanel);
 	
@@ -1305,7 +1342,7 @@
 	}, '{ }');
 
 /***/ },
-/* 77 */
+/* 81 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
