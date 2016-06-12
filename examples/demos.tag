@@ -1,4 +1,29 @@
 <demos>
+	<style>
+		ui-tooltip {
+			margin-left: 100px;
+		}
+	</style>
+
+	<br />
+	<br />
+
+	<!-- ui-tooltip -->
+
+	<ui-tooltip title="提示内容" placement="left">
+		<ui-button>bottom</ui-button>
+	</ui-tooltip>
+	<ui-tooltip title="提示内容" placement="top">
+		<ui-button>bottom</ui-button>
+	</ui-tooltip>
+	<ui-tooltip title="提示内容" placement="bottom">
+		<ui-button>bottom</ui-button>
+	</ui-tooltip>
+	<ui-tooltip title="提示内容" placement="right">
+		<ui-button>bottom</ui-button>
+	</ui-tooltip>
+
+	<br />
 	<br />
 
 	<!-- ui-breadcrumb -->
