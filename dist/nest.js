@@ -130,7 +130,7 @@
 			return typeof v === 'undefined';
 		};
 	
-		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.basic, isUndefined(this.opts.primary) && isUndefined(this.opts.success) && isUndefined(this.opts.warning) && isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.link, !isUndefined(this.opts.link)), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.ghost, !isUndefined(this.opts.ghost)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _uiButton2.default.base, true), _defineProperty(_classNames, _uiButton2.default.basic, isUndefined(this.opts.primary) && isUndefined(this.opts.success) && isUndefined(this.opts.warning) && isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.link, !isUndefined(this.opts.link)), _defineProperty(_classNames, _uiButton2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _uiButton2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _uiButton2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _uiButton2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _uiButton2.default.outline, !isUndefined(this.opts.outline)), _defineProperty(_classNames, _uiButton2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _uiButton2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _uiButton2.default.sm, !isUndefined(this.opts.sm)), _classNames));
 	
 		this.onClick = function () {
 			if (_this.opts.__disabled) {
@@ -200,7 +200,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"base":"ui-button__base--23f2b","basic":"ui-button__basic--81e3e","primary":"ui-button__primary--55b06","success":"ui-button__success--a5daa","warning":"ui-button__warning--099ac","danger":"ui-button__danger--0c2f4","ghost":"ui-button__ghost--1a0be","link":"ui-button__link--90952","sm":"ui-button__sm--586c1","md":"ui-button__md--dd1dc","lg":"ui-button__lg--aa436","disabled":"ui-button__disabled--a6225","loading":"ui-button__loading--df6bb"};
+	module.exports = {"base":"ui-button__base--23f2b","basic":"ui-button__basic--81e3e","primary":"ui-button__primary--55b06","success":"ui-button__success--a5daa","warning":"ui-button__warning--099ac","danger":"ui-button__danger--0c2f4","outline":"ui-button__outline--fa861","link":"ui-button__link--90952","sm":"ui-button__sm--586c1","md":"ui-button__md--dd1dc","lg":"ui-button__lg--aa436","disabled":"ui-button__disabled--a6225","loading":"ui-button__loading--df6bb"};
 
 /***/ },
 /* 6 */,

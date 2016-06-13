@@ -21,7 +21,7 @@
 		text-shadow: 0 0 1px @color;
 	}
 }
-.button-ghost-style(@color; @background; @border){
+.button-outline-style(@color; @background; @border){
 	.button-color(@color; @background; @border);
 
 	&:hover {
@@ -99,22 +99,22 @@ ui-button {
 	.button-style(#FFF; @danger-color; @danger-color);
 }
 
-/* Ghost */
+/* Outline */
 
-:local(.primary.ghost) {
-	.button-ghost-style(@primary-color; #FFF; @primary-color);
+:local(.primary.outline) {
+	.button-outline-style(@primary-color; #FFF; @primary-color);
 }
 
-:local(.success.ghost) {
-	.button-ghost-style(@success-color; #FFF; @success-color);
+:local(.success.outline) {
+	.button-outline-style(@success-color; #FFF; @success-color);
 }
 
-:local(.warning.ghost) {
-	.button-ghost-style(@warning-color; #FFF; @warning-color);
+:local(.warning.outline) {
+	.button-outline-style(@warning-color; #FFF; @warning-color);
 }
 
-:local(.danger.ghost) {
-	.button-ghost-style(@danger-color; #FFF; @danger-color);
+:local(.danger.outline) {
+	.button-outline-style(@danger-color; #FFF; @danger-color);
 }
 
 /* Link */

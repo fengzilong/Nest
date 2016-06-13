@@ -145,19 +145,19 @@
 	<br />
 	<br />
 
-	<ui-button primary ghost>
+	<ui-button primary outline>
 		{ parent.text }
 	</ui-button>
 
-	<ui-button success ghost>
+	<ui-button success outline>
 		{ parent.text }
 	</ui-button>
 
-	<ui-button warning ghost>
+	<ui-button warning outline>
 		{ parent.text }
 	</ui-button>
 
-	<ui-button danger ghost>
+	<ui-button danger outline>
 		{ parent.text }
 	</ui-button>
 

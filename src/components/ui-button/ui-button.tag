@@ -25,7 +25,7 @@ import '../ui-icon';
 			[ styles.success ]: !isUndefined( this.opts.success ),
 			[ styles.warning ]: !isUndefined( this.opts.warning ),
 			[ styles.danger ]: !isUndefined( this.opts.danger ),
-			[ styles.ghost ]: !isUndefined( this.opts.ghost ),
+			[ styles.outline ]: !isUndefined( this.opts.outline ),
 			[ styles.lg ]: !isUndefined( this.opts.lg ),
 			[ styles.md ]: isUndefined( this.opts.lg ) && isUndefined( this.opts.sm ),
 			[ styles.sm ]: !isUndefined( this.opts.sm ),
