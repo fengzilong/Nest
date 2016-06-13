@@ -1374,6 +1374,27 @@
 		this.placement = this.opts.placement;
 		this.triggered = false;
 	
+		var points = ['tc', 'bc'];
+		var offset = [0, 0];
+		switch (this.placement) {
+			case 'top':
+				points = ['bc', 'tc'];
+				offset = [0, -1];
+				break;
+			case 'bottom':
+				points = ['tc', 'bc'];
+				offset = [0, 1];
+				break;
+			case 'left':
+				points = ['cr', 'cl'];
+				offset = [-2, 0];
+				break;
+			case 'right':
+				points = ['cl', 'cr'];
+				offset = [2, 0];
+				break;
+		}
+	
 		var show = function show() {
 			_this.triggered = true;
 			_this.update();
@@ -1389,27 +1410,6 @@
 		};
 	
 		this.on('mount', function () {
-			var points = ['tc', 'bc'];
-			var offset = [0, 0];
-			switch (_this.placement) {
-				case 'top':
-					points = ['bc', 'tc'];
-					offset = [0, -1];
-					break;
-				case 'bottom':
-					points = ['tc', 'bc'];
-					offset = [0, 1];
-					break;
-				case 'left':
-					points = ['cr', 'cl'];
-					offset = [-2, 0];
-					break;
-				case 'right':
-					points = ['cl', 'cr'];
-					offset = [2, 0];
-					break;
-			}
-	
 			_this.t.addEventListener('mouseenter', show, false);
 			_this.t.addEventListener('mouseleave', hide, false);
 		});

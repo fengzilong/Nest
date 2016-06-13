@@ -18,6 +18,27 @@ import domAlign from 'dom-align';
 		this.placement = this.opts.placement;
 		this.triggered = false;
 
+		let points = [ 'tc', 'bc' ];
+		let offset = [ 0, 0 ];
+		switch( this.placement ) {
+			case 'top':
+				points = [ 'bc', 'tc' ];
+				offset = [ 0, -1 ];
+				break;
+			case 'bottom':
+				points = [ 'tc', 'bc' ];
+				offset = [ 0, 1 ];
+				break;
+			case 'left':
+				points = [ 'cr', 'cl' ];
+				offset = [ -2, 0 ];
+				break;
+			case 'right':
+				points = [ 'cl', 'cr' ];
+				offset = [ 2, 0 ];
+				break;
+		}
+
 		const show = () => {
 			this.triggered = true;
 			this.update();
@@ -33,27 +54,6 @@ import domAlign from 'dom-align';
 		};
 
 		this.on('mount', () => {
-			let points = [ 'tc', 'bc' ];
-			let offset = [ 0, 0 ];
-			switch( this.placement ) {
-				case 'top':
-					points = [ 'bc', 'tc' ];
-					offset = [ 0, -1 ];
-					break;
-				case 'bottom':
-					points = [ 'tc', 'bc' ];
-					offset = [ 0, 1 ];
-					break;
-				case 'left':
-					points = [ 'cr', 'cl' ];
-					offset = [ -2, 0 ];
-					break;
-				case 'right':
-					points = [ 'cl', 'cr' ];
-					offset = [ 2, 0 ];
-					break;
-			}
-
 			this.t.addEventListener('mouseenter', show, false);
 			this.t.addEventListener('mouseleave', hide, false);
 		});
