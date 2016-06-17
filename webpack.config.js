@@ -16,7 +16,9 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve( cwd, 'dist' ),
-		filename: '[name].js'
+		filename: '[name].js',
+		library: 'nest',
+		libraryTarget: 'umd',
 	},
 	module: {
 		preLoaders: [
@@ -46,7 +48,7 @@ module.exports = {
 				loader: ExtractTextWebpackPlugin.extract('style-loader', 'css-loader?localIdentName=[name]__[local]--[hash:5]')
 			},
 			{
-				test: /\.js$|\.tag$/,
+				test: /\.(js|tag)$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 			}

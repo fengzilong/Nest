@@ -10,9 +10,7 @@ import classNames from 'classnames';
 	</a>
 
 	<script>
-		let isUndefined = ( obj ) => {
-			return typeof obj === 'undefined';
-		};
+		const isUndefined = obj => typeof obj === 'undefined';
 		this.classnames = classNames({
 			[ base ]: true,
 			[ primary ]: true,
