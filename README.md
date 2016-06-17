@@ -1,15 +1,10 @@
-# Nest <sup>wip<sup>
+# Nest
 
 Yet another UI framework for Web, built with riot
 
-## Development
+## Demo
 
-```bash
-$ git clone git@github.com:fengzilong/Nest.git
-$ npm i
-$ npm start
-# open http://localhost/examples/
-```
+https://fengzilong.github.io/Nest/
 
 ## License
 
