@@ -16,8 +16,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve( cwd, 'dist' ),
-		filename: '[name].js',
-		publicPath: path.resolve( cwd, 'dist' )
+		filename: '[name].js'
 	},
 	module: {
 		preLoaders: [
