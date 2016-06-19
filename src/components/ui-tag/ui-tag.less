@@ -1,6 +1,7 @@
 @import "../../theme.less";
 
-@tag-basic-color: #454545;
+@tag-basic-background-color: #DCDCDC;
+@tag-basic-color: #666;
 
 .tag-color(@color; @background){
 	color: @color;
@@ -24,7 +25,7 @@ ui-tag, [data-is="ui-tag"] {
 	user-select: none;
 	line-height: 1.4;
 
-	.tag-style(#FFF, @tag-basic-color);
+	.tag-style(@tag-basic-color, @tag-basic-background-color);
 
 	&[primary] {
 		.tag-style(#FFF, @primary-color);

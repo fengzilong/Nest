@@ -58,3 +58,4 @@ gulp.task('watch', function () {
 
 gulp.task('site:dist', ['html', 'site:css', 'site:js', 'nest:css', 'nest:js'])
 gulp.task('site:dev', ['serve', 'site:dist', 'watch'])
+gulp.task('default', ['site:dev'])
