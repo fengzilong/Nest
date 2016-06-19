@@ -11,6 +11,7 @@ import './components/ui-checkbox';
 import './components/ui-checkbox-group';
 import './components/ui-breadcrumb';
 import './components/ui-breadcrumb-item';
+import './components/ui-tag';
 import './components/ui-json-tree';
 import './components/ui-tree';
 import './components/ui-tree-node';

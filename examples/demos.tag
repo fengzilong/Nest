@@ -8,6 +8,33 @@
 	<br />
 	<br />
 
+	<ui-tag>normal</ui-tag>
+	<ui-tag primary>primary</ui-tag>
+	<ui-tag success>success</ui-tag>
+	<ui-tag warning>warning</ui-tag>
+	<ui-tag danger>danger</ui-tag>
+
+	<br />
+	<br />
+
+	<ui-tag round>normal</ui-tag>
+	<ui-tag primary round>primary</ui-tag>
+	<ui-tag success round>success</ui-tag>
+	<ui-tag warning round>warning</ui-tag>
+	<ui-tag danger round>danger</ui-tag>
+
+	<br />
+	<br />
+
+	<ui-tag invert>normal</ui-tag>
+	<ui-tag primary invert>primary</ui-tag>
+	<ui-tag success invert>success</ui-tag>
+	<ui-tag warning invert>warning</ui-tag>
+	<ui-tag danger invert>danger</ui-tag>
+
+	<br />
+	<br />
+
 	<!-- ui-tooltip -->
 
 	<ui-tooltip title="提示内容" placement="left">
@@ -84,7 +111,7 @@
 
 	<!-- ui-message -->
 
-	<ui-message content="我是一条消息"></ui-message>
+	<!-- <ui-message content="我是一条消息"></ui-message> -->
 
 	<!-- ui-badge -->
 	<ui-json-tree json="{ jsonData }"></ui-json-tree>

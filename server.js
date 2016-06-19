@@ -1,9 +1,9 @@
 var WebpackDevServer = require('webpack-dev-server');
 var webpack          = require('webpack');
-var config           = require('./webpack.config.js');
 var express          = require('express');
 var cookieParser     = require('cookie-parser');
 var bodyParser       = require('body-parser');
+var config           = require('./webpack.config.js');
 var cwd              = process.cwd();
 
 var app = express();
@@ -14,7 +14,7 @@ app.use( express.static( __dirname ) );
 
 var staticServerPort = 80;
 app.listen( staticServerPort, function() {
-	console.log( '[   Static Server   ] Port: ' + staticServerPort );
+	console.log( '[Server] http://localhost:' + staticServerPort );
 } );
 
 var compiler = webpack( config );
@@ -30,5 +30,5 @@ var devServer = new WebpackDevServer( compiler, serverOptions );
 
 var devServerPort = 8080;
 devServer.listen(devServerPort, 'localhost', function(){
-	console.log( '[ Webpack DevServer ] Port: ' + devServerPort );
+	console.log( '[devServer] http://localhost:' + devServerPort );
 });

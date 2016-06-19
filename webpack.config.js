@@ -2,15 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
+var es6Promise = require('es6-promise');
 var cwd  = process.cwd();
 
-require('es6-promise').polyfill();
+es6Promise.polyfill();
 
-module.exports = {
-	debug: true,
-	watch: false,
+var webpackConfig = {
 	context: cwd,
-	devtool: 'source-map',
 	entry: {
 		'nest': path.resolve( cwd, 'src/index.js' )
 	},
@@ -71,3 +69,17 @@ module.exports = {
 		new ExtractTextWebpackPlugin( 'nest.css' )
 	]
 };
+
+if( process.env.NODE_ENV === 'production' ) {
+	webpackConfig.plugins.push(
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
+	);
+} else {
+	webpackConfig.devtool = 'source-map';
+}
+
+module.exports = webpackConfig;

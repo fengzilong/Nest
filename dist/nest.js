@@ -86,7 +86,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(52);
 
-	__webpack_require__(53);
+	__webpack_require__(55);
 
 	__webpack_require__(56);
 
@@ -107,6 +107,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	__webpack_require__(80);
 
 	__webpack_require__(83);
+
+	__webpack_require__(86);
 
 /***/ },
 /* 1 */,
@@ -742,9 +744,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	var _uiTag = __webpack_require__(50);
+	
+	var _uiTag2 = _interopRequireDefault(_uiTag);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-tag', '<yield></yield>', '', '', function (opts) {
+			this.styles = _uiTag2.default;
+	});
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 51 */,
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var _uiJsonTree = __webpack_require__(50);
+	var _uiJsonTree = __webpack_require__(53);
 	
 	var _uiJsonTree2 = _interopRequireDefault(_uiJsonTree);
 	
@@ -853,14 +878,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 50 */
+/* 53 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 51 */,
-/* 52 */
+/* 54 */,
+/* 55 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -976,12 +1001,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 53 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiTreeNode = __webpack_require__(54);
+	var _uiTreeNode = __webpack_require__(57);
 	
 	var _uiTreeNode2 = _interopRequireDefault(_uiTreeNode);
 	
@@ -1045,20 +1070,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 54 */
+/* 57 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"title":"ui-tree-node__title--6b761","children":"ui-tree-node__children--eda21"};
 
 /***/ },
-/* 55 */,
-/* 56 */
+/* 58 */,
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMenu = __webpack_require__(57);
+	var _uiMenu = __webpack_require__(60);
 	
 	var _classnames = __webpack_require__(4);
 	
@@ -1071,32 +1096,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 58 */,
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _uiSubmenu = __webpack_require__(60);
-	
-	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
-		this.styles = {
-			items: _uiSubmenu.items
-		};
-	}, '{ }');
-
-/***/ },
 /* 60 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"items":"ui-submenu__items--f47d9"};
 
 /***/ },
 /* 61 */,
@@ -1105,7 +1108,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _uiMenuItem = __webpack_require__(63);
+	var _uiSubmenu = __webpack_require__(63);
+	
+	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
+		this.styles = {
+			items: _uiSubmenu.items
+		};
+	}, '{ }');
+
+/***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"items":"ui-submenu__items--f47d9"};
+
+/***/ },
+/* 64 */,
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _uiMenuItem = __webpack_require__(66);
 	
 	var _classnames = __webpack_require__(4);
 	
@@ -1126,15 +1151,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 63 */
+/* 66 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-menu-item__base--46135"};
 
 /***/ },
-/* 64 */,
-/* 65 */
+/* 67 */,
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1143,7 +1168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _uiSwitch = __webpack_require__(66);
+	var _uiSwitch = __webpack_require__(69);
 	
 	var _uiSwitch2 = _interopRequireDefault(_uiSwitch);
 	
@@ -1202,20 +1227,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 66 */
+/* 69 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"base":"ui-switch__base--e2fac","off":"ui-switch__off--b66a6","on":"ui-switch__on--17e70","sm":"ui-switch__sm--c01c5","lg":"ui-switch__lg--3d195","disabled":"ui-switch__disabled--64b78"};
 
 /***/ },
-/* 67 */,
-/* 68 */
+/* 70 */,
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiProgressBar = __webpack_require__(69);
+	var _uiProgressBar = __webpack_require__(72);
 	
 	var _uiProgressBar2 = _interopRequireDefault(_uiProgressBar);
 	
@@ -1235,20 +1260,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 69 */
+/* 72 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"outter":"ui-progress-bar__outter--b19c7","inner":"ui-progress-bar__inner--c7cc3","label":"ui-progress-bar__label--5cad3","primary":"ui-progress-bar__primary--fc241","success":"ui-progress-bar__success--8db4a","warning":"ui-progress-bar__warning--f4465","danger":"ui-progress-bar__danger--0ed62"};
 
 /***/ },
-/* 70 */,
-/* 71 */
+/* 73 */,
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiPopover = __webpack_require__(72);
+	var _uiPopover = __webpack_require__(75);
 	
 	var _uiPopover2 = _interopRequireDefault(_uiPopover);
 	
@@ -1267,20 +1292,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 72 */
+/* 75 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"popover":"ui-popover__popover--2cd67"};
 
 /***/ },
-/* 73 */,
-/* 74 */
+/* 76 */,
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiMessage = __webpack_require__(75);
+	var _uiMessage = __webpack_require__(78);
 	
 	var _uiMessage2 = _interopRequireDefault(_uiMessage);
 	
@@ -1291,20 +1316,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 75 */
+/* 78 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"icon":"ui-message__icon--82d2e"};
 
 /***/ },
-/* 76 */,
-/* 77 */
+/* 79 */,
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapse = __webpack_require__(78);
+	var _uiCollapse = __webpack_require__(81);
 	
 	var _uiCollapse2 = _interopRequireDefault(_uiCollapse);
 	
@@ -1317,19 +1342,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 78 */
+/* 81 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 79 */,
-/* 80 */
+/* 82 */,
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiCollapsePanel = __webpack_require__(81);
+	var _uiCollapsePanel = __webpack_require__(84);
 	
 	var _uiCollapsePanel2 = _interopRequireDefault(_uiCollapsePanel);
 	
@@ -1354,24 +1379,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 81 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"title":"ui-collapse-panel__title--47429","title-inner":"ui-collapse-panel__title-inner--2cde4","content":"ui-collapse-panel__content--d7b6a","content-box":"ui-collapse-panel__content-box--d8edc","content-inactive":"ui-collapse-panel__content-inactive--9eaf4","content-active":"ui-collapse-panel__content-active--4dad8"};
 
 /***/ },
-/* 82 */,
-/* 83 */
+/* 85 */,
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _uiTooltip = __webpack_require__(84);
+	var _uiTooltip = __webpack_require__(87);
 	
 	var _uiTooltip2 = _interopRequireDefault(_uiTooltip);
 	
-	var _domAlign = __webpack_require__(86);
+	var _domAlign = __webpack_require__(89);
 	
 	var _domAlign2 = _interopRequireDefault(_domAlign);
 	
@@ -1431,15 +1456,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, '{ }');
 
 /***/ },
-/* 84 */
+/* 87 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"target":"ui-tooltip__target--0dfc9","base":"ui-tooltip__base--c0de7","arrow":"ui-tooltip__arrow--64d91","content":"ui-tooltip__content--87471","bottom":"ui-tooltip__bottom--a907e","top":"ui-tooltip__top--b5177","left":"ui-tooltip__left--51825","right":"ui-tooltip__right--70a0b"};
 
 /***/ },
-/* 85 */,
-/* 86 */
+/* 88 */,
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1455,27 +1480,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(87);
+	var _utils = __webpack_require__(90);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(88);
+	var _getOffsetParent = __webpack_require__(91);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
-	var _getVisibleRectForElement = __webpack_require__(89);
+	var _getVisibleRectForElement = __webpack_require__(92);
 	
 	var _getVisibleRectForElement2 = _interopRequireDefault(_getVisibleRectForElement);
 	
-	var _adjustForViewport = __webpack_require__(90);
+	var _adjustForViewport = __webpack_require__(93);
 	
 	var _adjustForViewport2 = _interopRequireDefault(_adjustForViewport);
 	
-	var _getRegion = __webpack_require__(91);
+	var _getRegion = __webpack_require__(94);
 	
 	var _getRegion2 = _interopRequireDefault(_getRegion);
 	
-	var _getElFuturePos = __webpack_require__(92);
+	var _getElFuturePos = __webpack_require__(95);
 	
 	var _getElFuturePos2 = _interopRequireDefault(_getElFuturePos);
 	
@@ -1662,7 +1687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 87 */
+/* 90 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2160,7 +2185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 88 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2171,7 +2196,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(87);
+	var _utils = __webpack_require__(90);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -2218,7 +2243,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 89 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2229,11 +2254,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(87);
+	var _utils = __webpack_require__(90);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(88);
+	var _getOffsetParent = __webpack_require__(91);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
@@ -2299,7 +2324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 90 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2310,7 +2335,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(87);
+	var _utils = __webpack_require__(90);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -2359,7 +2384,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 91 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2370,7 +2395,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(87);
+	var _utils = __webpack_require__(90);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -2400,7 +2425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 92 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2411,7 +2436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _getAlignOffset = __webpack_require__(93);
+	var _getAlignOffset = __webpack_require__(96);
 	
 	var _getAlignOffset2 = _interopRequireDefault(_getAlignOffset);
 	
@@ -2441,7 +2466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 93 */
+/* 96 */
 /***/ function(module, exports) {
 
 	/**

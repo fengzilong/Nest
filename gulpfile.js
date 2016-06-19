@@ -56,6 +56,5 @@ gulp.task('watch', function () {
 	gulp.watch('./dist/**/*.js', ['nest:js'])
 })
 
-gulp.task('build', ['html', 'site:css', 'site:js', 'nest:css', 'nest:js'])
-
-gulp.task('default', ['serve', 'build', 'watch'])
+gulp.task('site:dist', ['html', 'site:css', 'site:js', 'nest:css', 'nest:js'])
+gulp.task('site:dev', ['serve', 'site:dist', 'watch'])

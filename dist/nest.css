@@ -2,6 +2,7 @@
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-button {
   display: inline-block;
 }
@@ -360,6 +361,7 @@ ui-icon {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 .ui-badge__base--b9cfc {
   display: inline-block;
   position: relative;
@@ -397,6 +399,7 @@ ui-icon {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-link {
   display: inline-block;
 }
@@ -584,6 +587,7 @@ ui-input-nao {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-input {
   display: inline-block;
 }
@@ -628,6 +632,7 @@ ui-input {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-radio {
   cursor: pointer;
   color: #666;
@@ -676,6 +681,7 @@ ui-radio {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-radio-button {
   display: inline-block;
 }
@@ -732,6 +738,7 @@ ui-radio-button:first-child .ui-radio-button__checked--a2fc6 {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-radio-group {
   display: inline-block;
 }
@@ -747,6 +754,7 @@ ui-radio-group ui-radio {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-checkbox {
   display: inline-block;
   cursor: pointer;
@@ -795,6 +803,7 @@ ui-checkbox:active > .ui-checkbox__base--c3df2 {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-checkbox-group ui-checkbox {
   margin-right: 8px;
 }
@@ -802,6 +811,7 @@ ui-checkbox-group ui-checkbox {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-breadcrumb-item {
   font-size: 13px;
   color: #666;
@@ -825,6 +835,106 @@ ui-breadcrumb-item a {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
+ui-tag,
+[data-is="ui-tag"] {
+  display: inline-block;
+  padding: 3px 9px;
+  font-size: 11px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  line-height: 1.4;
+  color: #FFF;
+  background-color: #454545;
+  /* round */
+  /* invert */
+  /* no-hover-effect */
+}
+ui-tag:hover,
+[data-is="ui-tag"]:hover {
+  color: #FFF;
+  background-color: #3e3e3e;
+}
+ui-tag[primary],
+[data-is="ui-tag"][primary] {
+  color: #FFF;
+  background-color: #2db7f5;
+}
+ui-tag[primary]:hover,
+[data-is="ui-tag"][primary]:hover {
+  color: #FFF;
+  background-color: #29a5dd;
+}
+ui-tag[success],
+[data-is="ui-tag"][success] {
+  color: #FFF;
+  background-color: #2ecc71;
+}
+ui-tag[success]:hover,
+[data-is="ui-tag"][success]:hover {
+  color: #FFF;
+  background-color: #29b866;
+}
+ui-tag[warning],
+[data-is="ui-tag"][warning] {
+  color: #666;
+  background-color: #f4d03f;
+}
+ui-tag[warning]:hover,
+[data-is="ui-tag"][warning]:hover {
+  color: #666;
+  background-color: #dcbb39;
+}
+ui-tag[danger],
+[data-is="ui-tag"][danger] {
+  color: #FFF;
+  background-color: #ec7063;
+}
+ui-tag[danger]:hover,
+[data-is="ui-tag"][danger]:hover {
+  color: #FFF;
+  background-color: #d46559;
+}
+ui-tag[round],
+[data-is="ui-tag"][round],
+ui-tag[rounded],
+[data-is="ui-tag"][rounded] {
+  border-radius: 11px;
+}
+ui-tag[invert],
+[data-is="ui-tag"][invert] {
+  color: #454545;
+  background-color: #FFF;
+}
+ui-tag[primary][invert],
+[data-is="ui-tag"][primary][invert] {
+  color: #2db7f5;
+  background-color: #FFF;
+}
+ui-tag[success][invert],
+[data-is="ui-tag"][success][invert] {
+  color: #2ecc71;
+  background-color: #FFF;
+}
+ui-tag[warning][invert],
+[data-is="ui-tag"][warning][invert] {
+  color: #f4d03f;
+  background-color: #FFF;
+}
+ui-tag[danger][invert],
+[data-is="ui-tag"][danger][invert] {
+  color: #ec7063;
+  background-color: #FFF;
+}
+/* Badge */
+/* Tooltip */
+/* Input */
+/* Button */
+/* Tag */
 .title,
 .caret {
   cursor: pointer;
@@ -881,6 +991,7 @@ ui-breadcrumb-item a {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-tree-node {
   display: block;
   cursor: pointer;
@@ -897,6 +1008,7 @@ ui-tree-node {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-menu {
   display: block;
   cursor: pointer;
@@ -917,6 +1029,7 @@ ui-menu[horizontal]::after {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-submenu {
   display: block;
   position: relative;
@@ -947,6 +1060,7 @@ ui-menu[horizontal] > ui-submenu:hover .ui-submenu__items--f47d9 {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-menu-item {
   display: block;
   white-space: nowrap;
@@ -980,6 +1094,7 @@ ui-menu[horizontal] > ui-submenu ui-menu-item:hover {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-switch {
   display: inline-block;
   color: #FFF;
@@ -1079,6 +1194,7 @@ ui-switch {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-progress-bar {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1159,6 +1275,7 @@ ui-progress-bar[lg] {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-popover {
   position: relative;
 }
@@ -1179,6 +1296,7 @@ ui-popover {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-message {
   position: fixed;
   left: 50%;
@@ -1208,6 +1326,7 @@ ui-message {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-collapse {
   display: block;
   border: solid 1px #2db7f5;
@@ -1218,6 +1337,7 @@ ui-collapse {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 ui-collapse-panel {
   display: block;
 }
@@ -1253,6 +1373,7 @@ ui-collapse > ui-collapse-panel:not(:last-child) {
 /* Tooltip */
 /* Input */
 /* Button */
+/* Tag */
 .ui-tooltip__target--0dfc9 {
   display: inline-block;
 }

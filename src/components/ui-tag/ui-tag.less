@@ -1,5 +1,73 @@
 @import "../../theme.less";
 
-:local(.base) {
+@tag-basic-color: #454545;
 
+.tag-color(@color; @background){
+	color: @color;
+	background-color: @background;
+}
+.tag-style(@color; @background) {
+	.tag-color(@color; @background);
+
+	&:hover {
+		color: @color;
+		background-color: shade(@background, 10%);
+	}
+}
+
+ui-tag, [data-is="ui-tag"] {
+	display: inline-block;
+	padding: 3px 9px;
+	font-size: 11px;
+	border-radius: 3px;
+	cursor: pointer;
+	user-select: none;
+	line-height: 1.4;
+
+	.tag-style(#FFF, @tag-basic-color);
+
+	&[primary] {
+		.tag-style(#FFF, @primary-color);
+	}
+
+	&[success] {
+		.tag-style(#FFF, @success-color);
+	}
+
+	&[warning] {
+		.tag-style(#666, @warning-color);
+	}
+
+	&[danger] {
+		.tag-style(#FFF, @danger-color);
+	}
+
+	/* round */
+
+	&[round], &[rounded] {
+		border-radius: 11px;
+	}
+
+	/* invert */
+	/* no-hover-effect */
+
+	&[invert] {
+		.tag-color(@tag-basic-color, #FFF);
+	}
+
+	&[primary][invert] {
+		.tag-color(@primary-color, #FFF);
+	}
+
+	&[success][invert] {
+		.tag-color(@success-color, #FFF);
+	}
+
+	&[warning][invert] {
+		.tag-color(@warning-color, #FFF);
+	}
+
+	&[danger][invert] {
+		.tag-color(@danger-color, #FFF);
+	}
 }
