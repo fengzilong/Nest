@@ -6,7 +6,7 @@ Yet another UI framework for Web, built with riot
 
 https://fengzilong.github.io/Nest/
 
-## Install
+## Installation
 
 ```bash
 $ npm i nest-ui --save
@@ -14,19 +14,19 @@ $ npm i nest-ui --save
 
 ## Usage
 
-Include nest-ui css file via `<link>`
+include nest-ui css file via `<link>`
 
 ```html
 <link rel="stylesheet" href="https://npmcdn.com/nest-ui/dist/nest.css">
 ```
 
-Include [riot](https://github.com/riot/riot) via `<script>`
+include [riot](https://github.com/riot/riot) via `<script>`
 
 ```html
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.4.1/riot.min.js"></script>
 ```
 
-Then enjoy :)
+enjoy :)
 
 index.html
 
@@ -49,7 +49,7 @@ index.html
 app.js
 
 ```js
-// or you can include nest-ui via `script` too
+// you can also include nest-ui via `script`
 import 'nest-ui';
 
 riot.tag('app', `
