@@ -6,7 +6,7 @@ import domAlign from 'dom-align';
 		<yield></yield>
 	</div>
 
-	<div if="{ triggered }" name="s" class="{ styles.base } { styles[ opts.placement ] }">
+	<div if="{ ( !manual && triggered ) || ( manual && opts.show ) }" name="s" class="{ styles.base } { styles[ opts.placement || defaultPlaceholder ] }">
 		<div class="{ styles.arrow }"></div>
 		<div class="{ styles.content }">
 			{ opts.title }
@@ -15,12 +15,13 @@ import domAlign from 'dom-align';
 
 	<script>
 		this.styles = styles;
-		this.placement = this.opts.placement;
+		this.manual = false;
 		this.triggered = false;
+		this.defaultPlaceholder = 'top';
 
 		let points = [ 'tc', 'bc' ];
 		let offset = [ 0, 0 ];
-		switch( this.placement ) {
+		switch( this.opts.placement || this.defaultPlaceholder ) {
 			case 'top':
 				points = [ 'bc', 'tc' ];
 				offset = [ 0, -1 ];
@@ -53,14 +54,69 @@ import domAlign from 'dom-align';
 			this.update();
 		};
 
-		this.on('mount', () => {
-			this.t.addEventListener('mouseenter', show, false);
-			this.t.addEventListener('mouseleave', hide, false);
+		const checkClickOutSide = e => {
+			if( !this.root.contains( e.target ) ) {
+				hide();
+			}
+		}
+
+		this.on('updated', () => {
+			const shallShowTooltip = ( !this.manual && this.triggered ) ||
+				( this.manual && this.opts.show );
+
+			if( !shallShowTooltip ) {
+				return;
+			}
+
+			const isTrackValid = this.opts.track &&
+				( this.opts.track instanceof HTMLElement );
+
+			if( !isTrackValid ) {
+				return;
+			}
+
+			domAlign( this.s, this.opts.track, {
+				points,
+				offset
+			} );
+		});
+
+		this.on('before-mount', () => {
+			const trigger = this.opts.trigger || 'hover';
+
+			// TODO: track first child element by default if track is not specificed
+
+			switch( trigger ) {
+				case 'hover':
+					this.t.addEventListener('mouseenter', show, false);
+					this.t.addEventListener('mouseleave', hide, false);
+					break;
+				case 'click':
+					this.t.addEventListener('click', show, false);
+					document.addEventListener('click', checkClickOutSide, false);
+					break;
+				case 'manual':
+					// control tooltip visibility on your own
+					this.manual = true;
+					break;
+			}
 		});
 
 		this.on('unmount', () => {
-			this.t.removeEventListener('mouseenter', show, false);
-			this.t.removeEventListener('mouseleave', hide, false);
+			const trigger = this.opts.trigger || 'hover';
+
+			switch( trigger ) {
+				case 'hover':
+					this.t.removeEventListener('mouseenter', show, false);
+					this.t.removeEventListener('mouseleave', hide, false);
+					break;
+				case 'click':
+					this.t.removeEventListener('click', show, false);
+					document.removeEventListener('click', checkClickOutSide, false);
+					break;
+				case 'manual':
+					break;
+			}
 		});
 	</script>
 </ui-tooltip>

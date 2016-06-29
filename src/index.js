@@ -25,3 +25,4 @@ import './components/ui-message';
 import './components/ui-collapse';
 import './components/ui-collapse-panel';
 import './components/ui-tooltip';
+import './components/ui-slider';

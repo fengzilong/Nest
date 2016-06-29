@@ -1,12 +1,14 @@
 <demos>
 	<style>
-		ui-tooltip {
-			margin-left: 100px;
-		}
+		
 	</style>
+
+	<ui-slider value="{ 50 }"></ui-slider>
 
 	<br />
 	<br />
+
+	<div style="margin-bottom: 1000px;"></div>
 
 	<ui-tag>normal</ui-tag>
 	<ui-tag primary>primary</ui-tag>
