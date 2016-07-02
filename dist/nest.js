@@ -1,6 +1,2650 @@
-!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.nest=e():t.nest=e()}(this,function(){return function(t){function e(i){if(n[i])return n[i].exports;var o=n[i]={exports:{},id:i,loaded:!1};return t[i].call(o.exports,o,o.exports,e),o.loaded=!0,o.exports}var n={};return e.m=t,e.c=n,e.p="",e(0)}([function(t,e,n){"use strict";n(3),n(9),n(18),n(21),n(24),n(27),n(30),n(33),n(36),n(39),n(42),n(45),n(46),n(49),n(52),n(55),n(56),n(59),n(62),n(65),n(68),n(71),n(74),n(77),n(80),n(83),n(86)},,,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(4),u=i(s),r=n(5),a=i(r);n(9),riot.tag2("ui-button",'<button onclick="{onClick}" class="{uiCls} {opts.disabled ? styles.disabled : \'\'}"> <ui-icon type="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>',"","",function(t){var e,n=this;this.styles=a["default"];var i=function(t){return"undefined"==typeof t};this.uiCls=(0,u["default"])((e={},o(e,a["default"].base,!0),o(e,a["default"].basic,i(this.opts.primary)&&i(this.opts.success)&&i(this.opts.warning)&&i(this.opts.danger)),o(e,a["default"].link,!i(this.opts.link)),o(e,a["default"].primary,!i(this.opts.primary)),o(e,a["default"].success,!i(this.opts.success)),o(e,a["default"].warning,!i(this.opts.warning)),o(e,a["default"].danger,!i(this.opts.danger)),o(e,a["default"].outline,!i(this.opts.outline)),o(e,a["default"].lg,!i(this.opts.lg)),o(e,a["default"].md,i(this.opts.lg)&&i(this.opts.sm)),o(e,a["default"].sm,!i(this.opts.sm)),e)),this.onClick=function(){n.opts.__disabled||n.opts.onClick&&n.opts.onClick()}},"{ }")},function(t,e,n){var i,o;/*!
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["nest"] = factory();
+	else
+		root["nest"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(3);
+
+	__webpack_require__(9);
+
+	__webpack_require__(18);
+
+	__webpack_require__(21);
+
+	__webpack_require__(24);
+
+	__webpack_require__(27);
+
+	__webpack_require__(30);
+
+	__webpack_require__(33);
+
+	__webpack_require__(36);
+
+	__webpack_require__(39);
+
+	__webpack_require__(42);
+
+	__webpack_require__(45);
+
+	__webpack_require__(46);
+
+	__webpack_require__(49);
+
+	__webpack_require__(52);
+
+	__webpack_require__(55);
+
+	__webpack_require__(56);
+
+	__webpack_require__(59);
+
+	__webpack_require__(62);
+
+	__webpack_require__(65);
+
+	__webpack_require__(68);
+
+	__webpack_require__(71);
+
+	__webpack_require__(74);
+
+	__webpack_require__(77);
+
+	__webpack_require__(80);
+
+	__webpack_require__(83);
+
+	__webpack_require__(86);
+
+	__webpack_require__(97);
+
+/***/ },
+/* 1 */,
+/* 2 */,
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _button = __webpack_require__(5);
+	
+	var _button2 = _interopRequireDefault(_button);
+	
+	__webpack_require__(9);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-button', '<button onclick="{onClick}" class="{uiCls} {opts.disabled ? styles.disabled : \'\'}"> <ui-icon type="loading" if="{opts.loading}" class="{styles.loading}"></ui-icon> <yield></yield> </button>', '', '', function (opts) {
+		var _classNames,
+		    _this = this;
+	
+		this.styles = _button2.default;
+	
+		var isUndefined = function isUndefined(v) {
+			return typeof v === 'undefined';
+		};
+	
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _button2.default.base, true), _defineProperty(_classNames, _button2.default.basic, isUndefined(this.opts.primary) && isUndefined(this.opts.success) && isUndefined(this.opts.warning) && isUndefined(this.opts.danger)), _defineProperty(_classNames, _button2.default.link, !isUndefined(this.opts.link)), _defineProperty(_classNames, _button2.default.primary, !isUndefined(this.opts.primary)), _defineProperty(_classNames, _button2.default.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _button2.default.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _button2.default.danger, !isUndefined(this.opts.danger)), _defineProperty(_classNames, _button2.default.outline, !isUndefined(this.opts.outline)), _defineProperty(_classNames, _button2.default.lg, !isUndefined(this.opts.lg)), _defineProperty(_classNames, _button2.default.md, isUndefined(this.opts.lg) && isUndefined(this.opts.sm)), _defineProperty(_classNames, _button2.default.sm, !isUndefined(this.opts.sm)), _classNames));
+	
+		this.onClick = function () {
+			if (_this.opts.__disabled) {
+				return;
+			}
+	
+			_this.opts.onClick && _this.opts.onClick();
+		};
+	}, '{ }');
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	  Copyright (c) 2016 Jed Watson.
 	  Licensed under the MIT License (MIT), see
 	  http://jedwatson.github.io/classnames
 	*/
-!function(){"use strict";function n(){for(var t=[],e=0;e<arguments.length;e++){var i=arguments[e];if(i){var o=typeof i;if("string"===o||"number"===o)t.push(i);else if(Array.isArray(i))t.push(n.apply(null,i));else if("object"===o)for(var u in i)s.call(i,u)&&i[u]&&t.push(u)}}return t.join(" ")}var s={}.hasOwnProperty;"undefined"!=typeof t&&t.exports?t.exports=n:(i=[],o=function(){return n}.apply(e,i),!(void 0!==o&&(t.exports=o)))}()},function(t,e){t.exports={base:"ui-button__base--23f2b",basic:"ui-button__basic--81e3e",primary:"ui-button__primary--55b06",success:"ui-button__success--a5daa",warning:"ui-button__warning--099ac",danger:"ui-button__danger--0c2f4",outline:"ui-button__outline--fa861",link:"ui-button__link--90952",sm:"ui-button__sm--586c1",md:"ui-button__md--dd1dc",lg:"ui-button__lg--aa436",disabled:"ui-button__disabled--a6225",loading:"ui-button__loading--df6bb"}},,,,function(t,e,n){"use strict";n(10),n(16),riot.tag2("ui-icon",'<span class="iconfont">{icon}</span>',"","",function(t){var e=this,n={"arrow-left":"&#xe600;","arrow-right":"&#xe601;",loading:"&#xe602;",info:"&#xe608;","caret-right":"&#xe603;","caret-down":"&#xe604;"},i=function(t){return t=t.replace(/(\\u)(\w{4})/gi,function(t){return String.fromCharCode(parseInt(escape(t).replace(/(%5Cu)(\w{4})/g,"$2"),16))}),t=t.replace(/(&#x)(\w{4});/gi,function(t){return String.fromCharCode(parseInt(escape(t).replace(/(%26%23x)(\w{4})(%3B)/g,"$2"),16))})};this.one("update",function(){e.icon=e.opts.icon,!e.opts.icon&&n[e.opts.type]&&(e.icon=i(n[e.opts.type]))})},"{ }")},function(t,e){},,,,,,function(t,e){},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(19),s=i(o);riot.tag2("ui-badge",'<span class="{styles.base}"> <yield></yield> <sup if="{parseInt( opts.count ) > 0}" class="{styles.count} {!countStr || opts.dot === true ? styles.dot : \'\'}">{!countStr || opts.dot === true ? \'\' : countStr}</sup> </span>',"","",function(t){var e=this;this.styles=s["default"],this.on("mount",function(){}),this.on("update",function(){var t=e.opts.max;t=parseInt(t),isNaN(t)&&(t=1/0);var n=e.opts.count;if(n=parseInt(n),!isNaN(n)){var i=n;n>t&&(i=t+"+"),e.countStr=i}})},"{ }")},function(t,e){t.exports={base:"ui-badge__base--b9cfc",count:"ui-badge__count--a0dab",dot:"ui-badge__dot--084f1"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(22),u=n(4),r=i(u);riot.tag2("ui-link",'<a href="{opts.href || \'javascript:;\'}" class="{classnames}" onclick="{opts.onclick}"> <yield></yield> </a>',"","",function(t){var e,n=function(t){return"undefined"==typeof t};this.classnames=(0,r["default"])((e={},o(e,s.base,!0),o(e,s.primary,!0),o(e,s.success,!n(this.opts.success)),o(e,s.warning,!n(this.opts.warning)),o(e,s.danger,!n(this.opts.danger)),e))},"{ }")},function(t,e){t.exports={base:"ui-link__base--00da4",primary:"ui-link__primary--d23d5",success:"ui-link__success--0d6b1",warning:"ui-link__warning--e931b",danger:"ui-link__danger--ba7fa"}},,function(t,e,n){"use strict";n(25),riot.tag2("ui-input-nao",'<span class="input input--nao {input--filled : hasValue}" name="container"> <input class="input__field input__field--nao" type="text" onchange="{onChange}"> <label class="input__label input__label--nao"> <span class="input__label-content input__label-content--nao">{opts.placeholder}</span> </label> <svg class="graphic graphic--nao" width="300%" height="100%" viewbox="0 0 1200 60" preserveaspectratio="none"> <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path> </svg> </span>',"","",function(t){var e=this,n=this.opts.value;this.hasValue=!("undefined"==typeof n||""===n),this.onChange=function(t){var n=t.target.value;e.hasValue=!("undefined"==typeof n||""===n)}},"{ }")},function(t,e){},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(4),u=i(s),r=n(28),a=i(r);riot.tag2("ui-input",'<input class="{uiCls} {stateCls}" type="{opts.type || \'text\'}" placeholder="{opts.placeholder}" onchange="{onChange}" oninput="{onInput}" onfocus="{onFocus}" onblur="{onBlur}" __disabled="{opts.__disabled === true}" value="{opts.value}">',"","",function(t){var e,n=this,i=function(t){return"undefined"==typeof t};this.uiCls=(0,u["default"])((e={},o(e,a["default"].base,!0),o(e,a["default"].sm,!i(this.opts.sm)),o(e,a["default"].lg,!i(this.opts.lg)),e)),this.on("update",function(){n.stateCls=(0,u["default"])(o({},a["default"].disabled,t.__disabled===!0))}),this.onChange=function(){n.opts.onChange&&n.opts.onChange()},this.onInput=function(){n.opts.onInput&&n.opts.onInput()},this.onFocus=function(){n.opts.onFocus&&n.opts.onFocus()},this.onBlur=function(){n.opts.onBlur&&n.opts.onBlur()}},"{ }")},function(t,e){t.exports={base:"ui-input__base--d9c63",sm:"ui-input__sm--d8ab3",lg:"ui-input__lg--5db49",disabled:"ui-input__disabled--2541c"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(31),s=i(o);riot.tag2("ui-radio","<span class=\"{styles.base} {checked ? styles.checked : ''}\"></span> <span> <yield></yield> </span>","","",function(t){var e=this;this.styles=s["default"],this.checked=this.opts.__checked||!1;var n=function(){e.checked||(e.opts.onChange&&e.opts.onChange(e.checked),e.trigger("change"))};this.on("mount",function(){e.root.addEventListener("click",n,!1)}),this.on("unmount",function(){e.root.removeEventListener("click",n,!1)})},"{ }")},function(t,e){t.exports={base:"ui-radio__base--99842",checked:"ui-radio__checked--83367"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(34),s=i(o);riot.tag2("ui-radio-button","<span class=\"{styles.base} {checked ? styles.checked : ''}\"> <yield></yield> </span>","","",function(t){var e=this;this.styles=s["default"],this.checked=!1;var n=function(){e.checked||(e.opts.onChange&&e.opts.onChange(),e.trigger("change"))};this.on("mount",function(){e.root.addEventListener("click",n,!1)}),this.on("unmount",function(){e.root.removeEventListener("click",n,!1)})},"{ }")},function(t,e){t.exports={base:"ui-radio-button__base--de77c",checked:"ui-radio-button__checked--a2fc6"}},,function(t,e,n){"use strict";n(37),riot.tag2("ui-radio-group","<yield></yield>","","",function(t){var e=this;this.on("mount",function(){var t=[],n=e.tags["ui-radio"],i=e.tags["ui-radio-button"];n||(n=[]),"undefined"==typeof n.length&&(n=[n]),i||(i=[]),"undefined"==typeof i.length&&(i=[i]),t.push.apply(t,n),t.push.apply(t,i);for(var o=function(n){for(var i=0,o=t.length;o>i;i++)n===i?t[i].checked=!0:t[i].checked=!1;e.update()},s=e.opts.value,u=e.opts.onChange||function(){},r=function(n,i){e.opts.value&&t[n].opts.value===e.opts.value&&o(n),t[n].on("change",function(){o(n),n!==s&&(s=n,u(t[n].opts.value,n))})},a=0,l=t.length;l>a;a++)r(a,l)})})},function(t,e){},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(40),s=i(o);riot.tag2("ui-checkbox","<span class=\"{styles.base} {checked ? styles.checked : ''}\"></span> <span> <yield></yield> </span>","","",function(t){var e=this;this.styles=s["default"],this.checked=this.opts.checked||!1;var n=function(){e.checked=!e.checked,e.update(),e.opts.onChange&&e.opts.onChange(e.checked),e.trigger("change")};this.on("mount",function(){e.root.addEventListener("click",n,!1)}),this.on("unmount",function(){e.root.removeEventListener("click",n,!1)})},"{ }")},function(t,e){t.exports={base:"ui-checkbox__base--c3df2",checked:"ui-checkbox__checked--35331"}},,function(t,e,n){"use strict";n(43),riot.tag2("ui-checkbox-group","<yield></yield>","","",function(t){var e=this;this.on("mount",function(){var t=e.tags["ui-checkbox"];if(t){t.length||(t=[t]);for(var n=function(){for(var e={keys:[],values:[]},n=0;n<t.length;n++)t[n].checked&&(e.keys.push(n),e.values.push(t[n].opts.value));return e},i=e.opts.value,o=e.opts.onChange||function(){},s=0,u=t.length;u>s;s++)~i.indexOf(t[s].opts.value)&&(t[s].checked=!0,t[s].update()),t[s].on("change",function(){var t=n();o(t.values,t.keys)})}})})},function(t,e){},,function(t,e){"use strict";riot.tag2("ui-breadcrumb","<yield></yield>","","",function(t){})},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(47),s=i(o);riot.tag2("ui-breadcrumb-item",'<yield></yield> <span class="{styles.sep}">{sep}</span>',"","",function(t){this.styles=s["default"],this.sep="/"},"{ }")},function(t,e){t.exports={sep:"ui-breadcrumb-item__sep--f28eb"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(50),s=i(o);riot.tag2("ui-tag","<yield></yield>","","",function(t){this.styles=s["default"]})},function(t,e){},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol?"symbol":typeof t},s=n(53);i(s);riot.tag2("ui-json-tree","","","",function(t){var e=this,n=Object.hasOwnProperty,i=function(t,e){if(Array.isArray(t))for(var i=0,o=t.length;o>i;i++)e(t[i],i);else for(var i in t)n.call(t,i)&&e(t[i],i)},s=function(){return'\n			<div class="node">\n			'},u=function(){return"\n			</div>\n			"},r=function(t,e){var n=!1,i="undefined"==typeof e?"undefined":o(e);return"string"==typeof e?e='"'+e+'"':Array.isArray(e)?(e="Array["+e.length+"]",n=!0):"object"===i&&(e="Object",n=!0),'\n			<div class="title">'+(n?'<div class="iconfont caret caret-right">&#xe603;</div><div class="iconfont caret caret-down">&#xe604;</div>':'<div class="iconfont caret"></div>')+('\n				<div>\n					<span class="key">'+t+':</span>\n					<span class="'+i+'">'+e+"</span>\n				</div>\n			</div>")},a=function(){return'\n			<div class="children">\n			'},l=function(){return"\n			</div>\n			"},c=function f(t){var e="";return i(t,function(t,n){e+=s(),"number"==typeof t?e+=r(n,t):"string"==typeof t?e+=r(n,t):"boolean"==typeof t?e+=r(n,t):Array.isArray(t)?(e+=r(n,t),e+=a(),e+=f(t),e+=l()):"object"===("undefined"==typeof t?"undefined":o(t))&&(e+=r(n,t),e+=a(),e+=f(t),e+=l()),e+=u()}),e},d=void 0;this.on("updated",function(){if(e.opts.json!==d){var t=c(e.opts.json);e.root.innerHTML=t;var n=e.root.querySelectorAll(".title");n&&Array.prototype.slice.call(n).forEach(function(t){t.addEventListener("click",function(){if(t.nextElementSibling){var e=t.parentNode;e.classList.contains("open")?e.classList.remove("open"):e.classList.add("open")}},!1)}),d=e.opts.json}}),this.on("mount",function(){})})},function(t,e){},,function(t,e){"use strict";riot.tag2("ui-tree","<yield></yield>","","",function(t){var e=this,n={CHECKED:0,UNCHECKED:1,HALF_CHECKED:2};this.nodes={},this.one("update",function(){var t=e.tags["ui-tree-node"];t?"undefined"==typeof t.length&&(t=[t]):t=[];for(var n=0,i=t.length;i>n;n++)t[n].treeNodeId=n+""}),this.on("tree-node-change",function(t){var i=e.nodes;if(i[t].status!==n.CHECKED?i[t].status=n.CHECKED:i[t].status=n.UNCHECKED,i[t].status===n.CHECKED)for(var o in i)o!==t&&o.startsWith(t)&&(i[o].status=n.CHECKED,i[o].update());else for(var o in i)o!==t&&o.startsWith(t)&&(i[o].status=n.UNCHECKED,i[o].update());if(i[t].status===n.CHECKED)for(var s=t.slice(0,-1),u=!1;s.length>0;){if(!u)for(var o in i)if(o!==s&&o.startsWith(s)&&i[o].status!==n.CHECKED){u=!0;break}u?i[s].status=n.HALF_CHECKED:i[s].status=n.CHECKED,i[s].update(),s=s.slice(0,-1)}else for(var s=t.slice(0,-1),r=!1;s.length>0;){if(!r)for(var o in i)if(o!==s&&o.startsWith(s)&&i[o].status===n.CHECKED){r=!0;break}r?i[s].status=n.HALF_CHECKED:i[s].status=n.UNCHECKED,i[s].update(),s=s.slice(0,-1)}})})},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(57),s=i(o);riot.tag2("ui-tree-node",'<span class="{styles.state}">{this.statusIcon()}</span> <span class="{styles.title}" onclick="{onCheckChange}">{opts.title}</span> <div class="{styles.children}"> <yield></yield> </div>',"","",function(t){var e=this,n={CHECKED:0,UNCHECKED:1,HALF_CHECKED:2};this.styles=s["default"],this.STATUS=n,this.status=n.UNCHECKED,this.statusIcon=function(){var t="";switch(e.status){case n.CHECKED:t="v";break;case n.UNCHECKED:t="口";break;case n.HALF_CHECKED:t="曰"}return t},this.on("mount",function(){var t=e.parent;"UI-TREE"===t.root.tagName?e.tree=t:t.tree&&(e.tree=t.tree),e.tree.nodes[e.treeNodeId]=e;var n=e.treeNodeId||"",i=e.tags["ui-tree-node"];i?"undefined"==typeof i.length&&(i=[i]):i=[];for(var o=0,s=i.length;s>o;o++)i[o].treeNodeId=n+o+""}),this.onCheckChange=function(){e.tree.trigger("tree-node-change",e.treeNodeId)}},"{ }")},function(t,e){t.exports={title:"ui-tree-node__title--6b761",children:"ui-tree-node__children--eda21"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=(n(60),n(4));i(o);riot.tag2("ui-menu","<yield></yield>","","",function(t){this.on("update",function(){})})},function(t,e){},,function(t,e,n){"use strict";var i=n(63);riot.tag2("ui-submenu",'{opts.text} <div class="{styles.items}"> <yield></yield> </div>',"","",function(t){this.styles={items:i.items}},"{ }")},function(t,e){t.exports={items:"ui-submenu__items--f47d9"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(66),u=n(4),r=i(u);riot.tag2("ui-menu-item",'<div class="{classnames}"> {opts.text} </div>',"","",function(t){var e=this;this.on("mount",function(){}),this.on("update",function(){e.classnames=(0,r["default"])(o({},s.base,!0))})},"{ }")},function(t,e){t.exports={base:"ui-menu-item__base--46135"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(4),u=i(s),r=n(69),a=i(r);riot.tag2("ui-switch",'<div class="{uiCls} {stateCls}" onclick="{root.$toggle}"></div>',"","",function(t){var e,n=this;this.disabled=this.opts.disabled||!1;var i=!!this.opts.checked;this.styles=a["default"],this.uiCls=(0,u["default"])((e={},o(e,a["default"].base,!0),o(e,a["default"].sm,"undefined"!=typeof this.opts.sm),o(e,a["default"].lg,"undefined"!=typeof this.opts.lg),e)),this.root.$toggle=function(t){n.disabled||(i=!i,t||n.update(),n.onChange&&n.onChange(i))},this.root.$check=function(){i=!0,n.update(),n.onChange&&n.onChange(i)},this.root.$uncheck=function(){i=!1,n.update(),n.onChange&&n.onChange(i)},this.root.$enable=function(){n.disabled=!1,n.update()},this.root.$disable=function(){n.disabled=!0,n.update()},this.on("update",function(){var t;n.stateCls=(0,u["default"])((t={},o(t,a["default"].on,i),o(t,a["default"].off,!i),o(t,a["default"].disabled,n.disabled),t))})},"{ }")},function(t,e){t.exports={base:"ui-switch__base--e2fac",off:"ui-switch__off--b66a6",on:"ui-switch__on--17e70",sm:"ui-switch__sm--c01c5",lg:"ui-switch__lg--3d195",disabled:"ui-switch__disabled--64b78"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}var s=n(72),u=i(s),r=n(4),a=i(r);riot.tag2("ui-progress-bar",'<div class="{styles.outter}"> <div class="{styles.inner} {colorCls}" riot-style="width: {opts.value}%;"></div> </div> <div if="{typeof opts.label !== \'undefined\'}" class="{styles.label}"> {this.opts.value}% </div>',"","",function(t){var e;this.styles=u["default"],this.colorCls=(0,a["default"])((e={},o(e,u["default"].primary,!0),o(e,u["default"].success,"undefined"!=typeof this.opts.success),o(e,u["default"].warning,"undefined"!=typeof this.opts.warning),o(e,u["default"].danger,"undefined"!=typeof this.opts.danger),e))},"{ }")},function(t,e){t.exports={outter:"ui-progress-bar__outter--b19c7",inner:"ui-progress-bar__inner--c7cc3",label:"ui-progress-bar__label--5cad3",primary:"ui-progress-bar__primary--fc241",success:"ui-progress-bar__success--8db4a",warning:"ui-progress-bar__warning--f4465",danger:"ui-progress-bar__danger--0ed62"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(75),s=i(o);riot.tag2("ui-popover",'<yield></yield> <div class="{styles.popover}"> 悬浮 </div>',"","",function(t){var e=this;this.styles=s["default"],this.on("mount",function(){e.root.addEventListener("mouseenter",function(){console.log("enter")},!1)})},"{ }")},function(t,e){t.exports={popover:"ui-popover__popover--2cd67"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(78),s=i(o);riot.tag2("ui-message",'<ui-icon type="info" class="{styles.icon}"></ui-icon> <div>{opts.content}<yield></yield></div>',"","",function(t){this.styles=s["default"]},"{ }")},function(t,e){t.exports={icon:"ui-message__icon--82d2e"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(81),s=i(o);riot.tag2("ui-collapse","<yield></yield>","","",function(t){this.styles=s["default"],this.on("mount",function(){})})},function(t,e){},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(84),s=i(o);riot.tag2("ui-collapse-panel",'<div class="{styles.title}"> <div class="{styles[ \'title-inner\' ]}"> <ui-icon type="caret-right"></ui-icon> {opts.title} </div> </div> <div class="{styles.content} {expand ? styles[ \'content-active\' ] : styles[ \'content-inactive\' ]}"> <div class="{styles[ \'content-box\' ]}"> <yield></yield> </div> </div>',"","",function(t){var e=this;this.styles=s["default"],this.expand=!1;var n=function(){e.expand=!e.expand,e.update()};this.on("mount",function(){e.root.addEventListener("click",n,!1)}),this.on("unmount",function(){e.root.removeEventListener("click",n,!1)})},"{ }")},function(t,e){t.exports={title:"ui-collapse-panel__title--47429","title-inner":"ui-collapse-panel__title-inner--2cde4",content:"ui-collapse-panel__content--d7b6a","content-box":"ui-collapse-panel__content-box--d8edc","content-inactive":"ui-collapse-panel__content-inactive--9eaf4","content-active":"ui-collapse-panel__content-active--4dad8"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}var o=n(87),s=i(o),u=n(89),r=i(u);riot.tag2("ui-tooltip",'<div name="t" class="{styles.target}"> <yield></yield> </div> <div if="{triggered}" name="s" class="{styles.base} {styles[ opts.placement ]}"> <div class="{styles.arrow}"></div> <div class="{styles.content}"> {opts.title} </div> </div>',"","",function(t){var e=this;this.styles=s["default"],this.placement=this.opts.placement,this.triggered=!1;var n=["tc","bc"],i=[0,0];switch(this.placement){case"top":n=["bc","tc"],i=[0,-1];break;case"bottom":n=["tc","bc"],i=[0,1];break;case"left":n=["cr","cl"],i=[-2,0];break;case"right":n=["cl","cr"],i=[2,0]}var o=function(){e.triggered=!0,e.update(),(0,r["default"])(e.s,e.t,{points:n,offset:i})},u=function(){e.triggered=!1,e.update()};this.on("mount",function(){e.t.addEventListener("mouseenter",o,!1),e.t.addEventListener("mouseleave",u,!1)}),this.on("unmount",function(){e.t.removeEventListener("mouseenter",o,!1),e.t.removeEventListener("mouseleave",u,!1)})},"{ }")},function(t,e){t.exports={target:"ui-tooltip__target--0dfc9",base:"ui-tooltip__base--c0de7",arrow:"ui-tooltip__arrow--64d91",content:"ui-tooltip__content--87471",bottom:"ui-tooltip__bottom--a907e",top:"ui-tooltip__top--b5177",left:"ui-tooltip__left--51825",right:"ui-tooltip__right--70a0b"}},,function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n){return t.left<n.left||t.left+e.width>n.right}function s(t,e,n){return t.top<n.top||t.top+e.height>n.bottom}function u(t,e,n){return t.left>n.right||t.left+e.width<n.left}function r(t,e,n){return t.top>n.bottom||t.top+e.height<n.top}function a(t,e,n){var i=[];return h["default"].each(t,function(t){i.push(t.replace(e,function(t){return n[t]}))}),i}function l(t,e){return t[e]=-t[e],t}function c(t,e){var n=void 0;return n=/%$/.test(t)?parseInt(t.substring(0,t.length-1),10)/100*e:parseInt(t,10),n||0}function d(t,e){t[0]=c(t[0],e.width),t[1]=c(t[1],e.height)}function f(t,e,n){var i=n.points,c=n.offset||[0,0],f=n.targetOffset||[0,0],p=n.overflow,v=n.target||e,g=n.source||t;c=[].concat(c),f=[].concat(f),p=p||{};var b={},y=0,w=(0,_["default"])(g),x=(0,C["default"])(g),E=(0,C["default"])(v);d(c,x),d(f,E);var M=(0,k["default"])(x,E,i,c,f),j=h["default"].merge(x,M);if(w&&(p.adjustX||p.adjustY)){if(p.adjustX&&o(M,x,w)){var H=a(i,/[lr]/gi,{l:"r",r:"l"}),L=l(c,0),O=l(f,0),W=(0,k["default"])(x,E,H,L,O);u(W,x,w)||(y=1,i=H,c=L,f=O)}if(p.adjustY&&s(M,x,w)){var H=a(i,/[tb]/gi,{t:"b",b:"t"}),L=l(c,1),O=l(f,1),W=(0,k["default"])(x,E,H,L,O);r(W,x,w)||(y=1,i=H,c=L,f=O)}y&&(M=(0,k["default"])(x,E,i,c,f),h["default"].mix(j,M)),b.adjustX=p.adjustX&&o(M,x,w),b.adjustY=p.adjustY&&s(M,x,w),(b.adjustX||b.adjustY)&&(j=(0,m["default"])(M,x,w,b))}return j.width!==x.width&&h["default"].css(g,"width",g.width()+j.width-x.width),j.height!==x.height&&h["default"].css(g,"height",g.height()+j.height-x.height),h["default"].offset(g,{left:j.left,top:j.top},{useCssRight:n.useCssRight,useCssBottom:n.useCssBottom}),{points:i,offset:c,targetOffset:f,overflow:b}}Object.defineProperty(e,"__esModule",{value:!0});var p=n(90),h=i(p),v=n(91),g=i(v),b=n(92),_=i(b),y=n(93),m=i(y),w=n(94),C=i(w),x=n(95),k=i(x);f.__getOffsetParent=g["default"],f.__getVisibleRectForElement=_["default"],e["default"]=f,t.exports=e["default"]},function(t,e){"use strict";function n(t,e,i){var o=i;{if("object"!=typeof e)return"undefined"!=typeof o?("number"==typeof o&&(o+="px"),void(t.style[e]=o)):C(t,e);for(var s in e)e.hasOwnProperty(s)&&n(t,s,e[s])}}function i(t){var e=void 0,n=void 0,i=void 0,o=t.ownerDocument,s=o.body,u=o&&o.documentElement;return e=t.getBoundingClientRect(),n=e.left,i=e.top,n-=u.clientLeft||s.clientLeft||0,i-=u.clientTop||s.clientTop||0,{left:n,top:i}}function o(t,e){var n=t["page"+(e?"Y":"X")+"Offset"],i="scroll"+(e?"Top":"Left");if("number"!=typeof n){var o=t.document;n=o.documentElement[i],"number"!=typeof n&&(n=o.body[i])}return n}function s(t){return o(t)}function u(t){return o(t,!0)}function r(t){var e=i(t),n=t.ownerDocument,o=n.defaultView||n.parentWindow;return e.left+=s(o),e.top+=u(o),e}function a(t,e,n){var i=n,o="",s=t.ownerDocument;return i=i||s.defaultView.getComputedStyle(t,null),i&&(o=i.getPropertyValue(e)||i[e]),o}function l(t,e){var n=t[E]&&t[E][e];if(x.test(n)&&!k.test(e)){var i=t.style,o=i[j],s=t[M][j];t[M][j]=t[E][j],i[j]="fontSize"===e?"1em":n||0,n=i.pixelLeft+H,i[j]=o,t[M][j]=s}return""===n?"auto":n}function c(t,e){return"left"===t?e.useCssRight?"right":t:e.useCssBottom?"bottom":t}function d(t){return"left"===t?"right":"right"===t?"left":"top"===t?"bottom":"bottom"===t?"top":void 0}function f(t,e,i){"static"===n(t,"position")&&(t.style.position="relative");var o=-999,s=-999,u=c("left",i),a=c("top",i),l=d(u),f=d(a);"left"!==u&&(o=999),"top"!==a&&(s=999),"left"in e&&(t.style[l]="",t.style[u]=o+"px"),"top"in e&&(t.style[f]="",t.style[a]=s+"px");var p=r(t),h={},v=void 0;for(v in e)if(e.hasOwnProperty(v)){var g=c(v,i),b="left"===v?o:s;g===v?h[g]=b+e[v]-p[v]:h[g]=b+p[v]-e[v]}n(t,h)}function p(t,e){for(var n=0;n<t.length;n++)e(t[n])}function h(t){return"border-box"===C(t,"boxSizing")}function v(t,e,n){var i={},o=t.style,s=void 0;for(s in e)e.hasOwnProperty(s)&&(i[s]=o[s],o[s]=e[s]);n.call(t);for(s in e)e.hasOwnProperty(s)&&(o[s]=i[s])}function g(t,e,n){var i=0,o=void 0,s=void 0,u=void 0;for(s=0;s<e.length;s++)if(o=e[s])for(u=0;u<n.length;u++){var r=void 0;r="border"===o?o+n[u]+"Width":o+n[u],i+=parseFloat(C(t,r))||0}return i}function b(t){return null!==t&&void 0!==t&&t==t.window}function _(t,e,n){var i=n;if(b(t))return"width"===e?P.viewportWidth(t):P.viewportHeight(t);if(9===t.nodeType)return"width"===e?P.docWidth(t):P.docHeight(t);var o="width"===e?["Left","Right"]:["Top","Bottom"],s="width"===e?t.offsetWidth:t.offsetHeight,u=C(t),r=h(t,u),a=0;(null===s||void 0===s||0>=s)&&(s=void 0,a=C(t,e),(null===a||void 0===a||Number(a)<0)&&(a=t.style[e]||0),a=parseFloat(a)||0),void 0===i&&(i=r?D:O);var l=void 0!==s||r,c=s||a;return i===O?l?c-g(t,["border","padding"],o,u):a:l?i===D?c:c+(i===W?-g(t,["border"],o,u):g(t,["margin"],o,u)):a+g(t,L.slice(i),o,u)}function y(){for(var t=arguments.length,e=Array(t),n=0;t>n;n++)e[n]=arguments[n];var i=void 0,o=e[0];return 0!==o.offsetWidth?i=_.apply(void 0,e):v(o,A,function(){i=_.apply(void 0,e)}),i}function m(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n]);return t}Object.defineProperty(e,"__esModule",{value:!0});var w=/[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source,C=void 0,x=new RegExp("^("+w+")(?!px)[a-z%]+$","i"),k=/^(top|right|bottom|left)$/,E="currentStyle",M="runtimeStyle",j="left",H="px";"undefined"!=typeof window&&(C=window.getComputedStyle?a:l);var L=["margin","border","padding"],O=-1,W=2,D=1,S=0,P={};p(["Width","Height"],function(t){P["doc"+t]=function(e){var n=e.document;return Math.max(n.documentElement["scroll"+t],n.body["scroll"+t],P["viewport"+t](n))},P["viewport"+t]=function(e){var n="client"+t,i=e.document,o=i.body,s=i.documentElement,u=s[n];return"CSS1Compat"===i.compatMode&&u||o&&o[n]||u}});var A={position:"absolute",visibility:"hidden",display:"block"};p(["width","height"],function(t){var e=t.charAt(0).toUpperCase()+t.slice(1);P["outer"+e]=function(e,n){return e&&y(e,t,n?S:D)};var i="width"===t?["Left","Right"]:["Top","Bottom"];P[t]=function(e,o){var s=o;{if(void 0===s)return e&&y(e,t,O);if(e){var u=C(e),r=h(e);return r&&(s+=g(e,["padding","border"],i,u)),n(e,t,s)}}}});var K={getWindow:function(t){if(t&&t.document&&t.setTimeout)return t;var e=t.ownerDocument||t;return e.defaultView||e.parentWindow},offset:function(t,e,n){return"undefined"==typeof e?r(t):void f(t,e,n||{})},isWindow:b,each:p,css:n,clone:function(t){var e=void 0,n={};for(e in t)t.hasOwnProperty(e)&&(n[e]=t[e]);var i=t.overflow;if(i)for(e in t)t.hasOwnProperty(e)&&(n.overflow[e]=t.overflow[e]);return n},mix:m,getWindowScrollLeft:function(t){return s(t)},getWindowScrollTop:function(t){return u(t)},merge:function(){for(var t={},e=arguments.length,n=Array(e),i=0;e>i;i++)n[i]=arguments[i];for(var o=0;o<n.length;o++)K.mix(t,n[o]);return t},viewportWidth:0,viewportHeight:0};m(K,P),e["default"]=K,t.exports=e["default"]},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t){var e=t.ownerDocument,n=e.body,i=void 0,o=u["default"].css(t,"position"),s="fixed"===o||"absolute"===o;if(!s)return"html"===t.nodeName.toLowerCase()?null:t.parentNode;for(i=t.parentNode;i&&i!==n;i=i.parentNode)if(o=u["default"].css(i,"position"),"static"!==o)return i;return null}Object.defineProperty(e,"__esModule",{value:!0});var s=n(90),u=i(s);e["default"]=o,t.exports=e["default"]},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t){for(var e={left:0,right:1/0,top:0,bottom:1/0},n=(0,a["default"])(t),i=void 0,o=void 0,s=void 0,r=t.ownerDocument,l=r.defaultView||r.parentWindow,c=r.body,d=r.documentElement;n;){if(-1!==navigator.userAgent.indexOf("MSIE")&&0===n.clientWidth||n===c||n===d||"visible"===u["default"].css(n,"overflow")){if(n===c||n===d)break}else{var f=u["default"].offset(n);f.left+=n.clientLeft,f.top+=n.clientTop,e.top=Math.max(e.top,f.top),e.right=Math.min(e.right,f.left+n.clientWidth),e.bottom=Math.min(e.bottom,f.top+n.clientHeight),e.left=Math.max(e.left,f.left)}n=(0,a["default"])(n)}return i=u["default"].getWindowScrollLeft(l),o=u["default"].getWindowScrollTop(l),e.left=Math.max(e.left,i),e.top=Math.max(e.top,o),s={width:u["default"].viewportWidth(l),height:u["default"].viewportHeight(l)},e.right=Math.min(e.right,i+s.width),e.bottom=Math.min(e.bottom,o+s.height),e.top>=0&&e.left>=0&&e.bottom>e.top&&e.right>e.left?e:null}Object.defineProperty(e,"__esModule",{value:!0});var s=n(90),u=i(s),r=n(91),a=i(r);e["default"]=o,t.exports=e["default"]},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n,i){var o=u["default"].clone(t),s={width:e.width,height:e.height};return i.adjustX&&o.left<n.left&&(o.left=n.left),i.resizeWidth&&o.left>=n.left&&o.left+s.width>n.right&&(s.width-=o.left+s.width-n.right),i.adjustX&&o.left+s.width>n.right&&(o.left=Math.max(n.right-s.width,n.left)),i.adjustY&&o.top<n.top&&(o.top=n.top),i.resizeHeight&&o.top>=n.top&&o.top+s.height>n.bottom&&(s.height-=o.top+s.height-n.bottom),i.adjustY&&o.top+s.height>n.bottom&&(o.top=Math.max(n.bottom-s.height,n.top)),u["default"].mix(o,s)}Object.defineProperty(e,"__esModule",{value:!0});var s=n(90),u=i(s);e["default"]=o,t.exports=e["default"]},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t){var e=void 0,n=void 0,i=void 0;if(u["default"].isWindow(t)||9===t.nodeType){var o=u["default"].getWindow(t);e={left:u["default"].getWindowScrollLeft(o),top:u["default"].getWindowScrollTop(o)},n=u["default"].viewportWidth(o),i=u["default"].viewportHeight(o)}else e=u["default"].offset(t),n=u["default"].outerWidth(t),i=u["default"].outerHeight(t);return e.width=n,e.height=i,e}Object.defineProperty(e,"__esModule",{value:!0});var s=n(90),u=i(s);e["default"]=o,t.exports=e["default"]},function(t,e,n){"use strict";function i(t){return t&&t.__esModule?t:{"default":t}}function o(t,e,n,i,o){var s=void 0,r=void 0,a=void 0,l=void 0;return s={left:t.left,top:t.top},a=(0,u["default"])(e,n[1]),l=(0,u["default"])(t,n[0]),r=[l.left-a.left,l.top-a.top],{left:s.left-r[0]+i[0]-o[0],top:s.top-r[1]+i[1]-o[1]}}Object.defineProperty(e,"__esModule",{value:!0});var s=n(96),u=i(s);e["default"]=o,t.exports=e["default"]},function(t,e){"use strict";function n(t,e){var n=e.charAt(0),i=e.charAt(1),o=t.width,s=t.height,u=void 0,r=void 0;return u=t.left,r=t.top,"c"===n?r+=s/2:"b"===n&&(r+=s),"c"===i?u+=o/2:"r"===i&&(u+=o),{left:u,top:r}}Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=n,t.exports=e["default"]}])});
+	/* global define */
+	
+	(function () {
+		'use strict';
+	
+		var hasOwn = {}.hasOwnProperty;
+	
+		function classNames () {
+			var classes = [];
+	
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+	
+				var argType = typeof arg;
+	
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+	
+			return classes.join(' ');
+		}
+	
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"button__base--115b4","basic":"button__basic--209fe","primary":"button__primary--5050f","success":"button__success--ddaea","warning":"button__warning--79aba","danger":"button__danger--7ca3d","outline":"button__outline--a054a","link":"button__link--a98dd","sm":"button__sm--a65ae","md":"button__md--b5fc2","lg":"button__lg--40cc9","disabled":"button__disabled--68e4b","loading":"button__loading--a6479"};
+
+/***/ },
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	__webpack_require__(10);
+	
+	__webpack_require__(16);
+	
+	riot.tag2('ui-icon', '<span class="iconfont">{icon}</span>', '', '', function (opts) {
+		var _this = this;
+	
+		var iconset = {
+			'arrow-left': '&#xe600;',
+			'arrow-right': '&#xe601;',
+			loading: '&#xe602;',
+			info: '&#xe608;',
+			'caret-right': '&#xe603;',
+			'caret-down': '&#xe604;'
+		};
+	
+		var convert = function convert(str) {
+			str = str.replace(/(\\u)(\w{4})/gi, function ($0) {
+				return String.fromCharCode(parseInt(escape($0).replace(/(%5Cu)(\w{4})/g, "$2"), 16));
+			});
+			str = str.replace(/(&#x)(\w{4});/gi, function ($0) {
+				return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g, "$2"), 16));
+			});
+			return str;
+		};
+	
+		this.one('update', function () {
+			_this.icon = _this.opts.icon;
+			if (!_this.opts.icon && iconset[_this.opts.type]) {
+				_this.icon = convert(iconset[_this.opts.type]);
+			}
+		});
+	}, '{ }');
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 17 */,
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _badge = __webpack_require__(19);
+	
+	var _badge2 = _interopRequireDefault(_badge);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-badge', '<span class="{styles.base}"> <yield></yield> <sup if="{parseInt( opts.count ) > 0}" class="{styles.count} {!countStr || opts.dot === true ? styles.dot : \'\'}">{!countStr || opts.dot === true ? \'\' : countStr}</sup> </span>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _badge2.default;
+	
+		this.on('mount', function () {
+			// TODO: add animation
+		});
+	
+		this.on('update', function () {
+			var overflowCount = _this.opts.max;
+			overflowCount = parseInt(overflowCount);
+			if (isNaN(overflowCount)) {
+				overflowCount = Infinity;
+			}
+	
+			var count = _this.opts.count;
+			count = parseInt(count);
+			if (!isNaN(count)) {
+				var countStr = count;
+				if (count > overflowCount) {
+					countStr = overflowCount + '+';
+				}
+	
+				_this.countStr = countStr;
+			} else {
+				// 不合法的count，替换为dot
+	
+			}
+		});
+	}, '{ }');
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"badge__base--6c8aa","count":"badge__count--05ce4","dot":"badge__dot--8a1d4"};
+
+/***/ },
+/* 20 */,
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _link = __webpack_require__(22);
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-link', '<a href="{opts.href || \'javascript:;\'}" class="{classnames}" onclick="{opts.onclick}"> <yield></yield> </a>', '', '', function (opts) {
+		var _classNames;
+	
+		var isUndefined = function isUndefined(obj) {
+			return typeof obj === 'undefined';
+		};
+		this.classnames = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _link.base, true), _defineProperty(_classNames, _link.primary, true), _defineProperty(_classNames, _link.success, !isUndefined(this.opts.success)), _defineProperty(_classNames, _link.warning, !isUndefined(this.opts.warning)), _defineProperty(_classNames, _link.danger, !isUndefined(this.opts.danger)), _classNames));
+	}, '{ }');
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"link__base--90129","primary":"link__primary--d8678","success":"link__success--e20bf","warning":"link__warning--c1989","danger":"link__danger--ce8a1"};
+
+/***/ },
+/* 23 */,
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	__webpack_require__(25);
+	
+	riot.tag2('ui-input-nao', '<span class="input input--nao {input--filled : hasValue}" name="container"> <input class="input__field input__field--nao" type="text" onchange="{onChange}"> <label class="input__label input__label--nao"> <span class="input__label-content input__label-content--nao">{opts.placeholder}</span> </label> <svg class="graphic graphic--nao" width="300%" height="100%" viewbox="0 0 1200 60" preserveaspectratio="none"> <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path> </svg> </span>', '', '', function (opts) {
+			var _this = this;
+	
+			var v = this.opts.value;
+			this.hasValue = !(typeof v === 'undefined' || v === '');
+	
+			this.onChange = function (e) {
+					var v = e.target.value;
+					_this.hasValue = !(typeof v === 'undefined' || v === '');
+			};
+	}, '{ }');
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 26 */,
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _input = __webpack_require__(28);
+	
+	var _input2 = _interopRequireDefault(_input);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-input', '<input class="{uiCls} {stateCls}" type="{opts.type || \'text\'}" placeholder="{opts.placeholder}" onchange="{onChange}" oninput="{onInput}" onfocus="{onFocus}" onblur="{onBlur}" __disabled="{opts.__disabled === true}" value="{opts.value}">', '', '', function (opts) {
+		var _classNames,
+		    _this = this;
+	
+		var isUndefined = function isUndefined(v) {
+			return typeof v === 'undefined';
+		};
+	
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _input2.default.base, true), _defineProperty(_classNames, _input2.default.sm, !isUndefined(this.opts.sm)), _defineProperty(_classNames, _input2.default.lg, !isUndefined(this.opts.lg)), _classNames));
+	
+		this.on('update', function () {
+			_this.stateCls = (0, _classnames2.default)(_defineProperty({}, _input2.default.disabled, opts.__disabled === true));
+		});
+	
+		this.onChange = function () {
+			_this.opts.onChange && _this.opts.onChange();
+		};
+	
+		this.onInput = function () {
+			_this.opts.onInput && _this.opts.onInput();
+		};
+	
+		this.onFocus = function () {
+			_this.opts.onFocus && _this.opts.onFocus();
+		};
+	
+		this.onBlur = function () {
+			_this.opts.onBlur && _this.opts.onBlur();
+		};
+	}, '{ }');
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"input__base--4a527","sm":"input__sm--8bd7d","lg":"input__lg--ae4c0","disabled":"input__disabled--e7b86"};
+
+/***/ },
+/* 29 */,
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _radio = __webpack_require__(31);
+	
+	var _radio2 = _interopRequireDefault(_radio);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-radio', '<span class="{styles.base} {checked ? styles.checked : \'\'}"></span> <span> <yield></yield> </span>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _radio2.default;
+		this.checked = this.opts.__checked || false;
+	
+		var onToggle = function onToggle() {
+			if (!_this.checked) {
+				_this.opts.onChange && _this.opts.onChange(_this.checked);
+				_this.trigger('change');
+			}
+		};
+	
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onToggle, false);
+		});
+	
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onToggle, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"radio__base--9b7f4","checked":"radio__checked--8c355"};
+
+/***/ },
+/* 32 */,
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _radioButton = __webpack_require__(34);
+	
+	var _radioButton2 = _interopRequireDefault(_radioButton);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-radio-button', '<span class="{styles.base} {checked ? styles.checked : \'\'}"> <yield></yield> </span>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _radioButton2.default;
+		this.checked = false;
+	
+		var onClick = function onClick() {
+			if (!_this.checked) {
+				_this.opts.onChange && _this.opts.onChange();
+				_this.trigger('change');
+			}
+		};
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onClick, false);
+		});
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onClick, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"radio-button__base--94ffe","checked":"radio-button__checked--df45a"};
+
+/***/ },
+/* 35 */,
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	__webpack_require__(37);
+	
+	riot.tag2('ui-radio-group', '<yield></yield>', '', '', function (opts) {
+		var _this = this;
+	
+		this.on('mount', function () {
+			var radioElements = [];
+			var radios = _this.tags['ui-radio'];
+			var radioButtons = _this.tags['ui-radio-button'];
+	
+			if (!radios) {
+				radios = [];
+			}
+	
+			if (typeof radios.length === 'undefined') {
+				radios = [radios];
+			}
+	
+			if (!radioButtons) {
+				radioButtons = [];
+			}
+	
+			if (typeof radioButtons.length === 'undefined') {
+				radioButtons = [radioButtons];
+			}
+	
+			radioElements.push.apply(radioElements, radios);
+			radioElements.push.apply(radioElements, radioButtons);
+	
+			var check = function check(idx) {
+				for (var i = 0, len = radioElements.length; i < len; i++) {
+					if (idx === i) {
+						radioElements[i].checked = true;
+					} else {
+						radioElements[i].checked = false;
+					}
+				}
+				_this.update();
+			};
+	
+			var lastChecked = _this.opts.value;
+	
+			var onChange = _this.opts.onChange || function () {};
+	
+			var _loop = function _loop(i, len) {
+				if (_this.opts.value && radioElements[i].opts.value === _this.opts.value) {
+					check(i);
+				}
+				radioElements[i].on('change', function () {
+					check(i);
+	
+					if (i !== lastChecked) {
+						lastChecked = i;
+						onChange(radioElements[i].opts.value, i);
+					}
+				});
+			};
+	
+			for (var i = 0, len = radioElements.length; i < len; i++) {
+				_loop(i, len);
+			}
+		});
+	});
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 38 */,
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _checkbox = __webpack_require__(40);
+	
+	var _checkbox2 = _interopRequireDefault(_checkbox);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-checkbox', '<span class="{styles.base} {checked ? styles.checked : \'\'}"></span> <span> <yield></yield> </span>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _checkbox2.default;
+		this.checked = this.opts.checked || false;
+	
+		var onClick = function onClick() {
+			_this.checked = !_this.checked;
+			_this.update();
+			_this.opts.onChange && _this.opts.onChange(_this.checked);
+			_this.trigger('change');
+		};
+	
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onClick, false);
+		});
+	
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onClick, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 40 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"checkbox__base--d105c","checked":"checkbox__checked--90d92"};
+
+/***/ },
+/* 41 */,
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	__webpack_require__(43);
+	
+	riot.tag2('ui-checkbox-group', '<yield></yield>', '', '', function (opts) {
+		var _this = this;
+	
+		this.on('mount', function () {
+			var checkboxes = _this.tags['ui-checkbox'];
+	
+			if (!checkboxes) {
+				return;
+			}
+	
+			if (!checkboxes.length) {
+				checkboxes = [checkboxes];
+			}
+	
+			var getChecked = function getChecked() {
+				var tmp = {
+					keys: [],
+					values: []
+				};
+	
+				for (var i = 0; i < checkboxes.length; i++) {
+					if (checkboxes[i].checked) {
+						tmp.keys.push(i);
+						tmp.values.push(checkboxes[i].opts.value);
+					}
+				}
+	
+				return tmp;
+			};
+	
+			var values = _this.opts.value;
+			var onChange = _this.opts.onChange || function () {};
+			for (var i = 0, len = checkboxes.length; i < len; i++) {
+				if (~values.indexOf(checkboxes[i].opts.value)) {
+					checkboxes[i].checked = true;
+					checkboxes[i].update();
+				}
+				checkboxes[i].on('change', function () {
+					var checked = getChecked();
+					onChange(checked.values, checked.keys);
+				});
+			}
+		});
+	});
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 44 */,
+/* 45 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	riot.tag2('ui-breadcrumb', '<yield></yield>', '', '', function (opts) {});
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _breadcrumbItem = __webpack_require__(47);
+	
+	var _breadcrumbItem2 = _interopRequireDefault(_breadcrumbItem);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-breadcrumb-item', '<yield></yield> <span class="{styles.sep}">{sep}</span>', '', '', function (opts) {
+			this.styles = _breadcrumbItem2.default;
+			this.sep = '/';
+	}, '{ }');
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"sep":"breadcrumb-item__sep--17210"};
+
+/***/ },
+/* 48 */,
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _tag = __webpack_require__(50);
+	
+	var _tag2 = _interopRequireDefault(_tag);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-tag', '<yield></yield>', '', '', function (opts) {
+			this.styles = _tag2.default;
+	});
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 51 */,
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	var _jsonTree = __webpack_require__(53);
+	
+	var _jsonTree2 = _interopRequireDefault(_jsonTree);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-json-tree', '', '', '', function (opts) {
+		var _this = this;
+	
+		var hasOwn = Object.hasOwnProperty;
+		var each = function each(obj, fn) {
+			if (Array.isArray(obj)) {
+				for (var i = 0, len = obj.length; i < len; i++) {
+					fn(obj[i], i);
+				}
+			} else {
+				for (var i in obj) {
+					if (hasOwn.call(obj, i)) {
+						fn(obj[i], i);
+					}
+				}
+			}
+		};
+		var buildStart = function buildStart() {
+			return '\n\t\t\t<div class="node">\n\t\t\t';
+		};
+		var buildEnd = function buildEnd() {
+			return '\n\t\t\t</div>\n\t\t\t';
+		};
+		var build = function build(k, v) {
+			var hasCaret = false;
+			var type = typeof v === 'undefined' ? 'undefined' : _typeof(v);
+			if (typeof v === 'string') {
+				v = '"' + v + '"';
+			} else if (Array.isArray(v)) {
+				v = 'Array[' + v.length + ']';
+				hasCaret = true;
+			} else if (type === 'object') {
+				v = 'Object';
+				hasCaret = true;
+			}
+			return '\n\t\t\t<div class="title">' + (hasCaret ? '<div class="iconfont caret caret-right">&#xe603;</div><div class="iconfont caret caret-down">&#xe604;</div>' : '<div class="iconfont caret"></div>') + ('\n\t\t\t\t<div>\n\t\t\t\t\t<span class="key">' + k + ':</span>\n\t\t\t\t\t<span class="' + type + '">' + v + '</span>\n\t\t\t\t</div>\n\t\t\t</div>');
+		};
+		var buildChildrenStart = function buildChildrenStart() {
+			return '\n\t\t\t<div class="children">\n\t\t\t';
+		};
+		var buildChildrenEnd = function buildChildrenEnd() {
+			return '\n\t\t\t</div>\n\t\t\t';
+		};
+		var buildJsonTree = function buildJsonTree(json) {
+			var tmp = '';
+			each(json, function (v, k) {
+				tmp += buildStart();
+				if (typeof v === 'number') {
+					// console.log( k, '->', v );
+					tmp = tmp + build(k, v);
+				} else if (typeof v === 'string') {
+					// console.log( k, '->', v );
+					tmp = tmp + build(k, v);
+				} else if (typeof v === 'boolean') {
+					// console.log( k, '->', v );
+					tmp = tmp + build(k, v);
+				} else if (Array.isArray(v)) {
+					// console.log( k, '->' );
+					tmp += build(k, v);
+					tmp += buildChildrenStart();
+					tmp += buildJsonTree(v);
+					tmp += buildChildrenEnd();
+				} else if ((typeof v === 'undefined' ? 'undefined' : _typeof(v)) === 'object') {
+					// console.log( k, '->' );
+					tmp += build(k, v);
+					tmp += buildChildrenStart();
+					tmp += buildJsonTree(v);
+					tmp += buildChildrenEnd();
+				}
+				tmp += buildEnd();
+			});
+			return tmp;
+		};
+	
+		var last = undefined;
+		this.on('updated', function () {
+			if (_this.opts.json !== last) {
+				var result = buildJsonTree(_this.opts.json);
+				_this.root.innerHTML = result;
+				// bind
+				var nodes = _this.root.querySelectorAll('.title');
+				nodes && Array.prototype.slice.call(nodes).forEach(function (node) {
+					node.addEventListener('click', function () {
+						if (!node.nextElementSibling) {
+							return;
+						}
+	
+						var parent = node.parentNode;
+						if (parent.classList.contains('open')) {
+							parent.classList.remove('open');
+						} else {
+							parent.classList.add('open');
+						}
+					}, false);
+				});
+				last = _this.opts.json;
+			}
+		});
+	
+		this.on('mount', function () {});
+	});
+
+/***/ },
+/* 53 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 54 */,
+/* 55 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	riot.tag2('ui-tree', '<yield></yield>', '', '', function (opts) {
+		var _this = this;
+	
+		var STATUS = {
+			CHECKED: 0,
+			UNCHECKED: 1,
+			HALF_CHECKED: 2
+		};
+	
+		this.nodes = {};
+		this.one('update', function () {
+			var treeNodes = _this.tags['ui-tree-node'];
+			if (!treeNodes) {
+				treeNodes = [];
+			} else if (typeof treeNodes.length === 'undefined') {
+				treeNodes = [treeNodes];
+			}
+	
+			for (var i = 0, len = treeNodes.length; i < len; i++) {
+				treeNodes[i].treeNodeId = i + '';
+			}
+		});
+	
+		this.on('tree-node-change', function (id) {
+			var nodes = _this.nodes;
+	
+			// 修改当前节点
+	
+			if (nodes[id].status !== STATUS.CHECKED) {
+				nodes[id].status = STATUS.CHECKED;
+			} else {
+				nodes[id].status = STATUS.UNCHECKED;
+			}
+	
+			// 修改子孙节点
+	
+			if (nodes[id].status === STATUS.CHECKED) {
+				for (var i in nodes) {
+					if (i !== id && i.startsWith(id)) {
+						nodes[i].status = STATUS.CHECKED;
+						nodes[i].update();
+					}
+				}
+			} else {
+				for (var i in nodes) {
+					if (i !== id && i.startsWith(id)) {
+						nodes[i].status = STATUS.UNCHECKED;
+						nodes[i].update();
+					}
+				}
+			}
+	
+			// 修改祖先节点
+	
+			if (nodes[id].status === STATUS.CHECKED) {
+				var parentId = id.slice(0, -1);
+				var hasChildNotChecked = false;
+				// 非根节点
+				while (parentId.length > 0) {
+					// 父节点的子孙节点中存在半选或者未选，则父节点是半选(当前节点选中了)
+					if (!hasChildNotChecked) {
+						for (var i in nodes) {
+							if (i !== parentId && i.startsWith(parentId)) {
+								if (nodes[i].status !== STATUS.CHECKED) {
+									hasChildNotChecked = true;
+									break;
+								}
+							}
+						}
+					}
+	
+					if (hasChildNotChecked) {
+						nodes[parentId].status = STATUS.HALF_CHECKED;
+					} else {
+						nodes[parentId].status = STATUS.CHECKED;
+					}
+					nodes[parentId].update();
+	
+					parentId = parentId.slice(0, -1);
+				}
+			} else {
+				var parentId = id.slice(0, -1);
+				var hasChildChecked = false;
+				// 非根节点
+				while (parentId.length > 0) {
+					// 父节点的子孙节点中存在选中状态，则父节点是半选(或者全未选)
+					if (!hasChildChecked) {
+						for (var i in nodes) {
+							if (i !== parentId && i.startsWith(parentId)) {
+								if (nodes[i].status === STATUS.CHECKED) {
+									hasChildChecked = true;
+									break;
+								}
+							}
+						}
+					}
+	
+					if (hasChildChecked) {
+						nodes[parentId].status = STATUS.HALF_CHECKED;
+					} else {
+						nodes[parentId].status = STATUS.UNCHECKED;
+					}
+					nodes[parentId].update();
+	
+					parentId = parentId.slice(0, -1);
+				}
+			}
+		});
+	});
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _treeNode = __webpack_require__(57);
+	
+	var _treeNode2 = _interopRequireDefault(_treeNode);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-tree-node', '<span class="{styles.state}">{this.statusIcon()}</span> <span class="{styles.title}" onclick="{onCheckChange}">{opts.title}</span> <div class="{styles.children}"> <yield></yield> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		var STATUS = {
+			CHECKED: 0,
+			UNCHECKED: 1,
+			HALF_CHECKED: 2
+		};
+	
+		this.styles = _treeNode2.default;
+		this.STATUS = STATUS;
+		this.status = STATUS.UNCHECKED;
+		this.statusIcon = function () {
+			var icon = '';
+			switch (_this.status) {
+				case STATUS.CHECKED:
+					icon = 'v';
+					break;
+				case STATUS.UNCHECKED:
+					icon = '口';
+					break;
+				case STATUS.HALF_CHECKED:
+					icon = '曰';
+					break;
+			}
+			return icon;
+		};
+	
+		this.on('mount', function () {
+			var parent = _this.parent;
+			if (parent.root.tagName === 'UI-TREE') {
+				_this.tree = parent;
+			} else if (parent.tree) {
+				_this.tree = parent.tree;
+			}
+	
+			_this.tree.nodes[_this.treeNodeId] = _this;
+	
+			var currentTreeNodeId = _this.treeNodeId || '';
+	
+			var treeNodes = _this.tags['ui-tree-node'];
+			if (!treeNodes) {
+				treeNodes = [];
+			} else if (typeof treeNodes.length === 'undefined') {
+				treeNodes = [treeNodes];
+			}
+	
+			for (var i = 0, len = treeNodes.length; i < len; i++) {
+				treeNodes[i].treeNodeId = currentTreeNodeId + i + '';
+			}
+		});
+	
+		this.onCheckChange = function () {
+			_this.tree.trigger('tree-node-change', _this.treeNodeId);
+		};
+	}, '{ }');
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"title":"tree-node__title--1ff24","children":"tree-node__children--94f11"};
+
+/***/ },
+/* 58 */,
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _menu = __webpack_require__(60);
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-menu', '<yield></yield>', '', '', function (opts) {
+			this.on('update', function () {});
+	});
+
+/***/ },
+/* 60 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 61 */,
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _submenu = __webpack_require__(63);
+	
+	riot.tag2('ui-submenu', '{opts.text} <div class="{styles.items}"> <yield></yield> </div>', '', '', function (opts) {
+		this.styles = {
+			items: _submenu.items
+		};
+	}, '{ }');
+
+/***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"items":"submenu__items--453df"};
+
+/***/ },
+/* 64 */,
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _menuItem = __webpack_require__(66);
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-menu-item', '<div class="{classnames}"> {opts.text} </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.on('mount', function () {});
+	
+		this.on('update', function () {
+			_this.classnames = (0, _classnames2.default)(_defineProperty({}, _menuItem.base, true));
+		});
+	}, '{ }');
+
+/***/ },
+/* 66 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"menu-item__base--744fe"};
+
+/***/ },
+/* 67 */,
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _switch = __webpack_require__(69);
+	
+	var _switch2 = _interopRequireDefault(_switch);
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-switch', '<div class="{uiCls} {stateCls}" onclick="{root.$toggle}"></div>', '', '', function (opts) {
+		var _classNames,
+		    _this = this;
+	
+		this.disabled = this.opts.disabled || false;
+		var isOn = !!this.opts.checked;
+	
+		this.styles = _switch2.default;
+		this.uiCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _switch2.default.base, true), _defineProperty(_classNames, _switch2.default.sm, typeof this.opts.sm !== 'undefined'), _defineProperty(_classNames, _switch2.default.lg, typeof this.opts.lg !== 'undefined'), _classNames));
+	
+		this.root.$toggle = function (e) {
+			if (_this.disabled) {
+				return;
+			}
+			isOn = !isOn;
+			if (!e) {
+				_this.update();
+			}
+			_this.onChange && _this.onChange(isOn);
+		};
+	
+		this.root.$check = function () {
+			isOn = true;
+			_this.update();
+			_this.onChange && _this.onChange(isOn);
+		};
+	
+		this.root.$uncheck = function () {
+			isOn = false;
+			_this.update();
+			_this.onChange && _this.onChange(isOn);
+		};
+	
+		this.root.$enable = function () {
+			_this.disabled = false;
+			_this.update();
+		};
+	
+		this.root.$disable = function () {
+			_this.disabled = true;
+			_this.update();
+		};
+	
+		this.on('update', function () {
+			var _classNames2;
+	
+			_this.stateCls = (0, _classnames2.default)((_classNames2 = {}, _defineProperty(_classNames2, _switch2.default.on, isOn), _defineProperty(_classNames2, _switch2.default.off, !isOn), _defineProperty(_classNames2, _switch2.default.disabled, _this.disabled), _classNames2));
+		});
+	}, '{ }');
+
+/***/ },
+/* 69 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"switch__base--d8803","off":"switch__off--f5f12","on":"switch__on--e6918","sm":"switch__sm--30f39","lg":"switch__lg--4bee6","disabled":"switch__disabled--10aff"};
+
+/***/ },
+/* 70 */,
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _progressBar = __webpack_require__(72);
+	
+	var _progressBar2 = _interopRequireDefault(_progressBar);
+	
+	var _classnames = __webpack_require__(4);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	riot.tag2('ui-progress-bar', '<div class="{styles.outter}"> <div class="{styles.inner} {colorCls}" riot-style="width: {opts.value}%;"></div> </div> <div if="{typeof opts.label !== \'undefined\'}" class="{styles.label}"> {this.opts.value}% </div>', '', '', function (opts) {
+		var _classNames;
+	
+		this.styles = _progressBar2.default;
+		this.colorCls = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _progressBar2.default.primary, true), _defineProperty(_classNames, _progressBar2.default.success, typeof this.opts.success !== 'undefined'), _defineProperty(_classNames, _progressBar2.default.warning, typeof this.opts.warning !== 'undefined'), _defineProperty(_classNames, _progressBar2.default.danger, typeof this.opts.danger !== 'undefined'), _classNames));
+	}, '{ }');
+
+/***/ },
+/* 72 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"outter":"progress-bar__outter--45df2","inner":"progress-bar__inner--7cfae","label":"progress-bar__label--8a483","primary":"progress-bar__primary--4a533","success":"progress-bar__success--ec469","warning":"progress-bar__warning--50b47","danger":"progress-bar__danger--502a3"};
+
+/***/ },
+/* 73 */,
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _popover = __webpack_require__(75);
+	
+	var _popover2 = _interopRequireDefault(_popover);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-popover', '<yield></yield> <div class="{styles.popover}"> hover </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _popover2.default;
+	
+		this.on('mount', function () {
+			_this.root.addEventListener('mouseenter', function () {
+				console.log('enter');
+			}, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 75 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"popover":"popover__popover--729c4"};
+
+/***/ },
+/* 76 */,
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _message = __webpack_require__(78);
+	
+	var _message2 = _interopRequireDefault(_message);
+	
+	__webpack_require__(9);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-message', '<ui-icon type="info" class="{styles.icon}"></ui-icon> <div>{opts.content}<yield></yield></div>', '', '', function (opts) {
+			this.styles = _message2.default;
+	}, '{ }');
+
+/***/ },
+/* 78 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"message__icon--173e9"};
+
+/***/ },
+/* 79 */,
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _collapse = __webpack_require__(81);
+	
+	var _collapse2 = _interopRequireDefault(_collapse);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-collapse', '<yield></yield>', '', '', function (opts) {
+			this.styles = _collapse2.default;
+	
+			this.on('mount', function () {});
+	});
+
+/***/ },
+/* 81 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 82 */,
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _collapsePanel = __webpack_require__(84);
+	
+	var _collapsePanel2 = _interopRequireDefault(_collapsePanel);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-collapse-panel', '<div class="{styles.title}"> <div class="{styles[ \'title-inner\' ]}"> <ui-icon type="caret-right"></ui-icon> {opts.title} </div> </div> <div class="{styles.content} {expand ? styles[ \'content-active\' ] : styles[ \'content-inactive\' ]}"> <div class="{styles[ \'content-box\' ]}"> <yield></yield> </div> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _collapsePanel2.default;
+		this.expand = false;
+	
+		var onToggle = function onToggle() {
+			_this.expand = !_this.expand;
+			_this.update();
+		};
+		this.on('mount', function () {
+			_this.root.addEventListener('click', onToggle, false);
+		});
+		this.on('unmount', function () {
+			_this.root.removeEventListener('click', onToggle, false);
+		});
+	}, '{ }');
+
+/***/ },
+/* 84 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"title":"collapse-panel__title--b35c1","title-inner":"collapse-panel__title-inner--3a3da","content":"collapse-panel__content--fdbfc","content-box":"collapse-panel__content-box--de1ef","content-inactive":"collapse-panel__content-inactive--6b58d","content-active":"collapse-panel__content-active--98479"};
+
+/***/ },
+/* 85 */,
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _tooltip = __webpack_require__(87);
+	
+	var _tooltip2 = _interopRequireDefault(_tooltip);
+	
+	var _domAlign = __webpack_require__(89);
+	
+	var _domAlign2 = _interopRequireDefault(_domAlign);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-tooltip', '<div name="t" class="{styles.target}"> <yield></yield> </div> <div if="{( !manual && triggered ) || ( manual && opts.show )}" name="s" class="{styles.base} {styles[ opts.placement || defaultPlaceholder ]}"> <div class="{styles.arrow}"></div> <div class="{styles.content}"> {opts.title} </div> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _tooltip2.default;
+		this.manual = false;
+		this.triggered = false;
+		this.defaultPlaceholder = 'top';
+	
+		var points = ['tc', 'bc'];
+		var offset = [0, 0];
+		switch (this.opts.placement || this.defaultPlaceholder) {
+			case 'top':
+				points = ['bc', 'tc'];
+				offset = [0, -1];
+				break;
+			case 'bottom':
+				points = ['tc', 'bc'];
+				offset = [0, 1];
+				break;
+			case 'left':
+				points = ['cr', 'cl'];
+				offset = [-2, 0];
+				break;
+			case 'right':
+				points = ['cl', 'cr'];
+				offset = [2, 0];
+				break;
+		}
+	
+		var show = function show() {
+			_this.triggered = true;
+			_this.update();
+			(0, _domAlign2.default)(_this.s, _this.t, {
+				points: points,
+				offset: offset
+			});
+		};
+	
+		var hide = function hide() {
+			_this.triggered = false;
+			_this.update();
+		};
+	
+		var checkClickOutSide = function checkClickOutSide(e) {
+			if (!_this.root.contains(e.target)) {
+				hide();
+			}
+		};
+	
+		this.on('updated', function () {
+			var shallShowTooltip = !_this.manual && _this.triggered || _this.manual && _this.opts.show;
+	
+			if (!shallShowTooltip) {
+				return;
+			}
+	
+			var isTrackValid = _this.opts.track && _this.opts.track instanceof HTMLElement;
+	
+			if (!isTrackValid) {
+				return;
+			}
+	
+			(0, _domAlign2.default)(_this.s, _this.opts.track, {
+				points: points,
+				offset: offset
+			});
+		});
+	
+		this.on('before-mount', function () {
+			var trigger = _this.opts.trigger || 'hover';
+	
+			// TODO: track first child element by default if track is not specificed
+	
+			switch (trigger) {
+				case 'hover':
+					_this.t.addEventListener('mouseenter', show, false);
+					_this.t.addEventListener('mouseleave', hide, false);
+					break;
+				case 'click':
+					_this.t.addEventListener('click', show, false);
+					document.addEventListener('click', checkClickOutSide, false);
+					break;
+				case 'manual':
+					// control tooltip visibility on your own
+					_this.manual = true;
+					break;
+			}
+		});
+	
+		this.on('unmount', function () {
+			var trigger = _this.opts.trigger || 'hover';
+	
+			switch (trigger) {
+				case 'hover':
+					_this.t.removeEventListener('mouseenter', show, false);
+					_this.t.removeEventListener('mouseleave', hide, false);
+					break;
+				case 'click':
+					_this.t.removeEventListener('click', show, false);
+					document.removeEventListener('click', checkClickOutSide, false);
+					break;
+				case 'manual':
+					break;
+			}
+		});
+	}, '{ }');
+
+/***/ },
+/* 87 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"target":"tooltip__target--7b8bb","base":"tooltip__base--48015","arrow":"tooltip__arrow--f1c68","content":"tooltip__content--04b9a","bottom":"tooltip__bottom--16830","top":"tooltip__top--37a8a","left":"tooltip__left--0dc63","right":"tooltip__right--60295"};
+
+/***/ },
+/* 88 */,
+/* 89 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * align dom node flexibly
+	 * @author yiminghe@gmail.com
+	 */
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _utils = __webpack_require__(90);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	var _getOffsetParent = __webpack_require__(91);
+	
+	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
+	
+	var _getVisibleRectForElement = __webpack_require__(92);
+	
+	var _getVisibleRectForElement2 = _interopRequireDefault(_getVisibleRectForElement);
+	
+	var _adjustForViewport = __webpack_require__(93);
+	
+	var _adjustForViewport2 = _interopRequireDefault(_adjustForViewport);
+	
+	var _getRegion = __webpack_require__(94);
+	
+	var _getRegion2 = _interopRequireDefault(_getRegion);
+	
+	var _getElFuturePos = __webpack_require__(95);
+	
+	var _getElFuturePos2 = _interopRequireDefault(_getElFuturePos);
+	
+	// http://yiminghe.iteye.com/blog/1124720
+	
+	function isFailX(elFuturePos, elRegion, visibleRect) {
+	  return elFuturePos.left < visibleRect.left || elFuturePos.left + elRegion.width > visibleRect.right;
+	}
+	
+	function isFailY(elFuturePos, elRegion, visibleRect) {
+	  return elFuturePos.top < visibleRect.top || elFuturePos.top + elRegion.height > visibleRect.bottom;
+	}
+	
+	function isCompleteFailX(elFuturePos, elRegion, visibleRect) {
+	  return elFuturePos.left > visibleRect.right || elFuturePos.left + elRegion.width < visibleRect.left;
+	}
+	
+	function isCompleteFailY(elFuturePos, elRegion, visibleRect) {
+	  return elFuturePos.top > visibleRect.bottom || elFuturePos.top + elRegion.height < visibleRect.top;
+	}
+	
+	function flip(points, reg, map) {
+	  var ret = [];
+	  _utils2['default'].each(points, function (p) {
+	    ret.push(p.replace(reg, function (m) {
+	      return map[m];
+	    }));
+	  });
+	  return ret;
+	}
+	
+	function flipOffset(offset, index) {
+	  offset[index] = -offset[index];
+	  return offset;
+	}
+	
+	function convertOffset(str, offsetLen) {
+	  var n = undefined;
+	  if (/%$/.test(str)) {
+	    n = parseInt(str.substring(0, str.length - 1), 10) / 100 * offsetLen;
+	  } else {
+	    n = parseInt(str, 10);
+	  }
+	  return n || 0;
+	}
+	
+	function normalizeOffset(offset, el) {
+	  offset[0] = convertOffset(offset[0], el.width);
+	  offset[1] = convertOffset(offset[1], el.height);
+	}
+	
+	function domAlign(el, refNode, align) {
+	  var points = align.points;
+	  var offset = align.offset || [0, 0];
+	  var targetOffset = align.targetOffset || [0, 0];
+	  var overflow = align.overflow;
+	  var target = align.target || refNode;
+	  var source = align.source || el;
+	  offset = [].concat(offset);
+	  targetOffset = [].concat(targetOffset);
+	  overflow = overflow || {};
+	  var newOverflowCfg = {};
+	
+	  var fail = 0;
+	  // 当前节点可以被放置的显示区域
+	  var visibleRect = (0, _getVisibleRectForElement2['default'])(source);
+	  // 当前节点所占的区域, left/top/width/height
+	  var elRegion = (0, _getRegion2['default'])(source);
+	  // 参照节点所占的区域, left/top/width/height
+	  var refNodeRegion = (0, _getRegion2['default'])(target);
+	  // 将 offset 转换成数值，支持百分比
+	  normalizeOffset(offset, elRegion);
+	  normalizeOffset(targetOffset, refNodeRegion);
+	  // 当前节点将要被放置的位置
+	  var elFuturePos = (0, _getElFuturePos2['default'])(elRegion, refNodeRegion, points, offset, targetOffset);
+	  // 当前节点将要所处的区域
+	  var newElRegion = _utils2['default'].merge(elRegion, elFuturePos);
+	
+	  // 如果可视区域不能完全放置当前节点时允许调整
+	  if (visibleRect && (overflow.adjustX || overflow.adjustY)) {
+	    if (overflow.adjustX) {
+	      // 如果横向不能放下
+	      if (isFailX(elFuturePos, elRegion, visibleRect)) {
+	        // 对齐位置反下
+	        var newPoints = flip(points, /[lr]/ig, {
+	          l: 'r',
+	          r: 'l'
+	        });
+	        // 偏移量也反下
+	        var newOffset = flipOffset(offset, 0);
+	        var newTargetOffset = flipOffset(targetOffset, 0);
+	        var newElFuturePos = (0, _getElFuturePos2['default'])(elRegion, refNodeRegion, newPoints, newOffset, newTargetOffset);
+	        if (!isCompleteFailX(newElFuturePos, elRegion, visibleRect)) {
+	          fail = 1;
+	          points = newPoints;
+	          offset = newOffset;
+	          targetOffset = newTargetOffset;
+	        }
+	      }
+	    }
+	
+	    if (overflow.adjustY) {
+	      // 如果纵向不能放下
+	      if (isFailY(elFuturePos, elRegion, visibleRect)) {
+	        // 对齐位置反下
+	        var newPoints = flip(points, /[tb]/ig, {
+	          t: 'b',
+	          b: 't'
+	        });
+	        // 偏移量也反下
+	        var newOffset = flipOffset(offset, 1);
+	        var newTargetOffset = flipOffset(targetOffset, 1);
+	        var newElFuturePos = (0, _getElFuturePos2['default'])(elRegion, refNodeRegion, newPoints, newOffset, newTargetOffset);
+	        if (!isCompleteFailY(newElFuturePos, elRegion, visibleRect)) {
+	          fail = 1;
+	          points = newPoints;
+	          offset = newOffset;
+	          targetOffset = newTargetOffset;
+	        }
+	      }
+	    }
+	
+	    // 如果失败，重新计算当前节点将要被放置的位置
+	    if (fail) {
+	      elFuturePos = (0, _getElFuturePos2['default'])(elRegion, refNodeRegion, points, offset, targetOffset);
+	      _utils2['default'].mix(newElRegion, elFuturePos);
+	    }
+	
+	    // 检查反下后的位置是否可以放下了
+	    // 如果仍然放不下只有指定了可以调整当前方向才调整
+	    newOverflowCfg.adjustX = overflow.adjustX && isFailX(elFuturePos, elRegion, visibleRect);
+	
+	    newOverflowCfg.adjustY = overflow.adjustY && isFailY(elFuturePos, elRegion, visibleRect);
+	
+	    // 确实要调整，甚至可能会调整高度宽度
+	    if (newOverflowCfg.adjustX || newOverflowCfg.adjustY) {
+	      newElRegion = (0, _adjustForViewport2['default'])(elFuturePos, elRegion, visibleRect, newOverflowCfg);
+	    }
+	  }
+	
+	  // need judge to in case set fixed with in css on height auto element
+	  if (newElRegion.width !== elRegion.width) {
+	    _utils2['default'].css(source, 'width', source.width() + newElRegion.width - elRegion.width);
+	  }
+	
+	  if (newElRegion.height !== elRegion.height) {
+	    _utils2['default'].css(source, 'height', source.height() + newElRegion.height - elRegion.height);
+	  }
+	
+	  // https://github.com/kissyteam/kissy/issues/190
+	  // http://localhost:8888/kissy/src/overlay/demo/other/relative_align/align.html
+	  // 相对于屏幕位置没变，而 left/top 变了
+	  // 例如 <div 'relative'><el absolute></div>
+	  _utils2['default'].offset(source, {
+	    left: newElRegion.left,
+	    top: newElRegion.top
+	  }, {
+	    useCssRight: align.useCssRight,
+	    useCssBottom: align.useCssBottom
+	  });
+	
+	  return {
+	    points: points,
+	    offset: offset,
+	    targetOffset: targetOffset,
+	    overflow: newOverflowCfg
+	  };
+	}
+	
+	domAlign.__getOffsetParent = _getOffsetParent2['default'];
+	
+	domAlign.__getVisibleRectForElement = _getVisibleRectForElement2['default'];
+	
+	exports['default'] = domAlign;
+	
+	/**
+	 *  2012-04-26 yiminghe@gmail.com
+	 *   - 优化智能对齐算法
+	 *   - 慎用 resizeXX
+	 *
+	 *  2011-07-13 yiminghe@gmail.com note:
+	 *   - 增加智能对齐，以及大小调整选项
+	 **/
+	module.exports = exports['default'];
+
+/***/ },
+/* 90 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var RE_NUM = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source;
+	
+	var getComputedStyleX = undefined;
+	
+	function css(el, name, v) {
+	  var value = v;
+	  if (typeof name === 'object') {
+	    for (var i in name) {
+	      if (name.hasOwnProperty(i)) {
+	        css(el, i, name[i]);
+	      }
+	    }
+	    return undefined;
+	  }
+	  if (typeof value !== 'undefined') {
+	    if (typeof value === 'number') {
+	      value = value + 'px';
+	    }
+	    el.style[name] = value;
+	    return undefined;
+	  }
+	  return getComputedStyleX(el, name);
+	}
+	
+	function getClientPosition(elem) {
+	  var box = undefined;
+	  var x = undefined;
+	  var y = undefined;
+	  var doc = elem.ownerDocument;
+	  var body = doc.body;
+	  var docElem = doc && doc.documentElement;
+	  // 根据 GBS 最新数据，A-Grade Browsers 都已支持 getBoundingClientRect 方法，不用再考虑传统的实现方式
+	  box = elem.getBoundingClientRect();
+	
+	  // 注：jQuery 还考虑减去 docElem.clientLeft/clientTop
+	  // 但测试发现，这样反而会导致当 html 和 body 有边距/边框样式时，获取的值不正确
+	  // 此外，ie6 会忽略 html 的 margin 值，幸运地是没有谁会去设置 html 的 margin
+	
+	  x = box.left;
+	  y = box.top;
+	
+	  // In IE, most of the time, 2 extra pixels are added to the top and left
+	  // due to the implicit 2-pixel inset border.  In IE6/7 quirks mode and
+	  // IE6 standards mode, this border can be overridden by setting the
+	  // document element's border to zero -- thus, we cannot rely on the
+	  // offset always being 2 pixels.
+	
+	  // In quirks mode, the offset can be determined by querying the body's
+	  // clientLeft/clientTop, but in standards mode, it is found by querying
+	  // the document element's clientLeft/clientTop.  Since we already called
+	  // getClientBoundingRect we have already forced a reflow, so it is not
+	  // too expensive just to query them all.
+	
+	  // ie 下应该减去窗口的边框吧，毕竟默认 absolute 都是相对窗口定位的
+	  // 窗口边框标准是设 documentElement ,quirks 时设置 body
+	  // 最好禁止在 body 和 html 上边框 ，但 ie < 9 html 默认有 2px ，减去
+	  // 但是非 ie 不可能设置窗口边框，body html 也不是窗口 ,ie 可以通过 html,body 设置
+	  // 标准 ie 下 docElem.clientTop 就是 border-top
+	  // ie7 html 即窗口边框改变不了。永远为 2
+	  // 但标准 firefox/chrome/ie9 下 docElem.clientTop 是窗口边框，即使设了 border-top 也为 0
+	
+	  x -= docElem.clientLeft || body.clientLeft || 0;
+	  y -= docElem.clientTop || body.clientTop || 0;
+	
+	  return { left: x, top: y };
+	}
+	
+	function getScroll(w, top) {
+	  var ret = w['page' + (top ? 'Y' : 'X') + 'Offset'];
+	  var method = 'scroll' + (top ? 'Top' : 'Left');
+	  if (typeof ret !== 'number') {
+	    var d = w.document;
+	    // ie6,7,8 standard mode
+	    ret = d.documentElement[method];
+	    if (typeof ret !== 'number') {
+	      // quirks mode
+	      ret = d.body[method];
+	    }
+	  }
+	  return ret;
+	}
+	
+	function getScrollLeft(w) {
+	  return getScroll(w);
+	}
+	
+	function getScrollTop(w) {
+	  return getScroll(w, true);
+	}
+	
+	function getOffset(el) {
+	  var pos = getClientPosition(el);
+	  var doc = el.ownerDocument;
+	  var w = doc.defaultView || doc.parentWindow;
+	  pos.left += getScrollLeft(w);
+	  pos.top += getScrollTop(w);
+	  return pos;
+	}
+	function _getComputedStyle(elem, name, cs) {
+	  var computedStyle = cs;
+	  var val = '';
+	  var d = elem.ownerDocument;
+	  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
+	
+	  // https://github.com/kissyteam/kissy/issues/61
+	  if (computedStyle) {
+	    val = computedStyle.getPropertyValue(name) || computedStyle[name];
+	  }
+	
+	  return val;
+	}
+	
+	var _RE_NUM_NO_PX = new RegExp('^(' + RE_NUM + ')(?!px)[a-z%]+$', 'i');
+	var RE_POS = /^(top|right|bottom|left)$/;
+	var CURRENT_STYLE = 'currentStyle';
+	var RUNTIME_STYLE = 'runtimeStyle';
+	var LEFT = 'left';
+	var PX = 'px';
+	
+	function _getComputedStyleIE(elem, name) {
+	  // currentStyle maybe null
+	  // http://msdn.microsoft.com/en-us/library/ms535231.aspx
+	  var ret = elem[CURRENT_STYLE] && elem[CURRENT_STYLE][name];
+	
+	  // 当 width/height 设置为百分比时，通过 pixelLeft 方式转换的 width/height 值
+	  // 一开始就处理了! CUSTOM_STYLE.height,CUSTOM_STYLE.width ,cssHook 解决@2011-08-19
+	  // 在 ie 下不对，需要直接用 offset 方式
+	  // borderWidth 等值也有问题，但考虑到 borderWidth 设为百分比的概率很小，这里就不考虑了
+	
+	  // From the awesome hack by Dean Edwards
+	  // http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
+	  // If we're not dealing with a regular pixel number
+	  // but a number that has a weird ending, we need to convert it to pixels
+	  // exclude left right for relativity
+	  if (_RE_NUM_NO_PX.test(ret) && !RE_POS.test(name)) {
+	    // Remember the original values
+	    var style = elem.style;
+	    var left = style[LEFT];
+	    var rsLeft = elem[RUNTIME_STYLE][LEFT];
+	
+	    // prevent flashing of content
+	    elem[RUNTIME_STYLE][LEFT] = elem[CURRENT_STYLE][LEFT];
+	
+	    // Put in the new values to get a computed value out
+	    style[LEFT] = name === 'fontSize' ? '1em' : ret || 0;
+	    ret = style.pixelLeft + PX;
+	
+	    // Revert the changed values
+	    style[LEFT] = left;
+	
+	    elem[RUNTIME_STYLE][LEFT] = rsLeft;
+	  }
+	  return ret === '' ? 'auto' : ret;
+	}
+	
+	if (typeof window !== 'undefined') {
+	  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
+	}
+	
+	function getOffsetDirection(dir, option) {
+	  if (dir === 'left') {
+	    return option.useCssRight ? 'right' : dir;
+	  }
+	  return option.useCssBottom ? 'bottom' : dir;
+	}
+	
+	function oppositeOffsetDirection(dir) {
+	  if (dir === 'left') {
+	    return 'right';
+	  } else if (dir === 'right') {
+	    return 'left';
+	  } else if (dir === 'top') {
+	    return 'bottom';
+	  } else if (dir === 'bottom') {
+	    return 'top';
+	  }
+	}
+	
+	// 设置 elem 相对 elem.ownerDocument 的坐标
+	function setOffset(elem, offset, option) {
+	  // set position first, in-case top/left are set even on static elem
+	  if (css(elem, 'position') === 'static') {
+	    elem.style.position = 'relative';
+	  }
+	  var presetH = -999;
+	  var presetV = -999;
+	  var horizontalProperty = getOffsetDirection('left', option);
+	  var verticalProperty = getOffsetDirection('top', option);
+	  var oppositeHorizontalProperty = oppositeOffsetDirection(horizontalProperty);
+	  var oppositeVerticalProperty = oppositeOffsetDirection(verticalProperty);
+	
+	  if (horizontalProperty !== 'left') {
+	    presetH = 999;
+	  }
+	
+	  if (verticalProperty !== 'top') {
+	    presetV = 999;
+	  }
+	
+	  if ('left' in offset) {
+	    elem.style[oppositeHorizontalProperty] = '';
+	    elem.style[horizontalProperty] = presetH + 'px';
+	  }
+	  if ('top' in offset) {
+	    elem.style[oppositeVerticalProperty] = '';
+	    elem.style[verticalProperty] = presetV + 'px';
+	  }
+	  var old = getOffset(elem);
+	  var ret = {};
+	  var key = undefined;
+	  for (key in offset) {
+	    if (offset.hasOwnProperty(key)) {
+	      var dir = getOffsetDirection(key, option);
+	      var preset = key === 'left' ? presetH : presetV;
+	      if (dir === key) {
+	        ret[dir] = preset + offset[key] - old[key];
+	      } else {
+	        ret[dir] = preset + old[key] - offset[key];
+	      }
+	    }
+	  }
+	  css(elem, ret);
+	}
+	
+	function each(arr, fn) {
+	  for (var i = 0; i < arr.length; i++) {
+	    fn(arr[i]);
+	  }
+	}
+	
+	function isBorderBoxFn(elem) {
+	  return getComputedStyleX(elem, 'boxSizing') === 'border-box';
+	}
+	
+	var BOX_MODELS = ['margin', 'border', 'padding'];
+	var CONTENT_INDEX = -1;
+	var PADDING_INDEX = 2;
+	var BORDER_INDEX = 1;
+	var MARGIN_INDEX = 0;
+	
+	function swap(elem, options, callback) {
+	  var old = {};
+	  var style = elem.style;
+	  var name = undefined;
+	
+	  // Remember the old values, and insert the new ones
+	  for (name in options) {
+	    if (options.hasOwnProperty(name)) {
+	      old[name] = style[name];
+	      style[name] = options[name];
+	    }
+	  }
+	
+	  callback.call(elem);
+	
+	  // Revert the old values
+	  for (name in options) {
+	    if (options.hasOwnProperty(name)) {
+	      style[name] = old[name];
+	    }
+	  }
+	}
+	
+	function getPBMWidth(elem, props, which) {
+	  var value = 0;
+	  var prop = undefined;
+	  var j = undefined;
+	  var i = undefined;
+	  for (j = 0; j < props.length; j++) {
+	    prop = props[j];
+	    if (prop) {
+	      for (i = 0; i < which.length; i++) {
+	        var cssProp = undefined;
+	        if (prop === 'border') {
+	          cssProp = prop + which[i] + 'Width';
+	        } else {
+	          cssProp = prop + which[i];
+	        }
+	        value += parseFloat(getComputedStyleX(elem, cssProp)) || 0;
+	      }
+	    }
+	  }
+	  return value;
+	}
+	
+	/**
+	 * A crude way of determining if an object is a window
+	 * @member util
+	 */
+	function isWindow(obj) {
+	  // must use == for ie8
+	  /* eslint eqeqeq:0 */
+	  return obj !== null && obj !== undefined && obj == obj.window;
+	}
+	
+	var domUtils = {};
+	
+	each(['Width', 'Height'], function (name) {
+	  domUtils['doc' + name] = function (refWin) {
+	    var d = refWin.document;
+	    return Math.max(
+	    // firefox chrome documentElement.scrollHeight< body.scrollHeight
+	    // ie standard mode : documentElement.scrollHeight> body.scrollHeight
+	    d.documentElement['scroll' + name],
+	    // quirks : documentElement.scrollHeight 最大等于可视窗口多一点？
+	    d.body['scroll' + name], domUtils['viewport' + name](d));
+	  };
+	
+	  domUtils['viewport' + name] = function (win) {
+	    // pc browser includes scrollbar in window.innerWidth
+	    var prop = 'client' + name;
+	    var doc = win.document;
+	    var body = doc.body;
+	    var documentElement = doc.documentElement;
+	    var documentElementProp = documentElement[prop];
+	    // 标准模式取 documentElement
+	    // backcompat 取 body
+	    return doc.compatMode === 'CSS1Compat' && documentElementProp || body && body[prop] || documentElementProp;
+	  };
+	});
+	
+	/*
+	 得到元素的大小信息
+	 @param elem
+	 @param name
+	 @param {String} [extra]  'padding' : (css width) + padding
+	 'border' : (css width) + padding + border
+	 'margin' : (css width) + padding + border + margin
+	 */
+	function getWH(elem, name, ex) {
+	  var extra = ex;
+	  if (isWindow(elem)) {
+	    return name === 'width' ? domUtils.viewportWidth(elem) : domUtils.viewportHeight(elem);
+	  } else if (elem.nodeType === 9) {
+	    return name === 'width' ? domUtils.docWidth(elem) : domUtils.docHeight(elem);
+	  }
+	  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
+	  var borderBoxValue = name === 'width' ? elem.offsetWidth : elem.offsetHeight;
+	  var computedStyle = getComputedStyleX(elem);
+	  var isBorderBox = isBorderBoxFn(elem, computedStyle);
+	  var cssBoxValue = 0;
+	  if (borderBoxValue === null || borderBoxValue === undefined || borderBoxValue <= 0) {
+	    borderBoxValue = undefined;
+	    // Fall back to computed then un computed css if necessary
+	    cssBoxValue = getComputedStyleX(elem, name);
+	    if (cssBoxValue === null || cssBoxValue === undefined || Number(cssBoxValue) < 0) {
+	      cssBoxValue = elem.style[name] || 0;
+	    }
+	    // Normalize '', auto, and prepare for extra
+	    cssBoxValue = parseFloat(cssBoxValue) || 0;
+	  }
+	  if (extra === undefined) {
+	    extra = isBorderBox ? BORDER_INDEX : CONTENT_INDEX;
+	  }
+	  var borderBoxValueOrIsBorderBox = borderBoxValue !== undefined || isBorderBox;
+	  var val = borderBoxValue || cssBoxValue;
+	  if (extra === CONTENT_INDEX) {
+	    if (borderBoxValueOrIsBorderBox) {
+	      return val - getPBMWidth(elem, ['border', 'padding'], which, computedStyle);
+	    }
+	    return cssBoxValue;
+	  } else if (borderBoxValueOrIsBorderBox) {
+	    if (extra === BORDER_INDEX) {
+	      return val;
+	    }
+	    return val + (extra === PADDING_INDEX ? -getPBMWidth(elem, ['border'], which, computedStyle) : getPBMWidth(elem, ['margin'], which, computedStyle));
+	  }
+	  return cssBoxValue + getPBMWidth(elem, BOX_MODELS.slice(extra), which, computedStyle);
+	}
+	
+	var cssShow = { position: 'absolute', visibility: 'hidden', display: 'block' };
+	
+	// fix #119 : https://github.com/kissyteam/kissy/issues/119
+	function getWHIgnoreDisplay() {
+	  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	    args[_key] = arguments[_key];
+	  }
+	
+	  var val = undefined;
+	  var elem = args[0];
+	  // in case elem is window
+	  // elem.offsetWidth === undefined
+	  if (elem.offsetWidth !== 0) {
+	    val = getWH.apply(undefined, args);
+	  } else {
+	    swap(elem, cssShow, function () {
+	      val = getWH.apply(undefined, args);
+	    });
+	  }
+	  return val;
+	}
+	
+	each(['width', 'height'], function (name) {
+	  var first = name.charAt(0).toUpperCase() + name.slice(1);
+	  domUtils['outer' + first] = function (el, includeMargin) {
+	    return el && getWHIgnoreDisplay(el, name, includeMargin ? MARGIN_INDEX : BORDER_INDEX);
+	  };
+	  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
+	
+	  domUtils[name] = function (elem, v) {
+	    var val = v;
+	    if (val !== undefined) {
+	      if (elem) {
+	        var computedStyle = getComputedStyleX(elem);
+	        var isBorderBox = isBorderBoxFn(elem);
+	        if (isBorderBox) {
+	          val += getPBMWidth(elem, ['padding', 'border'], which, computedStyle);
+	        }
+	        return css(elem, name, val);
+	      }
+	      return undefined;
+	    }
+	    return elem && getWHIgnoreDisplay(elem, name, CONTENT_INDEX);
+	  };
+	});
+	
+	function mix(to, from) {
+	  for (var i in from) {
+	    if (from.hasOwnProperty(i)) {
+	      to[i] = from[i];
+	    }
+	  }
+	  return to;
+	}
+	
+	var utils = {
+	  getWindow: function getWindow(node) {
+	    if (node && node.document && node.setTimeout) {
+	      return node;
+	    }
+	    var doc = node.ownerDocument || node;
+	    return doc.defaultView || doc.parentWindow;
+	  },
+	  offset: function offset(el, value, option) {
+	    if (typeof value !== 'undefined') {
+	      setOffset(el, value, option || {});
+	    } else {
+	      return getOffset(el);
+	    }
+	  },
+	  isWindow: isWindow,
+	  each: each,
+	  css: css,
+	  clone: function clone(obj) {
+	    var i = undefined;
+	    var ret = {};
+	    for (i in obj) {
+	      if (obj.hasOwnProperty(i)) {
+	        ret[i] = obj[i];
+	      }
+	    }
+	    var overflow = obj.overflow;
+	    if (overflow) {
+	      for (i in obj) {
+	        if (obj.hasOwnProperty(i)) {
+	          ret.overflow[i] = obj.overflow[i];
+	        }
+	      }
+	    }
+	    return ret;
+	  },
+	  mix: mix,
+	  getWindowScrollLeft: function getWindowScrollLeft(w) {
+	    return getScrollLeft(w);
+	  },
+	  getWindowScrollTop: function getWindowScrollTop(w) {
+	    return getScrollTop(w);
+	  },
+	  merge: function merge() {
+	    var ret = {};
+	
+	    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	      args[_key2] = arguments[_key2];
+	    }
+	
+	    for (var i = 0; i < args.length; i++) {
+	      utils.mix(ret, args[i]);
+	    }
+	    return ret;
+	  },
+	  viewportWidth: 0,
+	  viewportHeight: 0
+	};
+	
+	mix(utils, domUtils);
+	
+	exports['default'] = utils;
+	module.exports = exports['default'];
+
+/***/ },
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _utils = __webpack_require__(90);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	/**
+	 * 得到会导致元素显示不全的祖先元素
+	 */
+	
+	function getOffsetParent(element) {
+	  // ie 这个也不是完全可行
+	  /*
+	   <div style="width: 50px;height: 100px;overflow: hidden">
+	   <div style="width: 50px;height: 100px;position: relative;" id="d6">
+	   元素 6 高 100px 宽 50px<br/>
+	   </div>
+	   </div>
+	   */
+	  // element.offsetParent does the right thing in ie7 and below. Return parent with layout!
+	  //  In other browsers it only includes elements with position absolute, relative or
+	  // fixed, not elements with overflow set to auto or scroll.
+	  //        if (UA.ie && ieMode < 8) {
+	  //            return element.offsetParent;
+	  //        }
+	  // 统一的 offsetParent 方法
+	  var doc = element.ownerDocument;
+	  var body = doc.body;
+	  var parent = undefined;
+	  var positionStyle = _utils2['default'].css(element, 'position');
+	  var skipStatic = positionStyle === 'fixed' || positionStyle === 'absolute';
+	
+	  if (!skipStatic) {
+	    return element.nodeName.toLowerCase() === 'html' ? null : element.parentNode;
+	  }
+	
+	  for (parent = element.parentNode; parent && parent !== body; parent = parent.parentNode) {
+	    positionStyle = _utils2['default'].css(parent, 'position');
+	    if (positionStyle !== 'static') {
+	      return parent;
+	    }
+	  }
+	  return null;
+	}
+	
+	exports['default'] = getOffsetParent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _utils = __webpack_require__(90);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	var _getOffsetParent = __webpack_require__(91);
+	
+	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
+	
+	/**
+	 * 获得元素的显示部分的区域
+	 */
+	function getVisibleRectForElement(element) {
+	  var visibleRect = {
+	    left: 0,
+	    right: Infinity,
+	    top: 0,
+	    bottom: Infinity
+	  };
+	  var el = (0, _getOffsetParent2['default'])(element);
+	  var scrollX = undefined;
+	  var scrollY = undefined;
+	  var winSize = undefined;
+	  var doc = element.ownerDocument;
+	  var win = doc.defaultView || doc.parentWindow;
+	  var body = doc.body;
+	  var documentElement = doc.documentElement;
+	
+	  // Determine the size of the visible rect by climbing the dom accounting for
+	  // all scrollable containers.
+	  while (el) {
+	    // clientWidth is zero for inline block elements in ie.
+	    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
+	    // body may have overflow set on it, yet we still get the entire
+	    // viewport. In some browsers, el.offsetParent may be
+	    // document.documentElement, so check for that too.
+	    el !== body && el !== documentElement && _utils2['default'].css(el, 'overflow') !== 'visible') {
+	      var pos = _utils2['default'].offset(el);
+	      // add border
+	      pos.left += el.clientLeft;
+	      pos.top += el.clientTop;
+	      visibleRect.top = Math.max(visibleRect.top, pos.top);
+	      visibleRect.right = Math.min(visibleRect.right,
+	      // consider area without scrollBar
+	      pos.left + el.clientWidth);
+	      visibleRect.bottom = Math.min(visibleRect.bottom, pos.top + el.clientHeight);
+	      visibleRect.left = Math.max(visibleRect.left, pos.left);
+	    } else if (el === body || el === documentElement) {
+	      break;
+	    }
+	    el = (0, _getOffsetParent2['default'])(el);
+	  }
+	
+	  // Clip by window's viewport.
+	  scrollX = _utils2['default'].getWindowScrollLeft(win);
+	  scrollY = _utils2['default'].getWindowScrollTop(win);
+	  visibleRect.left = Math.max(visibleRect.left, scrollX);
+	  visibleRect.top = Math.max(visibleRect.top, scrollY);
+	  winSize = {
+	    width: _utils2['default'].viewportWidth(win),
+	    height: _utils2['default'].viewportHeight(win)
+	  };
+	  visibleRect.right = Math.min(visibleRect.right, scrollX + winSize.width);
+	  visibleRect.bottom = Math.min(visibleRect.bottom, scrollY + winSize.height);
+	  return visibleRect.top >= 0 && visibleRect.left >= 0 && visibleRect.bottom > visibleRect.top && visibleRect.right > visibleRect.left ? visibleRect : null;
+	}
+	
+	exports['default'] = getVisibleRectForElement;
+	module.exports = exports['default'];
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _utils = __webpack_require__(90);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	function adjustForViewport(elFuturePos, elRegion, visibleRect, overflow) {
+	  var pos = _utils2['default'].clone(elFuturePos);
+	  var size = {
+	    width: elRegion.width,
+	    height: elRegion.height
+	  };
+	
+	  if (overflow.adjustX && pos.left < visibleRect.left) {
+	    pos.left = visibleRect.left;
+	  }
+	
+	  // Left edge inside and right edge outside viewport, try to resize it.
+	  if (overflow.resizeWidth && pos.left >= visibleRect.left && pos.left + size.width > visibleRect.right) {
+	    size.width -= pos.left + size.width - visibleRect.right;
+	  }
+	
+	  // Right edge outside viewport, try to move it.
+	  if (overflow.adjustX && pos.left + size.width > visibleRect.right) {
+	    // 保证左边界和可视区域左边界对齐
+	    pos.left = Math.max(visibleRect.right - size.width, visibleRect.left);
+	  }
+	
+	  // Top edge outside viewport, try to move it.
+	  if (overflow.adjustY && pos.top < visibleRect.top) {
+	    pos.top = visibleRect.top;
+	  }
+	
+	  // Top edge inside and bottom edge outside viewport, try to resize it.
+	  if (overflow.resizeHeight && pos.top >= visibleRect.top && pos.top + size.height > visibleRect.bottom) {
+	    size.height -= pos.top + size.height - visibleRect.bottom;
+	  }
+	
+	  // Bottom edge outside viewport, try to move it.
+	  if (overflow.adjustY && pos.top + size.height > visibleRect.bottom) {
+	    // 保证上边界和可视区域上边界对齐
+	    pos.top = Math.max(visibleRect.bottom - size.height, visibleRect.top);
+	  }
+	
+	  return _utils2['default'].mix(pos, size);
+	}
+	
+	exports['default'] = adjustForViewport;
+	module.exports = exports['default'];
+
+/***/ },
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _utils = __webpack_require__(90);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	function getRegion(node) {
+	  var offset = undefined;
+	  var w = undefined;
+	  var h = undefined;
+	  if (!_utils2['default'].isWindow(node) && node.nodeType !== 9) {
+	    offset = _utils2['default'].offset(node);
+	    w = _utils2['default'].outerWidth(node);
+	    h = _utils2['default'].outerHeight(node);
+	  } else {
+	    var win = _utils2['default'].getWindow(node);
+	    offset = {
+	      left: _utils2['default'].getWindowScrollLeft(win),
+	      top: _utils2['default'].getWindowScrollTop(win)
+	    };
+	    w = _utils2['default'].viewportWidth(win);
+	    h = _utils2['default'].viewportHeight(win);
+	  }
+	  offset.width = w;
+	  offset.height = h;
+	  return offset;
+	}
+	
+	exports['default'] = getRegion;
+	module.exports = exports['default'];
+
+/***/ },
+/* 95 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _getAlignOffset = __webpack_require__(96);
+	
+	var _getAlignOffset2 = _interopRequireDefault(_getAlignOffset);
+	
+	function getElFuturePos(elRegion, refNodeRegion, points, offset, targetOffset) {
+	  var xy = undefined;
+	  var diff = undefined;
+	  var p1 = undefined;
+	  var p2 = undefined;
+	
+	  xy = {
+	    left: elRegion.left,
+	    top: elRegion.top
+	  };
+	
+	  p1 = (0, _getAlignOffset2['default'])(refNodeRegion, points[1]);
+	  p2 = (0, _getAlignOffset2['default'])(elRegion, points[0]);
+	
+	  diff = [p2.left - p1.left, p2.top - p1.top];
+	
+	  return {
+	    left: xy.left - diff[0] + offset[0] - targetOffset[0],
+	    top: xy.top - diff[1] + offset[1] - targetOffset[1]
+	  };
+	}
+	
+	exports['default'] = getElFuturePos;
+	module.exports = exports['default'];
+
+/***/ },
+/* 96 */
+/***/ function(module, exports) {
+
+	/**
+	 * 获取 node 上的 align 对齐点 相对于页面的坐标
+	 */
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	function getAlignOffset(region, align) {
+	  var V = align.charAt(0);
+	  var H = align.charAt(1);
+	  var w = region.width;
+	  var h = region.height;
+	  var x = undefined;
+	  var y = undefined;
+	
+	  x = region.left;
+	  y = region.top;
+	
+	  if (V === 'c') {
+	    y += h / 2;
+	  } else if (V === 'b') {
+	    y += h;
+	  }
+	
+	  if (H === 'c') {
+	    x += w / 2;
+	  } else if (H === 'r') {
+	    x += w;
+	  }
+	
+	  return {
+	    left: x,
+	    top: y
+	  };
+	}
+	
+	exports['default'] = getAlignOffset;
+	module.exports = exports['default'];
+
+/***/ },
+/* 97 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _slider = __webpack_require__(98);
+	
+	var _slider2 = _interopRequireDefault(_slider);
+	
+	__webpack_require__(86);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	riot.tag2('ui-slider', '<div class="{styles.base}"> <div name="handle" class="{styles.handle}" riot-style="left: {offsetRate + \'%\'};" onmousedown="{onMouseDown}"></div> <div name="tracker" class="{styles.tracker}"></div> <ui-tooltip title="{tipContent}" trigger="manual" show="{showTooltip}" placement="bottom" track="{handle}"></ui-tooltip> </div>', '', '', function (opts) {
+		var _this = this;
+	
+		this.styles = _slider2.default;
+		this.offsetRate = 0;
+		this.showTooltip = false;
+		this.tipContent = 0;
+	
+		var trackerWidth = 0;
+	
+		this.onMouseDown = function (e) {
+			var target = e.target;
+			var initPageX = e.pageX;
+			var initOffsetRate = _this.offsetRate;
+	
+			_this.showTooltip = true;
+	
+			var onMouseUp = function onMouseUp() {
+				_this.showTooltip = false;
+				_this.update();
+				document.removeEventListener('mousemove', onMouseMove, false);
+				document.removeEventListener('mouseup', onMouseUp, false);
+			};
+			document.addEventListener('mouseup', onMouseUp, false);
+	
+			var onMouseMove = function onMouseMove(e) {
+				var offsetX = e.pageX - initPageX;
+				_this.offsetRate = initOffsetRate + offsetX / trackerWidth * 100;
+	
+				console.log(offsetX / trackerWidth * 100);
+	
+				// offsetRate -> min === 0 && max === 100
+				if (_this.offsetRate < 0) {
+					_this.offsetRate = 0;
+				}
+				if (_this.offsetRate > 100) {
+					_this.offsetRate = 100;
+				}
+	
+				if (typeof _this.opts.tipFormatter === 'function') {
+					_this.tipContent = _this.opts.tipFormatter(_this.offsetRate);
+				} else {
+					_this.tipContent = parseInt(_this.offsetRate);
+				}
+				_this.update();
+			};
+			document.addEventListener('mousemove', onMouseMove, false);
+		};
+	
+		this.one('updated', function () {
+			trackerWidth = _this.tracker.clientWidth;
+		});
+	}, '{ }');
+
+/***/ },
+/* 98 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"base":"slider__base--93502","handle":"slider__handle--fd370","tracker":"slider__tracker--26f65"};
+
+/***/ }
+/******/ ])
+});
+;
+//# sourceMappingURL=nest.js.map
