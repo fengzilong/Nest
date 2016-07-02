@@ -153,3 +153,17 @@ pre {
 		animation:octocat-wave 560ms ease-in-out
 	}
 }
+
+/* Override github highlight */
+
+.hljs-tag, .hljs-name, .hljs-attribute {
+	color: #3e3e90;
+}
+
+.hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr {
+	color: #317f7f;
+}
+
+.hljs-string, .hljs-doctag {
+	color: #cd1a47;
+}
