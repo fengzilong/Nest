@@ -7,7 +7,7 @@ import '../tooltip';
 
 		<div name="tracker" class="{ styles.tracker }"></div>
 
-		<ui-tooltip title="{ tipContent }" trigger="manual" show="{ showTooltip }" placement="bottom" track="{ handle }"></ui-tooltip>
+		<ui-tooltip title="{ tipContent }" trigger="manual" show="{ showTooltip }" placement="{ opts.tipPlacement || 'top' }" track="{ handle }"></ui-tooltip>
 	</div>
 
 	<script>
@@ -15,6 +15,11 @@ import '../tooltip';
 		this.offsetRate = 0;
 		this.showTooltip = false;
 		this.tipContent = 0;
+
+		const min = this.opts.min || 0;
+		const max = this.opts.max || 100;
+		const step = this.opts.step || 1;
+		const stepPercent = step / ( max - min );
 
 		let trackerWidth = 0;
 
@@ -28,16 +33,21 @@ import '../tooltip';
 			const onMouseUp = () => {
 				this.showTooltip = false;
 				this.update();
+				if( this.offsetRate !== initOffsetRate ) {
+					this.opts.onChanged && this.opts.onChanged( this.offsetRate );
+				}
 				document.removeEventListener( 'mousemove', onMouseMove, false );
 				document.removeEventListener( 'mouseup', onMouseUp, false );
 			}
-			document.addEventListener( 'mouseup', onMouseUp, false );
 
 			const onMouseMove = e => {
 				let offsetX = e.pageX - initPageX;
-				this.offsetRate = initOffsetRate + offsetX / trackerWidth * 100;
+				let moved = offsetX / trackerWidth;
 
-				console.log( offsetX / trackerWidth * 100 );
+				// moved
+				moved = Math.round( moved / stepPercent ) * stepPercent;
+
+				this.offsetRate = initOffsetRate + moved * 100;
 
 				// offsetRate -> min === 0 && max === 100
 				if( this.offsetRate < 0 ) {
@@ -50,10 +60,17 @@ import '../tooltip';
 				if( typeof this.opts.tipFormatter === 'function' ) {
 					this.tipContent = this.opts.tipFormatter( this.offsetRate );
 				} else {
-					this.tipContent = parseInt( this.offsetRate );
+					this.tipContent = parseInt( this.offsetRate / 100 * ( max - min ) + min );
 				}
+				
 				this.update();
+
+				if( this.offsetRate !== initOffsetRate ) {
+					this.opts.onChange && this.opts.onChange( this.offsetRate );
+				}
 			}
+
+			document.addEventListener( 'mouseup', onMouseUp, false );
 			document.addEventListener( 'mousemove', onMouseMove, false );
 		};
 

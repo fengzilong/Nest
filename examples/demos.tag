@@ -1,9 +1,9 @@
 <demos>
 	<style>
-		
+
 	</style>
 
-	<ui-slider value="{ 50 }"></ui-slider>
+	<ui-slider value="{ 50 }" step="{ 5 }" min="{ 0 }" max="{ 100 }" tip-placement="top" on-changed="{ onSliderChanged }"></ui-slider>
 
 	<br />
 	<br />
@@ -381,6 +381,10 @@
 
 		this.onCheckboxChange = ( v, k ) => {
 			console.log( 'checkboxChange', v, k);
+		};
+
+		this.onSliderChanged = v => {
+			console.log( 'slider changed', v );
 		};
 
 		this.on('mount', function(){
