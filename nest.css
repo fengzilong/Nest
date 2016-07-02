@@ -839,7 +839,7 @@ ui-breadcrumb-item a {
 ui-tag,
 [data-is="ui-tag"] {
   display: inline-block;
-  padding: 3px 9px;
+  padding: 0 9px;
   font-size: 11px;
   border-radius: 3px;
   cursor: pointer;
@@ -847,7 +847,8 @@ ui-tag,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  line-height: 1.4;
+  height: 22px;
+  line-height: 22px;
   color: #666;
   background-color: #DCDCDC;
   /* round */
@@ -1456,6 +1457,7 @@ ui-collapse > ui-collapse-panel:not(:last-child) {
   top: 50%;
   border: solid 1px #2db7f5;
   background-color: #FFF;
+  margin-left: -5px;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
   border-radius: 50%;

@@ -2582,13 +2582,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	riot.tag2('ui-slider', '<div class="{styles.base}"> <div name="handle" class="{styles.handle}" riot-style="left: {offsetRate + \'%\'};" onmousedown="{onMouseDown}"></div> <div name="tracker" class="{styles.tracker}"></div> <ui-tooltip title="{tipContent}" trigger="manual" show="{showTooltip}" placement="bottom" track="{handle}"></ui-tooltip> </div>', '', '', function (opts) {
+	riot.tag2('ui-slider', '<div class="{styles.base}"> <div name="handle" class="{styles.handle}" riot-style="left: {offsetRate + \'%\'};" onmousedown="{onMouseDown}"></div> <div name="tracker" class="{styles.tracker}"></div> <ui-tooltip title="{tipContent}" trigger="manual" show="{showTooltip}" placement="{opts.tipPlacement || \'top\'}" track="{handle}"></ui-tooltip> </div>', '', '', function (opts) {
 		var _this = this;
 	
 		this.styles = _slider2.default;
 		this.offsetRate = 0;
 		this.showTooltip = false;
 		this.tipContent = 0;
+	
+		var min = this.opts.min || 0;
+		var max = this.opts.max || 100;
+		var step = this.opts.step || 1;
+		var stepPercent = step / (max - min);
 	
 		var trackerWidth = 0;
 	
@@ -2602,16 +2607,21 @@ return /******/ (function(modules) { // webpackBootstrap
 			var onMouseUp = function onMouseUp() {
 				_this.showTooltip = false;
 				_this.update();
+				if (_this.offsetRate !== initOffsetRate) {
+					_this.opts.onChanged && _this.opts.onChanged(_this.offsetRate);
+				}
 				document.removeEventListener('mousemove', onMouseMove, false);
 				document.removeEventListener('mouseup', onMouseUp, false);
 			};
-			document.addEventListener('mouseup', onMouseUp, false);
 	
 			var onMouseMove = function onMouseMove(e) {
 				var offsetX = e.pageX - initPageX;
-				_this.offsetRate = initOffsetRate + offsetX / trackerWidth * 100;
+				var moved = offsetX / trackerWidth;
 	
-				console.log(offsetX / trackerWidth * 100);
+				// moved
+				moved = Math.round(moved / stepPercent) * stepPercent;
+	
+				_this.offsetRate = initOffsetRate + moved * 100;
 	
 				// offsetRate -> min === 0 && max === 100
 				if (_this.offsetRate < 0) {
@@ -2624,10 +2634,17 @@ return /******/ (function(modules) { // webpackBootstrap
 				if (typeof _this.opts.tipFormatter === 'function') {
 					_this.tipContent = _this.opts.tipFormatter(_this.offsetRate);
 				} else {
-					_this.tipContent = parseInt(_this.offsetRate);
+					_this.tipContent = parseInt(_this.offsetRate / 100 * (max - min) + min);
 				}
+	
 				_this.update();
+	
+				if (_this.offsetRate !== initOffsetRate) {
+					_this.opts.onChange && _this.opts.onChange(_this.offsetRate);
+				}
 			};
+	
+			document.addEventListener('mouseup', onMouseUp, false);
 			document.addEventListener('mousemove', onMouseMove, false);
 		};
 	
