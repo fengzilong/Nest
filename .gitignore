@@ -2,3 +2,5 @@ node_modules
 .dev
 /site/partials-escape
 /public
+/dist/nest.js.map
+/dist/nest.css.map
