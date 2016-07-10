@@ -7,11 +7,11 @@
 	<title>Nest</title>
 	
 
-		<link rel="stylesheet" href="./reset.css?t=1467502839682">
-		<link rel="stylesheet" href="./site.css?t=1467502839682">
+		<link rel="stylesheet" href="./reset.css?t=1468135885280">
+		<link rel="stylesheet" href="./site.css?t=1468135885280">
 	
-<link rel="stylesheet" href="./nest.css?t=1467502839682">
-<link rel="stylesheet" href="./example.css?t=1467502839682">
+<link rel="stylesheet" href="./nest.css?t=1468135885280">
+<link rel="stylesheet" href="./example.css?t=1468135885280">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
 
 </head>
@@ -745,13 +745,41 @@
 </div>
 <div class="box-content">
 	<div class="element-inline">
-		<ui-slider step="{ 5 }" min="{ 10 }" max="{ 50 }" tip-placement="top"></ui-slider>
-<ui-slider step="{ 5 }" min="{ 10 }" max="{ 50 }" tip-placement="bottom"></ui-slider>
+		<ui-slider value="{ 50 }" min="{ 0 }" max="{ 100 }"></ui-slider>
 
 	</div>
 	<div class="example-code">
-		<pre><code class="language-html">&lt;ui-slider step=&quot;{ 5 }&quot; min=&quot;{ 10 }&quot; max=&quot;{ 50 }&quot; tip-placement=&quot;top&quot;&gt;&lt;/ui-slider&gt;
-&lt;ui-slider step=&quot;{ 5 }&quot; min=&quot;{ 10 }&quot; max=&quot;{ 50 }&quot; tip-placement=&quot;bottom&quot;&gt;&lt;/ui-slider&gt;
+		<pre><code class="language-html">&lt;ui-slider value=&quot;{ 50 }&quot; min=&quot;{ 0 }&quot; max=&quot;{ 100 }&quot;&gt;&lt;/ui-slider&gt;
+</code></pre>
+	</div>
+</div>
+
+
+<div class="box-header">
+	Slider With Step
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-slider value="{ 1 }" step="{ 2 }" min="{ 0 }" max="{ 10 }"></ui-slider>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-slider value=&quot;{ 1 }&quot; step=&quot;{ 2 }&quot; min=&quot;{ 0 }&quot; max=&quot;{ 10 }&quot;&gt;&lt;/ui-slider&gt;
+</code></pre>
+	</div>
+</div>
+
+
+<div class="box-header">
+	Slider With Placement
+</div>
+<div class="box-content">
+	<div class="element-inline">
+		<ui-slider min="{ 0 }" max="{ 10 }" tip-placement="bottom"></ui-slider>
+
+	</div>
+	<div class="example-code">
+		<pre><code class="language-html">&lt;ui-slider min=&quot;{ 0 }&quot; max=&quot;{ 10 }&quot; tip-placement=&quot;bottom&quot;&gt;&lt;/ui-slider&gt;
 </code></pre>
 	</div>
 </div>
@@ -771,7 +799,7 @@
 	
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script type="text/javascript" src="./riot.js"></script>
-<script type="text/javascript" src="./nest.js?t=1467502839682"></script>
+<script type="text/javascript" src="./nest.js?t=1468135885280"></script>
 <script>
 	hljs.initHighlightingOnLoad();
 	riot.mount( '*' );
