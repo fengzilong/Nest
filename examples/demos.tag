@@ -3,7 +3,7 @@
 
 	</style>
 
-	<ui-slider value="{ 50 }" step="{ 5 }" min="{ 0 }" max="{ 100 }" tip-placement="top" on-changed="{ onSliderChanged }"></ui-slider>
+	<ui-slider value="{ 1 }" step="{ 5 }" min="{ 0 }" max="{ 100 }" tip-placement="bottom" on-changed="{ onSliderChanged }"></ui-slider>
 
 	<br />
 	<br />

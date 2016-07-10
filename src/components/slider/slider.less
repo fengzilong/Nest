@@ -1,7 +1,7 @@
 @import "../../theme.less";
 
 @handle-size: 10px;
-@handle-hover-size: 15px;
+@handle-hover-size: 14px;
 @handle-transition-duration: .3s;
 
 :local(.base) {
@@ -33,8 +33,14 @@
 }
 
 :local(.tracker) {
-	background-color: fade(@primary-color, 15%);
+	background-color: #e6e6e6;
 	height: 4px;
 	border-radius: 10px;
 	margin: 10px 0;
+	overflow: hidden;
+
+	:local(.tracker-inner) {
+		height: 100%;
+		background-color: tint(@primary-color, 45%);
+	}
 }

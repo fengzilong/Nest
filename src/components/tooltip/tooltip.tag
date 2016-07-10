@@ -6,7 +6,7 @@ import domAlign from 'dom-align';
 		<yield></yield>
 	</div>
 
-	<div if="{ ( !manual && triggered ) || ( manual && opts.show ) }" name="s" class="{ styles.base } { styles[ opts.placement || defaultPlaceholder ] }">
+	<div show="{ ( !manual && triggered ) || ( manual && opts.show ) }" name="s" class="{ styles.base } { styles[ opts.placement || defaultPlaceholder ] }">
 		<div class="{ styles.arrow }"></div>
 		<div class="{ styles.content }">
 			{ opts.title }
@@ -24,11 +24,11 @@ import domAlign from 'dom-align';
 		switch( this.opts.placement || this.defaultPlaceholder ) {
 			case 'top':
 				points = [ 'bc', 'tc' ];
-				offset = [ 0, -1 ];
+				offset = [ 0, -2 ];
 				break;
 			case 'bottom':
 				points = [ 'tc', 'bc' ];
-				offset = [ 0, 1 ];
+				offset = [ 0, 2 ];
 				break;
 			case 'left':
 				points = [ 'cr', 'cl' ];
@@ -60,25 +60,27 @@ import domAlign from 'dom-align';
 			}
 		}
 
+		let lastTrackBy;
+
 		this.on('updated', () => {
 			const shallShowTooltip = ( !this.manual && this.triggered ) ||
 				( this.manual && this.opts.show );
-
-			if( !shallShowTooltip ) {
-				return;
-			}
-
 			const isTrackValid = this.opts.track &&
-				( this.opts.track instanceof HTMLElement );
+			( this.opts.track instanceof HTMLElement );
 
-			if( !isTrackValid ) {
+			if( !shallShowTooltip || !isTrackValid || typeof this.opts.trackby === 'undefined' ) {
 				return;
 			}
 
-			domAlign( this.s, this.opts.track, {
-				points,
-				offset
-			} );
+			// TODO: trackby support array
+			// if trackby changed, trigger align
+			if( this.opts.trackby !== lastTrackBy ) {
+				lastTrackBy = this.opts.trackby;
+				domAlign( this.s, this.opts.track, {
+					points,
+					offset
+				} );
+			}
 		});
 
 		this.on('before-mount', () => {
