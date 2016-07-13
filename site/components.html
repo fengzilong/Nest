@@ -1,0 +1,109 @@
+<components>
+
+	{% macro snippet( title, path ) %}
+	<div class="box-header">
+		{{ title }}
+	</div>
+	<div class="box-content">
+		<div class="element-inline">
+			{% include "./partials/" + path %}
+		</div>
+		<div class="example-code">
+			<pre><code class="language-html">
+				{%- include "./partials-escape/" + path -%}
+			</code></pre>
+		</div>
+	</div>
+	{% endmacro %}
+
+	{% include "layout/header.html" %}
+	{% include "layout/content_start.html" %}
+
+	{# Button #}
+	{{ snippet( 'Button Basic', 'button/button-basic.html' ) }}
+	{{ snippet( 'Button Outline', 'button/button-outline.html' ) }}
+	{{ snippet( 'Button Link', 'button/button-link.html' ) }}
+	{{ snippet( 'Button Size', 'button/button-size.html' ) }}
+	{{ snippet( 'Button Block', 'button/button-block.html' ) }}
+	{{ snippet( 'Button With Icon', 'button/button-with-icon.html' ) }}
+	{{ snippet( 'Button Loading', 'button/button-loading.html' ) }}
+	{{ snippet( 'Button Disabled', 'button/button-disabled.html' ) }}
+
+	{# Input #}
+
+	{{ snippet( 'Input Basic', 'input/input-basic.html' ) }}
+	{{ snippet( 'Input SIze', 'input/input-size.html' ) }}
+
+	{# Badge #}
+
+	{{ snippet( 'Badge Basic', 'badge/badge.html' ) }}
+
+	{# Progress Bar #}
+
+	{{ snippet( 'ProgressBar Basic', 'progress-bar/progress-bar-basic.html' ) }}
+	{{ snippet( 'ProgressBar With Label', 'progress-bar/progress-bar-with-label.html' ) }}
+
+	{# Link #}
+
+	{{ snippet( 'Link Basic', 'link/link-basic.html' ) }}
+
+	{# Switch #}
+
+	{{ snippet( 'Switch Basic', 'switch/switch-basic.html' ) }}
+	{{ snippet( 'Switch Disabled', 'switch/switch-disabled.html' ) }}
+
+	{# Checkbox #}
+
+	{{ snippet( 'Checkbox Basic', 'checkbox/checkbox-basic.html' ) }}
+
+	{# Radio #}
+
+	{{ snippet( 'Radio Basic', 'radio/radio-basic.html' ) }}
+	{{ snippet( 'Radio Button', 'radio/radio-button.html' ) }}
+
+	{# Json Tree #}
+
+	{{ snippet( 'Json Tree Basic', 'json-tree/json-tree-basic.html' ) }}
+
+	{# Breadcrumb #}
+
+	{{ snippet( 'Breadcrumb Basic', 'breadcrumb/breadcrumb-basic.html' ) }}
+	{{ snippet( 'Breadcrumb With Icon', 'breadcrumb/breadcrumb-with-icon.html' ) }}
+
+	{# Tooltip #}
+
+	{{ snippet( 'Tooltip Basic', 'tooltip/tooltip-basic.html' ) }}
+
+	{# Tag #}
+
+	{{ snippet( 'Tag Basic', 'tag/tag-basic.html' ) }}
+	{{ snippet( 'Tag Round', 'tag/tag-round.html' ) }}
+	{{ snippet( 'Tag Invert', 'tag/tag-invert.html' ) }}
+
+	{# Slider #}
+
+	{{ snippet( 'Slider Basic', 'slider/slider-basic.html' ) }}
+	{{ snippet( 'Slider With Step', 'slider/slider-with-step.html' ) }}
+	{{ snippet( 'Slider With Placement', 'slider/slider-with-placement.html' ) }}
+
+	{# Pagination #}
+
+	{{ snippet( 'Pagination Basic', 'pagination/pagination-basic.html' ) }}
+
+	{% include "layout/content_end.html" %}
+	{% include "layout/footer.html" %}
+
+	<script>
+		var self = this;
+
+		this.current = 60;
+		this.onPaginationChange = function( v ) {
+			self.current = v;
+		};
+
+		this.on('mount', function() {
+			hljs.initHighlighting();
+
+		});
+	</script>
+</components>

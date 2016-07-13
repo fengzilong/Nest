@@ -53,6 +53,7 @@
     "gulp": "^3.9.1",
     "gulp-html-escape": "0.0.3",
     "gulp-nunjucks": "^2.2.0",
+    "gulp-replace": "^0.5.4",
     "gulp-serve": "^1.2.0",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",

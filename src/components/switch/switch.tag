@@ -5,8 +5,8 @@ import classNames from 'classnames';
 	<div class="{ uiCls } { stateCls }" onclick="{ root.$toggle }"></div>
 
 	<script>
-		this.disabled = this.opts.disabled || false;
-		let isOn = !!this.opts.checked;
+		this.disabled = this.opts.__disabled || false;
+		let isOn = !!this.opts.__checked;
 
 		this.styles = styles;
 		this.uiCls = classNames({

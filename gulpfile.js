@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const serve = require('gulp-serve')
 const nunjucks = require('gulp-nunjucks')
 const escape = require('gulp-html-escape');
+const replace = require('gulp-replace');
 
 gulp.task('serve', serve({
 	root: ['./public'],
@@ -12,6 +13,8 @@ gulp.task('serve', serve({
 gulp.task('partial:escape', function () {
 	return gulp.src('site/partials/**/*.html')
 		.pipe(escape({}))
+		.pipe(replace(/\{/g, '\\{'))
+		.pipe(replace(/\}/g, '\\}'))
 		.pipe(gulp.dest('site/partials-escape'))
 })
 
@@ -34,7 +37,7 @@ gulp.task('site:css', function () {
 })
 
 gulp.task('site:js', function () {
-	return gulp.src('site/riot.js')
+	return gulp.src('site/**/*.js')
 		.pipe(gulp.dest('public'))
 })
 
