@@ -1,7 +1,8 @@
 <demos>
-	<style>
+	<ui-pagination min="{ 50 }" max="{ 100 }" current="{ c }" on-change="{ onPaginationChange }"></ui-pagination>
 
-	</style>
+	<br />
+	<br />
 
 	<ui-slider value="{ 1 }" step="{ 5 }" min="{ 0 }" max="{ 100 }" tip-placement="bottom" on-changed="{ onSliderChanged }"></ui-slider>
 
@@ -369,6 +370,13 @@
 					c: false
 				}
 			]
+		};
+
+		this.c = 60;
+		this.onPaginationChange = ( v ) => {
+			console.log( 'onPaginationChange', v );
+			this.c = v;
+			this.update();
 		};
 
 		this.onRadioButtonChange = ( v, k ) => {

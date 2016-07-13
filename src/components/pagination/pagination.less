@@ -1,5 +1,17 @@
 @import "../../theme.less";
 
-:local(.base) {
+ui-pagination, [data-is="ui-pagination"] {
+	display: inline-block;
+	user-select: none;
 
+	ui-button:not([primary]) {
+		button {
+			transition: none!important;
+		}
+	}
+}
+
+:local(.more) {
+	color: #999;
+	margin: 0 5px;
 }

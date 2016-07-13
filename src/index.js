@@ -15,6 +15,7 @@ import './components/tag';
 import './components/json-tree';
 import './components/tree';
 import './components/tree-node';
+import './components/pagination';
 import './components/menu';
 import './components/submenu';
 import './components/menu-item';
