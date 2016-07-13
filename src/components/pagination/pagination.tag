@@ -2,7 +2,7 @@ import styles from './pagination.less';
 
 <ui-pagination>
 	<ui-button sm on-click="{ onChangeFactory( current - 1 ) }">
-		{ opts.prevText || 'prev' }
+		{ parent.opts.prevText || 'prev' }
 	</ui-button>
 
 	<ui-button if="{ isBeforeHidden }" on-click="{ onChangeFactory( min ) }" sm>
@@ -42,7 +42,7 @@ import styles from './pagination.less';
 	</ui-button>
 
 	<ui-button on-click="{ onChangeFactory( current + 1 ) }" sm>
-		{ opts.nextText || 'next' }
+		{ parent.opts.nextText || 'next' }
 	</ui-button>
 
 	<script>
