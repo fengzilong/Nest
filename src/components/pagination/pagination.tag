@@ -1,7 +1,7 @@
 import styles from './pagination.less';
 
 <ui-pagination>
-	<ui-button sm on-click="{ onChangeFactory( current - 1 ) }">
+	<ui-button disabled="{ current === min }" sm on-click="{ onChangeFactory( current - 1 ) }">
 		{ parent.opts.prevText || 'prev' }
 	</ui-button>
 
@@ -41,7 +41,7 @@ import styles from './pagination.less';
 		{ parent.max }
 	</ui-button>
 
-	<ui-button on-click="{ onChangeFactory( current + 1 ) }" sm>
+	<ui-button disabled="{ current === max }" on-click="{ onChangeFactory( current + 1 ) }" sm>
 		{ parent.opts.nextText || 'next' }
 	</ui-button>
 

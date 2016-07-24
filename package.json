@@ -3,9 +3,7 @@
   "version": "0.0.2",
   "description": "Yet another UI framework for Web, built with riot",
   "main": "dist/nest.js",
-  "directories": {
-    "example": "examples"
-  },
+  "directories": {},
   "scripts": {
     "dev": "node server",
     "dist": "./node_modules/.bin/better-npm-run dist",
