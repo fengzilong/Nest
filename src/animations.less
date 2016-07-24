@@ -1,0 +1,12 @@
+@keyframes spin {
+	0%, 40%, to {
+		transform: scaleY(.4)
+	}
+	20% {
+		transform: scaleY(1)
+	}
+}
+
+:local(.spin) {
+	animation: spin 1.2s infinite ease-in-out
+}

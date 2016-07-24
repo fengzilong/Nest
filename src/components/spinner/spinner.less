@@ -1,5 +1,62 @@
 @import "../../theme.less";
 
-:local(.base) {
+ui-spinner {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 0;
+}
 
+ui-spinner[block] {
+	display: block;
+}
+
+:local(.rect) {
+	composes: spin from '../../animations.less';
+	display: inline-block;
+	background-color: #DDD;
+	vertical-align: middle;
+}
+
+:local(.rect2) {
+	animation-delay: -1.1s;
+}
+
+:local(.rect3) {
+	animation-delay: -1s;
+}
+
+:local(.rect4) {
+	animation-delay: -.9s;
+}
+
+:local(.rect5) {
+	animation-delay: -.8s;
+}
+
+ui-spinner[sm] :local(.rect) {
+	width: 2px;
+	height: 16px;
+
+	&:not(:last-child) {
+		margin-right: 2px;
+	}
+}
+
+ui-spinner :local(.rect) {
+	width: 3px;
+	height: 23px;
+
+	&:not(:last-child) {
+		margin-right: 3px;
+	}
+}
+
+ui-spinner[lg] :local(.rect) {
+	width: 4px;
+	height: 29px;
+
+	&:not(:last-child) {
+		margin-right: 4px;
+	}
 }

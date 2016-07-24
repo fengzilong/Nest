@@ -27,3 +27,4 @@ import './components/collapse';
 import './components/collapse-panel';
 import './components/tooltip';
 import './components/slider';
+import './components/spinner';

@@ -1,4 +1,11 @@
 <demos>
+	<ui-spinner sm></ui-spinner>
+	<ui-spinner></ui-spinner>
+	<ui-spinner lg></ui-spinner>
+
+	<br />
+	<br />
+
 	<ui-pagination min="{ 50 }" max="{ 100 }" current="{ c }" on-change="{ onPaginationChange }"></ui-pagination>
 
 	<br />

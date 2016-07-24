@@ -31,7 +31,7 @@ var webpackConfig = {
 		],
 		loaders: [
 			{
-				test: /\.(ttf|woff|eot|svg)$/,
+				test: /\.(ttf|woff|eot|svg)\??\d*$/,
 				include: /src/,
 				loader: 'url-loader?name=[path][name].[ext]?[hash:8]'
 			},
