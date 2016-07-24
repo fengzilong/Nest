@@ -9,7 +9,7 @@
     "dist": "./node_modules/.bin/better-npm-run dist",
     "site-dev": "gulp site:dev",
     "site-dist": "gulp site:dist",
-    "gh-pages": "gh-pages -d public"
+    "gh-pages": "gulp site:dist && gh-pages -d public"
   },
   "betterScripts": {
     "dist": {
