@@ -64,8 +64,15 @@ var webpackConfig = {
 	resolve: {
 		extensions: [ '', '.js', '.tag', '.less', '.css' ]
 	},
-	externals: [],
+	externals: [
+		{
+			riot: 'riot'
+		}
+	],
 	plugins: [
+		new webpack.ProvidePlugin({
+			riot: path.resolve( __dirname, 'src/riot.js' )
+		}),
 		new ExtractTextWebpackPlugin( 'nest.css' )
 	]
 };

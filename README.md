@@ -1,6 +1,6 @@
 # Nest [![npm package](https://img.shields.io/npm/v/nest-ui.svg?style=flat-square)](https://www.npmjs.org/package/nest-ui)
 
-> Yet another UI framework for Web, built with riot
+> Yet another UI framework for Web, built with [riot](https://github.com/riot/riot)
 
 ## Demo
 
@@ -13,58 +13,31 @@ coming soon...
 ## Installation
 
 ```bash
-$ npm i nest-ui --save
+$ npm install nest-ui --save
 ```
 
 ## Usage
 
-include nest-ui css file via `<link>`
-
-```html
-<link rel="stylesheet" href="https://npmcdn.com/nest-ui/dist/nest.css">
-```
-
-include [riot](https://github.com/riot/riot) via `<script>`
-
-```html
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.4.1/riot.min.js"></script>
-```
-
-enjoy :)
-
-index.html
-
-```html
-<html>
-	<head>
-		<title>example</title>
-		<link rel="stylesheet" href="https://npmcdn.com/nest-ui/dist/nest.css">
-	</head>
-	<body>
-		<app></app>
-
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.4.1/riot.min.js"></script>
-		<script type="text/javascript" src="./app.js"></script>
-	</body>
-</html>
-<app></app>
-```
-
-app.js
+Option #1: with webpack or any other bundler:
 
 ```js
-// you can also include nest-ui via `script`
 import 'nest-ui';
+import 'nest-ui/dist/nest.css';
+```
 
-riot.tag('app', `
-	<ui-button on-click="{ onClick }">click me</ui-button>
-`, opts => {
-	this.onClick = () => {
-		console.log( 'button clicked' );
-	}
-});
+Option #2: hot-link
 
-riot.mount('*');
+hot-link nest.css ([npmcdn](https://npmcdn.com/nest-ui/dist/nest.css))
+
+```html
+<link rel="stylesheet" href="path/to/nest.css">
+```
+
+hot-link riot.js ([npmcdn](https://npmcdn.com/riot/riot.min.js)) and nest.js ([npmcdn](https://npmcdn.com/nest-ui))
+
+```html
+<script type="text/javascript" src="path/to/riot.js"></script>
+<script type="text/javascript" src="path/to/nest.js"></script>
 ```
 
 ## License
