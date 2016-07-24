@@ -13,12 +13,12 @@
 	}
 
 	&:active {
-		.button-color(@color; shade(@background, 15%); shade(@border, 15%));
+		.button-color(@color; shade(@background, 6%); shade(@border, 6%));
+		text-shadow: 0 0 1px @color;
 	}
 
 	&:focus {
 		box-shadow: 0 0 0 3px tint(@background, 85%);
-		text-shadow: 0 0 1px @color;
 	}
 }
 .button-outline-style(@color; @background; @border){
