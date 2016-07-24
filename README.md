@@ -1,10 +1,14 @@
 # Nest [![npm package](https://img.shields.io/npm/v/nest-ui.svg?style=flat-square)](https://www.npmjs.org/package/nest-ui)
 
-Yet another UI framework for Web, built with riot
+> Yet another UI framework for Web, built with riot
 
 ## Demo
 
 https://fengzilong.github.io/Nest/
+
+## Docs
+
+coming soon...
 
 ## Installation
 
