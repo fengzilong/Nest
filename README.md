@@ -18,14 +18,14 @@ $ npm install nest-ui --save
 
 ## Usage
 
-Option #1: with webpack or any other bundler:
+**Option #1:** with webpack or any other bundler:
 
 ```js
 import 'nest-ui';
 import 'nest-ui/dist/nest.css';
 ```
 
-Option #2: hot-link
+**Option #2**: hot-link
 
 hot-link nest.css ([npmcdn](https://npmcdn.com/nest-ui/dist/nest.css))
 
