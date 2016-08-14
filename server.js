@@ -1,24 +1,26 @@
-var WebpackDevServer = require('webpack-dev-server');
-var webpack          = require('webpack');
-var express          = require('express');
-var cookieParser     = require('cookie-parser');
-var bodyParser       = require('body-parser');
-var config           = require('./webpack.config.js');
-var cwd              = process.cwd();
+const WebpackDevServer = require( 'webpack-dev-server' );
+const webpack          = require( 'webpack' );
+const express          = require( 'express' );
+const cookieParser     = require( 'cookie-parser' );
+const bodyParser       = require( 'body-parser' );
+const opn              = require( 'opn' );
+const config           = require( './webpack.config.js' );
+const cwd              = process.cwd();
 
-var app = express();
+const app = express();
 app.use( cookieParser() );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use( express.static( __dirname ) );
 
-var staticServerPort = 80;
+const staticServerPort = 80;
 app.listen( staticServerPort, function() {
-	console.log( '[Server] http://localhost:' + staticServerPort );
+	console.log( '[Server] http://127.0.0.1:' + staticServerPort );
+	opn( 'http://127.0.0.1:' + staticServerPort + '/examples' );
 } );
 
-var compiler = webpack( config );
-var serverOptions = {
+const compiler = webpack( config );
+const serverOptions = {
 	quiet: false,
 	watchOptions: {
 		aggregateTimeout: 300,
@@ -26,9 +28,9 @@ var serverOptions = {
 	},
 	publicPath: '/dist'
 };
-var devServer = new WebpackDevServer( compiler, serverOptions );
+const devServer = new WebpackDevServer( compiler, serverOptions );
 
-var devServerPort = 8080;
+const devServerPort = 8080;
 devServer.listen(devServerPort, 'localhost', function(){
-	console.log( '[devServer] http://localhost:' + devServerPort );
+	console.log( '[devServer] http://127.0.0.1:' + devServerPort );
 });
