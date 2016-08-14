@@ -1,5 +1,4 @@
 <components>
-
 	
 
 	<section class="brand">
@@ -448,64 +447,6 @@
 
 	
 	<div class="box-header">
-		Json Tree Basic
-	</div>
-	<div class="box-content">
-		<div class="element-inline">
-			<ui-json-tree json="{
-	{
-		id: 1,
-		name: 'mo',
-		age: 23,
-		numbers: [1, 2, 3, 4, 5],
-		a: {
-			b: ['11', '22', '33'],
-			c: true
-		},
-		arr: [
-			{
-				a: 1,
-				b: '2'
-			},
-			{
-				c: false
-			}
-		]
-	}
-}"></ui-json-tree>
-
-		</div>
-		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-json-tree json=&quot;\{
-	\{
-		id: 1,
-		name: &#39;mo&#39;,
-		age: 23,
-		numbers: [1, 2, 3, 4, 5],
-		a: \{
-			b: [&#39;11&#39;, &#39;22&#39;, &#39;33&#39;],
-			c: true
-		\},
-		arr: [
-			\{
-				a: 1,
-				b: &#39;2&#39;
-			\},
-			\{
-				c: false
-			\}
-		]
-	\}
-\}&quot;&gt;&lt;/ui-json-tree&gt;
-</code></pre>
-		</div>
-	</div>
-	
-
-	
-
-	
-	<div class="box-header">
 		Breadcrumb Basic
 	</div>
 	<div class="box-content">
@@ -769,19 +710,19 @@
 	<div class="box-content">
 		<div class="element-inline">
 			<ui-slider
-	value="{ 1 }"
+	value="{ 50 }"
 	min="{ 0 }"
-	max="{ 10 }"
-	step="{ 2 }"
+	max="{ 100 }"
+	step="{ 5 }"
 ></ui-slider>
 
 		</div>
 		<div class="example-code">
 			<pre><code class="language-html">&lt;ui-slider
-	value=&quot;\{ 1 \}&quot;
+	value=&quot;\{ 50 \}&quot;
 	min=&quot;\{ 0 \}&quot;
-	max=&quot;\{ 10 \}&quot;
-	step=&quot;\{ 2 \}&quot;
+	max=&quot;\{ 100 \}&quot;
+	step=&quot;\{ 5 \}&quot;
 &gt;&lt;/ui-slider&gt;
 </code></pre>
 		</div>
@@ -867,6 +808,64 @@
 		</div>
 		<div class="example-code">
 			<pre><code class="language-html">&lt;ui-spinner block&gt;&lt;/ui-spinner&gt;
+</code></pre>
+		</div>
+	</div>
+	
+
+	
+
+	
+	<div class="box-header">
+		Json Tree Basic
+	</div>
+	<div class="box-content">
+		<div class="element-inline">
+			<ui-json-tree json="{
+	{
+		id: 1,
+		name: 'mo',
+		age: 23,
+		numbers: [1, 2, 3, 4, 5],
+		a: {
+			b: ['11', '22', '33'],
+			c: true
+		},
+		arr: [
+			{
+				a: 1,
+				b: '2'
+			},
+			{
+				c: false
+			}
+		]
+	}
+}"></ui-json-tree>
+
+		</div>
+		<div class="example-code">
+			<pre><code class="language-html">&lt;ui-json-tree json=&quot;\{
+	\{
+		id: 1,
+		name: &#39;mo&#39;,
+		age: 23,
+		numbers: [1, 2, 3, 4, 5],
+		a: \{
+			b: [&#39;11&#39;, &#39;22&#39;, &#39;33&#39;],
+			c: true
+		\},
+		arr: [
+			\{
+				a: 1,
+				b: &#39;2&#39;
+			\},
+			\{
+				c: false
+			\}
+		]
+	\}
+\}&quot;&gt;&lt;/ui-json-tree&gt;
 </code></pre>
 		</div>
 	</div>
