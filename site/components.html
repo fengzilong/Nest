@@ -1,5 +1,4 @@
 <components>
-
 	{% macro snippet( title, path ) %}
 	<div class="box-header">
 		{{ title }}
@@ -61,10 +60,6 @@
 	{{ snippet( 'Radio Basic', 'radio/radio-basic.html' ) }}
 	{{ snippet( 'Radio Button', 'radio/radio-button.html' ) }}
 
-	{# Json Tree #}
-
-	{{ snippet( 'Json Tree Basic', 'json-tree/json-tree-basic.html' ) }}
-
 	{# Breadcrumb #}
 
 	{{ snippet( 'Breadcrumb Basic', 'breadcrumb/breadcrumb-basic.html' ) }}
@@ -94,6 +89,10 @@
 	{{ snippet( 'Spinner Basic', 'spinner/basic.html' ) }}
 	{{ snippet( 'Spinner Size', 'spinner/size.html' ) }}
 	{{ snippet( 'Spinner Block', 'spinner/block.html' ) }}
+
+	{# Json Tree #}
+
+	{{ snippet( 'Json Tree Basic', 'json-tree/json-tree-basic.html' ) }}
 
 	{% include "layout/content_end.html" %}
 	{% include "layout/footer.html" %}
