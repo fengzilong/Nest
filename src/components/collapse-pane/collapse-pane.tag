@@ -1,6 +1,6 @@
-import styles from './collapse-panel.less';
+import styles from './collapse-pane.less';
 
-<ui-collapse-panel>
+<ui-collapse-pane>
 	<div class="{ styles.title }">
 		<div class="{ styles[ 'title-inner' ] }">
 			<ui-icon type="caret-right"></ui-icon>
@@ -28,4 +28,4 @@ import styles from './collapse-panel.less';
 			this.root.removeEventListener('click', onToggle, false);
 		});
 	</script>
-</ui-collapse-panel>
+</ui-collapse-pane>

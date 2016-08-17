@@ -24,7 +24,7 @@ import './components/progress-bar';
 import './components/popover';
 import './components/message';
 import './components/collapse';
-import './components/collapse-panel';
+import './components/collapse-pane';
 import './components/tooltip';
 import './components/slider';
 import './components/spinner';

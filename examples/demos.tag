@@ -111,12 +111,12 @@
 	<!-- ui-collapse -->
 
 	<ui-collapse>
-		<ui-collapse-panel title="GET /users">
+		<ui-collapse-pane title="GET /users">
 			面板1
-		</ui-collapse-panel>
-		<ui-collapse-panel title="POST /addUser">
+		</ui-collapse-pane>
+		<ui-collapse-pane title="POST /addUser">
 			面板2
-		</ui-collapse-panel>
+		</ui-collapse-pane>
 	</ui-collapse>
 
 	<!-- ui-message -->
