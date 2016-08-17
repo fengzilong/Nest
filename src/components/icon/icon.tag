@@ -12,6 +12,9 @@ import './icon.less';
 			info: '&#xe608;',
 			'caret-right': '&#xe603;',
 			'caret-down': '&#xe604;',
+			code: '&#xe60d;',
+			heart: '&#xe60e;',
+			star: '&#xe60c;',
 		};
 
 		const convert = str => {

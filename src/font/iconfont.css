@@ -14,13 +14,16 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-heart:before { content: "\e60e"; }
 .icon-search:before { content: "\e609"; }
 .icon-caret-right:before { content: "\e603"; }
 .icon-success:before { content: "\e607"; }
 .icon-caretdown:before { content: "\e604"; }
 .icon-loading:before { content: "\e602"; }
+.icon-code:before { content: "\e60d"; }
 .icon-error:before { content: "\e605"; }
 .icon-guanyuwomen:before { content: "\e608"; }
+.icon-star:before { content: "\e60c"; }
 .icon-home:before { content: "\e60a"; }
 .icon-iconfontunie61e:before { content: "\e600"; }
 .icon-iconfontunie61f:before { content: "\e601"; }
