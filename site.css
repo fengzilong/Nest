@@ -68,7 +68,7 @@ pre {
 	padding: 0 10px;
 }
 .main {
-	padding: 20px 0 50px 0;
+	padding: 20px 0 0 0;
 	line-height: 1.7;
 	font-size: 1.2rem
 }
@@ -124,7 +124,7 @@ pre {
 	font-size: 13px;
 }
 .footer {
-	padding: 0 0 30px;
+	padding: 30px 0 60px;
 	text-align: center;
 }
 .footer strong {
