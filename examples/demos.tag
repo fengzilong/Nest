@@ -1,4 +1,6 @@
 <demos>
+	<ui-renderer content="<ui-tag primary round>primary</ui-tag>"></ui-renderer>
+
 	<ui-spinner sm></ui-spinner>
 	<ui-spinner></ui-spinner>
 	<ui-spinner lg></ui-spinner>

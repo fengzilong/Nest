@@ -28,3 +28,4 @@ import './components/collapse-pane';
 import './components/tooltip';
 import './components/slider';
 import './components/spinner';
+import './components/renderer';
