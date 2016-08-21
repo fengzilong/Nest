@@ -193,30 +193,15 @@
 	</div>
 	<div class="box-content">
 		<div class="element-inline">
-			<ui-input placeholder="Placeholder" value="value"></ui-input>
+			<ui-input placeholder="placeholder" value="content" sm></ui-input>
+<ui-input placeholder="placeholder" value="content"></ui-input>
+<ui-input placeholder="placeholder" value="content" lg></ui-input>
 
 		</div>
 		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-input placeholder=&quot;Placeholder&quot; value=&quot;value&quot;&gt;&lt;/ui-input&gt;
-</code></pre>
-		</div>
-	</div>
-	
-	
-	<div class="box-header">
-		Input SIze
-	</div>
-	<div class="box-content">
-		<div class="element-inline">
-			<ui-input placeholder="Placeholder" sm></ui-input>
-<ui-input placeholder="Placeholder"></ui-input>
-<ui-input placeholder="Placeholder" lg></ui-input>
-
-		</div>
-		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-input placeholder=&quot;Placeholder&quot; sm&gt;&lt;/ui-input&gt;
-&lt;ui-input placeholder=&quot;Placeholder&quot;&gt;&lt;/ui-input&gt;
-&lt;ui-input placeholder=&quot;Placeholder&quot; lg&gt;&lt;/ui-input&gt;
+			<pre><code class="language-html">&lt;ui-input placeholder=&quot;placeholder&quot; value=&quot;content&quot; sm&gt;&lt;/ui-input&gt;
+&lt;ui-input placeholder=&quot;placeholder&quot; value=&quot;content&quot;&gt;&lt;/ui-input&gt;
+&lt;ui-input placeholder=&quot;placeholder&quot; value=&quot;content&quot; lg&gt;&lt;/ui-input&gt;
 </code></pre>
 		</div>
 	</div>
@@ -453,53 +438,6 @@
 		<div class="element-inline">
 			<ui-breadcrumb>
 	<ui-breadcrumb-item>
-		Home
-	</ui-breadcrumb-item>
-
-	<ui-breadcrumb-item>
-		<a href="javascript:;">First</a>
-	</ui-breadcrumb-item>
-
-	<ui-breadcrumb-item>
-		<a href="javascript:;">Second</a>
-	</ui-breadcrumb-item>
-
-	<ui-breadcrumb-item>
-		<a href="javascript:;">Current</a>
-	</ui-breadcrumb-item>
-</ui-breadcrumb>
-
-		</div>
-		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-breadcrumb&gt;
-	&lt;ui-breadcrumb-item&gt;
-		Home
-	&lt;/ui-breadcrumb-item&gt;
-
-	&lt;ui-breadcrumb-item&gt;
-		&lt;a href=&quot;javascript:;&quot;&gt;First&lt;/a&gt;
-	&lt;/ui-breadcrumb-item&gt;
-
-	&lt;ui-breadcrumb-item&gt;
-		&lt;a href=&quot;javascript:;&quot;&gt;Second&lt;/a&gt;
-	&lt;/ui-breadcrumb-item&gt;
-
-	&lt;ui-breadcrumb-item&gt;
-		&lt;a href=&quot;javascript:;&quot;&gt;Current&lt;/a&gt;
-	&lt;/ui-breadcrumb-item&gt;
-&lt;/ui-breadcrumb&gt;
-</code></pre>
-		</div>
-	</div>
-	
-	
-	<div class="box-header">
-		Breadcrumb With Icon
-	</div>
-	<div class="box-content">
-		<div class="element-inline">
-			<ui-breadcrumb>
-	<ui-breadcrumb-item>
 		<ui-icon icon="&#xe60a;"></ui-icon>
 		Home
 	</ui-breadcrumb-item>
@@ -676,12 +614,14 @@
 	value="{ 50 }"
 	min="{ 0 }"
 	max="{ 100 }"
+	step="{ 5 }"
 ></ui-slider>
 
 <ui-slider
 	value="{ 50 }"
 	min="{ 0 }"
 	max="{ 100 }"
+	step="{ 5 }"
 	tip-placement="bottom"
 ></ui-slider>
 
@@ -691,38 +631,15 @@
 	value=&quot;\{ 50 \}&quot;
 	min=&quot;\{ 0 \}&quot;
 	max=&quot;\{ 100 \}&quot;
+	step=&quot;\{ 5 \}&quot;
 &gt;&lt;/ui-slider&gt;
 
 &lt;ui-slider
 	value=&quot;\{ 50 \}&quot;
 	min=&quot;\{ 0 \}&quot;
 	max=&quot;\{ 100 \}&quot;
-	tip-placement=&quot;bottom&quot;
-&gt;&lt;/ui-slider&gt;
-</code></pre>
-		</div>
-	</div>
-	
-	
-	<div class="box-header">
-		Slider With Step
-	</div>
-	<div class="box-content">
-		<div class="element-inline">
-			<ui-slider
-	value="{ 50 }"
-	min="{ 0 }"
-	max="{ 100 }"
-	step="{ 5 }"
-></ui-slider>
-
-		</div>
-		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-slider
-	value=&quot;\{ 50 \}&quot;
-	min=&quot;\{ 0 \}&quot;
-	max=&quot;\{ 100 \}&quot;
 	step=&quot;\{ 5 \}&quot;
+	tip-placement=&quot;bottom&quot;
 &gt;&lt;/ui-slider&gt;
 </code></pre>
 		</div>
@@ -769,21 +686,6 @@
 	</div>
 	<div class="box-content">
 		<div class="element-inline">
-			<ui-spinner></ui-spinner>
-
-		</div>
-		<div class="example-code">
-			<pre><code class="language-html">&lt;ui-spinner&gt;&lt;/ui-spinner&gt;
-</code></pre>
-		</div>
-	</div>
-	
-	
-	<div class="box-header">
-		Spinner Size
-	</div>
-	<div class="box-content">
-		<div class="element-inline">
 			<ui-spinner sm></ui-spinner>
 <ui-spinner></ui-spinner>
 <ui-spinner lg></ui-spinner>
@@ -808,6 +710,48 @@
 		</div>
 		<div class="example-code">
 			<pre><code class="language-html">&lt;ui-spinner block&gt;&lt;/ui-spinner&gt;
+</code></pre>
+		</div>
+	</div>
+	
+
+	
+
+	
+	<div class="box-header">
+		Tree Basic
+	</div>
+	<div class="box-content">
+		<div class="element-inline">
+			<ui-tree on-change="{ onTreeChange }">
+	<ui-tree-node title="root" key="0">
+		<ui-tree-node title="first0" key="1">
+			<ui-tree-node title="second0" key="3">
+				<ui-tree-node title="third0" key="6"></ui-tree-node>
+				<ui-tree-node title="third1" key="7"></ui-tree-node>
+			</ui-tree-node>
+			<ui-tree-node title="second1" key="4"></ui-tree-node>
+			<ui-tree-node title="second2" key="5"></ui-tree-node>
+		</ui-tree-node>
+		<ui-tree-node title="first1" key="2"></ui-tree-node>
+	</ui-tree-node>
+</ui-tree>
+
+		</div>
+		<div class="example-code">
+			<pre><code class="language-html">&lt;ui-tree on-change=&quot;\{ onTreeChange \}&quot;&gt;
+	&lt;ui-tree-node title=&quot;root&quot; key=&quot;0&quot;&gt;
+		&lt;ui-tree-node title=&quot;first0&quot; key=&quot;1&quot;&gt;
+			&lt;ui-tree-node title=&quot;second0&quot; key=&quot;3&quot;&gt;
+				&lt;ui-tree-node title=&quot;third0&quot; key=&quot;6&quot;&gt;&lt;/ui-tree-node&gt;
+				&lt;ui-tree-node title=&quot;third1&quot; key=&quot;7&quot;&gt;&lt;/ui-tree-node&gt;
+			&lt;/ui-tree-node&gt;
+			&lt;ui-tree-node title=&quot;second1&quot; key=&quot;4&quot;&gt;&lt;/ui-tree-node&gt;
+			&lt;ui-tree-node title=&quot;second2&quot; key=&quot;5&quot;&gt;&lt;/ui-tree-node&gt;
+		&lt;/ui-tree-node&gt;
+		&lt;ui-tree-node title=&quot;first1&quot; key=&quot;2&quot;&gt;&lt;/ui-tree-node&gt;
+	&lt;/ui-tree-node&gt;
+&lt;/ui-tree&gt;
 </code></pre>
 		</div>
 	</div>
@@ -887,8 +831,13 @@
 		var self = this;
 
 		this.current = 60;
+
 		this.onPaginationChange = function( v ) {
 			self.current = v;
+		};
+
+		this.onTreeChange = function( key, checked, oldChecked ) {
+			console.log( key + ' changed from ' + oldChecked + ' to ' + checked );
 		};
 
 		this.on('mount', function() {
