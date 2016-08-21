@@ -38,15 +38,16 @@ import styles from './tree-node.less';
 			checkbox.checked = checkedStatus( this.status );
 			if( checkbox.checked !== lastChecked ) {
 				checkbox.update();
-				lastChecked = checkbox.checked;
 
 				// trigger on tree node
-				this.trigger( 'change', this.opts.key, checkbox.checked );
-				this.opts.onChange && this.opts.onChange( this.opts.key, checkbox.checked );
+				this.trigger( 'change', this.opts.key, checkbox.checked, lastChecked );
+				this.opts.onChange && this.opts.onChange( this.opts.key, checkbox.checked, lastChecked );
 
 				// trigger on root tree
-				this.tree.trigger( 'change', this.opts.key, checkbox.checked );
-				this.tree.opts.onChange && this.tree.opts.onChange( this.opts.key, checkbox.checked );
+				this.tree.trigger( 'change', this.opts.key, checkbox.checked, lastChecked );
+				this.tree.opts.onChange && this.tree.opts.onChange( this.opts.key, checkbox.checked, lastChecked );
+
+				lastChecked = checkbox.checked;
 			}
 		});
 

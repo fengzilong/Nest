@@ -31,7 +31,6 @@
 	{# Input #}
 
 	{{ snippet( 'Input Basic', 'input/input-basic.html' ) }}
-	{{ snippet( 'Input SIze', 'input/input-size.html' ) }}
 
 	{# Badge #}
 
@@ -63,7 +62,6 @@
 	{# Breadcrumb #}
 
 	{{ snippet( 'Breadcrumb Basic', 'breadcrumb/breadcrumb-basic.html' ) }}
-	{{ snippet( 'Breadcrumb With Icon', 'breadcrumb/breadcrumb-with-icon.html' ) }}
 
 	{# Tooltip #}
 
@@ -78,7 +76,6 @@
 	{# Slider #}
 
 	{{ snippet( 'Slider Basic', 'slider/slider-basic.html' ) }}
-	{{ snippet( 'Slider With Step', 'slider/slider-with-step.html' ) }}
 
 	{# Pagination #}
 
@@ -87,8 +84,11 @@
 	{# Spinner #}
 
 	{{ snippet( 'Spinner Basic', 'spinner/basic.html' ) }}
-	{{ snippet( 'Spinner Size', 'spinner/size.html' ) }}
 	{{ snippet( 'Spinner Block', 'spinner/block.html' ) }}
+
+	{# Tree #}
+
+	{{ snippet( 'Tree Basic', 'tree/tree-basic.html' ) }}
 
 	{# Json Tree #}
 
@@ -101,8 +101,13 @@
 		var self = this;
 
 		this.current = 60;
+
 		this.onPaginationChange = function( v ) {
 			self.current = v;
+		};
+
+		this.onTreeChange = function( key, checked, oldChecked ) {
+			console.log( key + ' changed from ' + oldChecked + ' to ' + checked );
 		};
 
 		this.on('mount', function() {
