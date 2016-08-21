@@ -1,7 +1,7 @@
 import styles from './tree-node.less';
 
 <ui-tree-node>
-	<span class="{ styles.state }">{ this.statusIcon() }</span>
+	<ui-checkbox checked="{ false }" on-change="{ onCheckChange }"></ui-checkbox>
 	<span class="{ styles.title }" onclick="{ onCheckChange }">{ opts.title }</span>
 	<div class="{ styles.children }">
 		<yield></yield>
@@ -13,25 +13,42 @@ import styles from './tree-node.less';
 			UNCHECKED: 1,
 			HALF_CHECKED: 2
 		};
-
-		this.styles = styles;
-		this.STATUS = STATUS;
-		this.status = STATUS.UNCHECKED;
-		this.statusIcon = () => {
-			let icon = '';
-			switch( this.status ) {
+		const checkedStatus = status => {
+			let tmp = '';
+			switch( status ) {
 				case STATUS.CHECKED:
-					icon = 'v';
+					tmp = true;
 					break;
 				case STATUS.UNCHECKED:
-					icon = '口';
+					tmp = false;
 					break;
 				case STATUS.HALF_CHECKED:
-					icon = '曰';
+					tmp = '-';
 					break;
 			}
-			return icon;
+			return tmp;
 		};
+		const checkbox = this.tags[ 'ui-checkbox' ];
+
+		this.styles = styles;
+		this.status = STATUS.UNCHECKED;
+
+		let lastChecked = checkedStatus( this.status );
+		this.on('updated', () => {
+			checkbox.checked = checkedStatus( this.status );
+			if( checkbox.checked !== lastChecked ) {
+				checkbox.update();
+				lastChecked = checkbox.checked;
+
+				// trigger on tree node
+				this.trigger( 'change', this.opts.key, checkbox.checked );
+				this.opts.onChange && this.opts.onChange( this.opts.key, checkbox.checked );
+
+				// trigger on root tree
+				this.tree.trigger( 'change', this.opts.key, checkbox.checked );
+				this.tree.opts.onChange && this.tree.opts.onChange( this.opts.key, checkbox.checked );
+			}
+		});
 
 		this.on('mount', () => {
 			let parent = this.parent;

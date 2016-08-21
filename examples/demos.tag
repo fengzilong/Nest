@@ -102,10 +102,10 @@
 
 	<!-- ui-collapse -->
 
-	<ui-tree>
+	<ui-tree on-change="{ onTreeChange }">
 		<ui-tree-node title="根节点">
 			<ui-tree-node title="一级">
-				<ui-tree-node title="二级">
+				<ui-tree-node title="二级" key="second">
 					<ui-tree-node title="三级"></ui-tree-node>
 					<ui-tree-node title="三级"></ui-tree-node>
 				</ui-tree-node>
@@ -411,6 +411,10 @@
 
 		this.onSliderChanged = v => {
 			console.log( 'slider changed', v );
+		};
+
+		this.onTreeChange = ( key, checked ) => {
+			console.log( key, 'changed to', checked );
 		};
 
 		this.on('mount', function(){

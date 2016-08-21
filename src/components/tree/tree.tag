@@ -17,12 +17,13 @@
 				treeNodes = [ treeNodes ];
 			}
 
+			// first level tree node in tree
 			for( let i = 0, len = treeNodes.length; i < len; i++ ) {
 				treeNodes[ i ].treeNodeId = i + '';
 			}
 		});
 
-		this.on( 'tree-node-change', ( id ) => {
+		this.on( 'tree-node-change', id => {
 			let nodes = this.nodes;
 
 			// 修改当前节点
