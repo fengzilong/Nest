@@ -1,4 +1,13 @@
 <demos>
+	<!-- ui-checkbox -->
+
+	<ui-checkbox value="option1" checked="-">选项一</ui-checkbox>
+	<ui-checkbox value="option2">选项二</ui-checkbox>
+	<ui-checkbox value="option3">选项三</ui-checkbox>
+
+	<br />
+	<br />
+
 	<ui-renderer content="<ui-tag primary round>primary</ui-tag>"></ui-renderer>
 
 	<ui-spinner sm></ui-spinner>
