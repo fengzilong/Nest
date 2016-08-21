@@ -23,7 +23,7 @@ var webpackConfig = {
 			{
 				test: /\.tag$/,
 				exclude: /node_modules/,
-				loader: 'riotjs-loader',
+				loader: 'nest-loader',
 				query: {
 					type: 'none'
 				}
@@ -64,11 +64,14 @@ var webpackConfig = {
 	resolve: {
 		extensions: [ '', '.js', '.tag', '.less', '.css' ]
 	},
-	externals: [
-		{
-			riot: 'riot'
+	externals: {
+		riot: {
+			root: 'riot',
+			commonjs: 'riot',
+			commonjs2: 'riot',
+			amd: 'riot'
 		}
-	],
+	},
 	plugins: [
 		new webpack.ProvidePlugin({
 			riot: path.resolve( __dirname, 'src/riot.js' )
