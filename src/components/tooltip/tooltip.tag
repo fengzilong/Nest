@@ -1,6 +1,3 @@
-import styles from './tooltip.less';
-import domAlign from 'dom-align';
-
 <ui-tooltip>
 	<div name="t" class="{ styles.target }">
 		<yield></yield>
@@ -14,6 +11,9 @@ import domAlign from 'dom-align';
 	</div>
 
 	<script>
+		import domAlign from 'dom-align';
+		import styles from './tooltip.less';
+
 		this.styles = styles;
 		this.manual = false;
 		this.triggered = false;

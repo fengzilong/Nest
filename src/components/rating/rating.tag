@@ -1,6 +1,5 @@
 <ui-rating>
 
-
 	<script>
 
 	</script>

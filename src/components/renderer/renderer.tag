@@ -1,7 +1,7 @@
-import riot from 'riot';
-
 <ui-renderer>
 	<script>
+		import riot from 'riot';
+		
 		function doMount( root, content ) {
 			root.innerHTML = content;
 			riot.mount( root, '*' );

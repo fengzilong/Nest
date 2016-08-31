@@ -1,6 +1,5 @@
 <ui-modal>
 
-
 	<script>
 
 	</script>

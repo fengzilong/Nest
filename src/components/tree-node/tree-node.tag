@@ -1,5 +1,3 @@
-import styles from './tree-node.less';
-
 <ui-tree-node>
 	<ui-checkbox checked="{ false }" on-change="{ onCheckChange }"></ui-checkbox>
 	<span class="{ styles.title }" onclick="{ onCheckChange }">{ opts.title }</span>
@@ -8,6 +6,8 @@ import styles from './tree-node.less';
 	</div>
 
 	<script>
+		import styles from './tree-node.less';
+		
 		const STATUS = {
 			CHECKED: 0,
 			UNCHECKED: 1,

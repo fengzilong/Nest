@@ -1,6 +1,5 @@
 <ui-color-picker>
 
-
 	<script>
 
 	</script>

@@ -1,6 +1,3 @@
-import classNames from 'classnames';
-import styles from './checkbox.less';
-
 <ui-checkbox>
 	<span class="{ styles.base } { stateCls }"></span>
 	<span>
@@ -8,6 +5,9 @@ import styles from './checkbox.less';
 	</span>
 
 	<script>
+		import classNames from 'classnames';
+		import styles from './checkbox.less';
+
 		this.styles = styles;
 		this.checked = this.opts.checked || false;
 

@@ -1,6 +1,5 @@
 <ui-number-input>
 
-
 	<script>
 
 	</script>

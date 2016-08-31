@@ -1,6 +1,3 @@
-import styles from './progress-bar.less';
-import classNames from 'classnames';
-
 <ui-progress-bar>
 	<div class="{ styles.outter }">
 		<div class="{ styles.inner } { colorCls }" style="width: { opts.value }%;"></div>
@@ -10,6 +7,9 @@ import classNames from 'classnames';
 	</div>
 
 	<script>
+		import styles from './progress-bar.less';
+		import classNames from 'classnames';
+
 		this.styles = styles;
 		this.colorCls = classNames({
 			[ styles.primary ]: true,

@@ -1,6 +1,5 @@
 <ui-alert>
-
-
+	
 	<script>
 
 	</script>

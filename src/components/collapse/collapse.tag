@@ -1,9 +1,9 @@
-import styles from './collapse.less';
-
 <ui-collapse>
 	<yield></yield>
 
 	<script>
+		import styles from './collapse.less';
+		
 		this.styles = styles;
 
 		this.on('mount', () => {

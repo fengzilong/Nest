@@ -1,6 +1,5 @@
 <ui-date-picker>
 
-
 	<script>
 
 	</script>

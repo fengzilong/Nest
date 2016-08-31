@@ -1,6 +1,5 @@
 <ui-grid>
 
-
 	<script>
 
 	</script>

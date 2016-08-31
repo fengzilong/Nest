@@ -1,6 +1,5 @@
 <ui-context-menu>
 
-
 	<script>
 
 	</script>

@@ -1,6 +1,3 @@
-import styles from './slider.less';
-import '../tooltip';
-
 <ui-slider>
 	<div class="{ styles.base }">
 		<div
@@ -27,6 +24,9 @@ import '../tooltip';
 	</div>
 
 	<script>
+		import styles from './slider.less';
+		import '../tooltip';
+
 		const min = this.opts.min || 0;
 		const max = this.opts.max || 100;
 		const step = this.opts.step || 1;

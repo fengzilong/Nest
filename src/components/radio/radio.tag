@@ -1,5 +1,3 @@
-import styles from './radio.less';
-
 <ui-radio>
 	<span class="{ styles.base } { checked ? styles.checked : '' }"></span>
 	<span>
@@ -7,6 +5,8 @@ import styles from './radio.less';
 	</span>
 
 	<script>
+		import styles from './radio.less';
+		
 		this.styles = styles;
 		this.checked = this.opts.__checked || false;
 

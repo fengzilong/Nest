@@ -1,6 +1,5 @@
 <ui-tabs>
 
-
 	<script>
 
 	</script>

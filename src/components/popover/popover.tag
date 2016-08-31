@@ -1,5 +1,3 @@
-import styles from './popover.less';
-
 <ui-popover>
 	<yield></yield>
 
@@ -8,6 +6,8 @@ import styles from './popover.less';
 	</div>
 
 	<script>
+		import styles from './popover.less';
+		
 		this.styles = styles;
 
 		this.on('mount', () => {

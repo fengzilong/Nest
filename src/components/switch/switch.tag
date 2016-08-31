@@ -1,10 +1,10 @@
-import styles from './switch.less';
-import classNames from 'classnames';
-
 <ui-switch>
 	<div class="{ uiCls } { stateCls }" onclick="{ root.$toggle }"></div>
 
 	<script>
+		import styles from './switch.less';
+		import classNames from 'classnames';
+
 		this.disabled = this.opts.__disabled || false;
 		let isOn = !!this.opts.__checked;
 

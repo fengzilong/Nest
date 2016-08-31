@@ -1,12 +1,12 @@
-import { base, active } from './menu-item.less';
-import classNames from 'classnames';
-
 <ui-menu-item>
 	<div class="{ classnames }">
 		{ opts.text }
 	</div>
 
 	<script>
+		import { base, active } from './menu-item.less';
+		import classNames from 'classnames';
+
 		this.on('mount', () => {
 		});
 

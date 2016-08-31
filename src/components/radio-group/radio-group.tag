@@ -1,9 +1,9 @@
-import './radio-group.less';
-
 <ui-radio-group>
 	<yield></yield>
 
 	<script>
+		import './radio-group.less';
+		
 		this.on('mount', () => {
 			let radioElements = [];
 			let radios = this.tags[ 'ui-radio' ];

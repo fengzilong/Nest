@@ -1,7 +1,7 @@
-import styles from './json-tree.less';
-
 <ui-json-tree>
 	<script>
+		import styles from './json-tree.less';
+		
 		const hasOwn = Object.hasOwnProperty;
 		const each = ( obj, fn ) => {
 			if( Array.isArray( obj ) ) {

@@ -1,5 +1,3 @@
-import styles from './collapse-pane.less';
-
 <ui-collapse-pane>
 	<div class="{ styles.title }">
 		<div class="{ styles[ 'title-inner' ] }">
@@ -14,6 +12,8 @@ import styles from './collapse-pane.less';
 	</div>
 
 	<script>
+		import styles from './collapse-pane.less';
+
 		this.styles = styles;
 		this.expand = false;
 

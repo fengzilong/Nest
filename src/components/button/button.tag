@@ -1,7 +1,3 @@
-import classNames from 'classnames';
-import styles from './button.less';
-import '../icon';
-
 <ui-button>
 	<button onclick="{ onClick }" class="{ uiCls } { opts.__disabled ? styles.disabled : '' }">
 		<ui-icon type="loading" if="{ opts.loading }" class="{ styles.loading }"></ui-icon>
@@ -9,6 +5,10 @@ import '../icon';
 	</button>
 
 	<script>
+		import classNames from 'classnames';
+		import styles from './button.less';
+		import '../icon';
+
 		this.styles = styles;
 
 		const isUndefined = v => typeof v === 'undefined';

@@ -1,6 +1,5 @@
 <ui-time-picker>
 
-
 	<script>
 
 	</script>

@@ -1,10 +1,10 @@
-import '../../font/iconfont.css';
-import './icon.less';
-
 <ui-icon>
 	<span class="iconfont">{ icon }</span>
 
 	<script>
+		import '../../font/iconfont.css';
+		import './icon.less';
+
 		const iconset = {
 			'arrow-left': '&#xe600;',
 			'arrow-right': '&#xe601;',

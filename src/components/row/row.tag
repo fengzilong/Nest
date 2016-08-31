@@ -1,6 +1,5 @@
 <ui-row>
 
-
 	<script>
 
 	</script>

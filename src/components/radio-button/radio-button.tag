@@ -1,11 +1,11 @@
-import styles from './radio-button.less';
-
 <ui-radio-button>
 	<span class="{ styles.base } { checked ? styles.checked : '' }">
 		<yield></yield>
 	</span>
 
 	<script>
+		import styles from './radio-button.less';
+		
 		this.styles = styles;
 		this.checked = false;
 

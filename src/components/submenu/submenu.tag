@@ -1,5 +1,3 @@
-import { items } from './submenu.less';
-
 <ui-submenu>
 	{ opts.text }
 
@@ -8,6 +6,8 @@ import { items } from './submenu.less';
 	</div>
 
 	<script>
+		import { items } from './submenu.less';
+		
 		this.styles = {
 			items: items
 		}

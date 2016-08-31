@@ -1,6 +1,3 @@
-import classNames from 'classnames';
-import styles from './input.less';
-
 <ui-input>
 	<input
 		class="{ uiCls } { stateCls }"
@@ -15,6 +12,9 @@ import styles from './input.less';
 	/>
 
 	<script>
+		import classNames from 'classnames';
+		import styles from './input.less';
+
 		const isUndefined = v => typeof v === 'undefined';
 
 		this.uiCls = classNames({

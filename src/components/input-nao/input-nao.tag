@@ -1,5 +1,3 @@
-import './input-nao.less';
-
 <ui-input-nao>
 	<span class="input input--nao { input--filled : hasValue }" name="container">
 		<input class="input__field input__field--nao" type="text" onchange="{ onChange }" />
@@ -12,6 +10,8 @@ import './input-nao.less';
 	</span>
 
 	<script>
+		import './input-nao.less';
+		
 		let v = this.opts.value;
 		this.hasValue = !( typeof v === 'undefined' || v === '' );
 

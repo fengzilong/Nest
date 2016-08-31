@@ -1,6 +1,5 @@
 <ui-col>
-
-
+	
 	<script>
 
 	</script>

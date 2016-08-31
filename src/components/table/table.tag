@@ -1,6 +1,5 @@
 <ui-table>
 
-
 	<script>
 
 	</script>

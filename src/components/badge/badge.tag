@@ -1,5 +1,3 @@
-import styles from './badge.less';
-
 <ui-badge>
 	<span class="{ styles.base }">
 		<yield></yield>
@@ -7,6 +5,8 @@ import styles from './badge.less';
 	</span>
 
 	<script>
+		import styles from './badge.less';
+		
 		this.styles = styles;
 
 		this.on('mount', () => {
