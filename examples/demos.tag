@@ -1,4 +1,8 @@
 <demos>
+	<ui-rate total="{ 10 }">
+
+	</ui-rate>
+
 	<!-- ui-checkbox -->
 
 	<ui-checkbox value="option1" checked="-">选项一</ui-checkbox>
