@@ -1,0 +1,78 @@
+@import "../../theme.less";
+
+ui-rate {
+	font-size: 0;
+}
+
+@rate-active-color: @warning-color;
+@rate-inactive-color: #DDD;
+
+:local(.base) {
+	position: relative;
+	display: inline-block;
+	font-size: 18px;
+	margin-right: 4px;
+	transition: transform .4s ease;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&:local(.disabled) {
+		transform: initial;
+	}
+
+	&::before {
+		display: block;
+		content: '\e60c';
+	}
+
+	:local(.star) {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		overflow: hidden;
+		pointer-events: none;
+
+		&::before {
+			display: block;
+			content: '\e60c';
+			color: transparent;
+		}
+	}
+
+	&:local(.full) {
+		&::before {
+			color: @rate-active-color;
+		}
+
+		:local(.star) {
+
+		}
+	}
+
+	&:local(.half) {
+		&::before {
+			color: @rate-inactive-color;
+		}
+
+		:local(.star) {
+			&::before {
+				color: @rate-active-color;
+			}
+		}
+	}
+
+	&:local(.zero) {
+		&::before {
+			color: @rate-inactive-color;
+		}
+
+		:local(.star) {
+
+		}
+	}
+}
