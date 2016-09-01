@@ -4,27 +4,42 @@ ui-rate {
 	font-size: 0;
 }
 
-@rate-active-color: #f9df1a;
+@rate-active-color: @warning-color;
 @rate-inactive-color: #DDD;
 
 :local(.base) {
 	position: relative;
 	display: inline-block;
 	font-size: 18px;
-	margin-right: 5px;
+	margin-right: 4px;
+	transition: transform .4s ease;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&:local(.disabled) {
+		transform: initial;
+	}
+
+	&::before {
+		display: block;
+		content: '\e60c';
+	}
 
 	:local(.star) {
 		display: inline-block;
 		position: absolute;
 		top: 0;
 		left: 0;
-		transition: color ease 1s;
 		width: 50%;
 		overflow: hidden;
+		pointer-events: none;
 
 		&::before {
-			content: '\e60c';
 			display: block;
+			content: '\e60c';
 			color: transparent;
 		}
 	}
@@ -59,10 +74,5 @@ ui-rate {
 		:local(.star) {
 
 		}
-	}
-
-	&::before {
-		content: '\e60c';
-		display: block;
 	}
 }

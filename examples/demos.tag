@@ -1,5 +1,5 @@
 <demos>
-	<ui-rate total="{ 10 }">
+	<ui-rate total="{ 10 }" value="{ 5.7 }" disabled="{ true }">
 
 	</ui-rate>
 
