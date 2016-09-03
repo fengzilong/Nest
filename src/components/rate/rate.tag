@@ -1,11 +1,13 @@
-<ui-rate onclick="{ onConfirm }" onmouseleave="{ onLeave }">
-	<span
-		each={ state, i in states }
-		class="iconfont { styles.base } { parent.opts.__disabled ? styles.disabled : '' } { state }"
-		onmousemove="{ onMouseMove(i) }"
-	>
-		<span class="iconfont { styles.star }"></span>
-	</span>
+<ui-rate>
+	<div class="{ styles.wrapper }" onclick="{ onConfirm }" onmouseleave="{ onLeave }">
+		<span
+			each={ state, i in states }
+			class="iconfont { styles.base } { parent.opts.__disabled ? styles.disabled : '' } { state }"
+			onmousemove="{ onMouseMove(i) }"
+		>
+			<span class="iconfont { styles.star }"></span>
+		</span>
+	</div>
 
 	<script>
 		import '../icon';
@@ -36,12 +38,14 @@
 			this.value = tmp;
 		};
 
+		let v = parseInt( parseFloat( this.opts.value ) / .5 ) * .5;
+
 		this.onConfirm = () => {
 			if( this.opts.__disabled ) {
 				return;
 			}
 
-			this.v = this.value;
+			v = this.value;
 		};
 
 		this.onLeave = () => {
@@ -49,13 +53,16 @@
 				return;
 			}
 
-			this.value = this.v || this.opts.value;
+			this.value = v;
+
+			this.trigger( 'change', v );
+			this.opts.onChange && this.opts.onChange( v );
 		};
 
 		this.on('update', () => {
 			const value = this.value || parseFloat( this.opts.value ) || 0;
-			const total = parseInt( this.opts.total ) || 5;
 			const v = parseInt( value / .5 ) * .5;
+			const total = parseInt( this.opts.total ) || 5;
 
 			let states = [], i = 0;
 
@@ -71,8 +78,6 @@
 			}
 
 			this.states = states;
-
-			// TODO: onchange
 		});
 	</script>
 </ui-rate>

@@ -1,5 +1,5 @@
 <demos>
-	<ui-rate total="{ 10 }" value="{ 5.7 }" disabled="{ true }">
+	<ui-rate total="{ 10 }" value="{ 5.7 }" on-change="{ onRateChange }">
 
 	</ui-rate>
 
@@ -420,6 +420,10 @@
 		this.onTreeChange = ( key, checked ) => {
 			console.log( key, 'changed to', checked );
 		};
+
+		this.onRateChange = v => {
+			console.log( 'rate changed to ', v );
+		}
 
 		this.on('mount', function(){
 
