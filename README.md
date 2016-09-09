@@ -27,13 +27,13 @@ import 'nest-ui/dist/nest.css';
 
 **Option #2**: hot-link
 
-hot-link nest.css ([npmcdn](https://npmcdn.com/nest-ui/dist/nest.css))
+hot-link nest.css ([unpkg](https://unpkg.com/nest-ui/dist/nest.css))
 
 ```html
 <link rel="stylesheet" href="path/to/nest.css">
 ```
 
-hot-link riot.js ([npmcdn](https://npmcdn.com/riot/riot.min.js)) and nest.js ([npmcdn](https://npmcdn.com/nest-ui))
+hot-link riot.js ([unpkg](https://unpkg.com/riot/riot.min.js)) and nest.js ([unpkg](https://unpkg.com/nest-ui))
 
 ```html
 <script type="text/javascript" src="path/to/riot.js"></script>
