@@ -1,17 +1,28 @@
 @import "../../theme.less";
 
 ui-progress-bar {
-	display: flex;
-	align-items: center;
-	height: 8px;
+	:local(.progressbar) {
+		display: flex;
+		align-items: center;
+	}
 }
 
-ui-progress-bar[sm] {
-	height: 5px;
+ui-progress-bar {
+	:local(.progressbar) {
+		height: 8px;
+	}
 }
 
 ui-progress-bar[lg] {
-	height: 12px;
+	:local(.progressbar) {
+		height: 12px;
+	}
+}
+
+ui-progress-bar[sm] {
+	:local(.progressbar) {
+		height: 5px;
+	}
 }
 
 :local(.outter) {
@@ -20,18 +31,6 @@ ui-progress-bar[lg] {
 	background-color: #DDD;
 	overflow: hidden;
 	flex: 1;
-}
-
-@keyframes progress-bar-active {
-	0% {
-		opacity: .3;
-		width: 0;
-	}
-
-	100% {
-		opacity: 0;
-		width: 100%;
-	}
 }
 
 :local(.inner) {
@@ -70,4 +69,16 @@ ui-progress-bar[lg] {
 
 :local(.danger) {
 	background-color: @danger-color;
+}
+
+@keyframes progress-bar-active {
+	0% {
+		opacity: .3;
+		width: 0;
+	}
+
+	100% {
+		opacity: 0;
+		width: 100%;
+	}
 }

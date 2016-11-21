@@ -1,7 +1,5 @@
 <demos>
-	<ui-rate total="{ 10 }" value="{ 5.7 }" disabled="{ true }">
-
-	</ui-rate>
+	<ui-rate total="{ 10 }" value="{ 5.7 }" on-change="{ onRateChange }"></ui-rate>
 
 	<!-- ui-checkbox -->
 
@@ -159,9 +157,9 @@
 
 	<!-- ui-progress -->
 
-	<ui-progress-bar value="50" label></ui-progress-bar>
+	<ui-progress-bar value="50" label stroke-width="1"></ui-progress-bar>
 	<br />
-	<ui-progress-bar value="60" label success></ui-progress-bar>
+	<ui-progress-bar value="60" label success sm></ui-progress-bar>
 	<br />
 	<ui-progress-bar value="70" label warning></ui-progress-bar>
 	<br />
@@ -420,6 +418,10 @@
 		this.onTreeChange = ( key, checked ) => {
 			console.log( key, 'changed to', checked );
 		};
+
+		this.onRateChange = v => {
+			console.log( 'rate changed to ', v );
+		}
 
 		this.on('mount', function(){
 
