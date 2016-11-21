@@ -1,7 +1,5 @@
 <demos>
-	<ui-rate total="{ 10 }" value="{ 5.7 }" on-change="{ onRateChange }">
-
-	</ui-rate>
+	<ui-rate total="{ 10 }" value="{ 5.7 }" on-change="{ onRateChange }"></ui-rate>
 
 	<!-- ui-checkbox -->
 

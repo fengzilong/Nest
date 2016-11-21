@@ -15,6 +15,8 @@
 
 		this.styles = styles;
 
+		this.value = parseInt( parseFloat( this.opts.value ) / .5 ) * .5;
+
 		// TODO: debounce
 		this.onMouseMove = i => e => {
 			if( this.opts.__disabled ) {
@@ -38,7 +40,7 @@
 			this.value = tmp;
 		};
 
-		let v = parseInt( parseFloat( this.opts.value ) / .5 ) * .5;
+		let v = this.value;
 
 		this.onConfirm = () => {
 			if( this.opts.__disabled ) {
@@ -46,6 +48,9 @@
 			}
 
 			v = this.value;
+
+			this.trigger( 'change', v );
+			this.opts.onChange && this.opts.onChange( v );
 		};
 
 		this.onLeave = () => {
@@ -54,18 +59,15 @@
 			}
 
 			this.value = v;
-
-			this.trigger( 'change', v );
-			this.opts.onChange && this.opts.onChange( v );
 		};
 
 		this.on('update', () => {
-			const value = this.value || parseFloat( this.opts.value ) || 0;
+			const value = this.value || 0;
 			const v = parseInt( value / .5 ) * .5;
 			const total = parseInt( this.opts.total ) || 5;
+			const states = [];
 
-			let states = [], i = 0;
-
+			let i = 0;
 			while( i < total ) {
 				i++;
 				if( i <= v ) {
