@@ -1,9 +1,11 @@
 <ui-progress-bar>
-	<div class="{ styles.outter }">
-		<div class="{ styles.inner } { colorCls }" style="width: { opts.value }%;"></div>
-	</div>
-	<div if="{ typeof opts.label !== 'undefined' }" class="{ styles.label }">
-		{ this.opts.value }%
+	<div class="{ styles.progressbar }" style="{ typeof opts.strokeWidth !== 'undefined' ? 'height: ' + opts.strokeWidth + 'px' : '' }">
+		<div class="{ styles.outter }">
+			<div class="{ styles.inner } { colorCls }" style="width: { opts.value || 0 }%;"></div>
+		</div>
+		<div if="{ typeof opts.label !== 'undefined' }" class="{ styles.label }">
+			{ this.opts.value }%
+		</div>
 	</div>
 
 	<script>
