@@ -1,6 +1,6 @@
 {
   "name": "nest-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Yet another UI framework for Web, built with riot",
   "main": "dist/nest.js",
   "directories": {},
