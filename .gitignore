@@ -4,3 +4,4 @@ node_modules
 /public
 /dist/nest.js.map
 /dist/nest.css.map
+npm-debug.log*
