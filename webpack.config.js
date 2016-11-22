@@ -52,15 +52,12 @@ var webpackConfig = {
 			}
 		]
 	},
-	postcss: function(){
-		return [
-			autoprefixer({
-				browsers: [
-					'last 2 versions'
-				]
-			})
-		];
+	babel: {
+		"presets": [ "es2015" ]
 	},
+	postcss: [
+		autoprefixer({ browsers: [ 'last 2 versions' ] })
+	],
 	resolve: {
 		extensions: [ '', '.js', '.tag', '.less', '.css' ]
 	},
@@ -73,9 +70,6 @@ var webpackConfig = {
 		}
 	},
 	plugins: [
-		new webpack.ProvidePlugin({
-			riot: path.resolve( __dirname, 'src/riot.js' )
-		}),
 		new ExtractTextWebpackPlugin( 'nest.css' )
 	]
 };

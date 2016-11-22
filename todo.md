@@ -1,4 +1,4 @@
-- use css modules for `json-tree`
+- use css modules in `json-tree`
 - review existed components
 - refactor `json-tree`
 - implement `popover`

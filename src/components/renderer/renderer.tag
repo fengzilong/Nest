@@ -1,11 +1,6 @@
 <ui-renderer>
 	<script>
 		import riot from 'riot';
-		
-		function doMount( root, content ) {
-			root.innerHTML = content;
-			riot.mount( root, '*' );
-		}
 
 		this.on('mount', () => {
 			const root = this.root;
@@ -22,5 +17,10 @@
 
 			doMount.call( this, root, this.opts.content );
 		});
+
+		function doMount( root, content ) {
+			root.innerHTML = content;
+			riot.mount( root, '*' );
+		}
 	</script>
 </ui-renderer>
